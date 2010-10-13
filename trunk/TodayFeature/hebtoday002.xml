@@ -272,9 +272,10 @@ rabin.isMovable = 1;
 	text +="<td id=prevmonth background='"+DESIGN_LOCATION+"cal_04"+just+".jpg' rowspan='2' colSpan='1' width='33' height='38' align='"+alPrev+"'>"
 	text +="<a href='javascript:changedate(-1,0)'><img src='"+DESIGN_LOCATION+"but_04"+just+".jpg' onmousedown='this.src=butB04.src' onmouseup='this.src=but04.src' border='0' /></a></td>"
 	// The headline cell
+	
+	
+	text +="<div id=picture> <img src='http://code.google.com/p/heb-calendar/source/browse/trunk/TodayFeature/today.png'> </div>"
 	text +="<td id=headline background='"+DESIGN_LOCATION+"cal_05"+just+".jpg' width='140' colSpan='3' height='21'><center><b><font size='3'>"
-	var TodayButton = new Image(26,38);
-	TodayButton.src = "today.png";
 	text +=arrM[currMonth]
 	text +="&nbsp;&nbsp;"+currYear
 	// The > cell
