@@ -367,8 +367,8 @@ text +="<div id=picture style='position: absolute;'> <IMG SRC='http://heb-calend
 	msg = new _IG_MiniMessage(__MODULE_ID__, _gel("messageBox"));
 
 	// Set the left and top of image id.
-document.getElementById('picture').style.top = (document.getElementById('headline').offsetTop) + "px"
-document.getElementById('picture').style.left = (document.getElementById('headline').offsetLeft+document.getElementById('headline').offsetWidth) + "px"
+document.getElementById('picture').style.top = (document.getElementById('headline').offsetTop + 10) + "px"
+document.getElementById('picture').style.left = (document.getElementById('headline').offsetLeft+document.getElementById('headline').offsetWidth+50 ) + "px"
 	
 	// Change the cells calendar according to the current month and year.
 	changeCal();
