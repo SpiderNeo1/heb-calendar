@@ -355,7 +355,7 @@ text+="</table>"
 	/* TOOLTIP CODE END. */
 
 	/* Today Image Code */
-text +="<div id=picture style='position: absolute;'> <IMG SRC='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/today.png'  width = 50 height = 50 style='position: absolute;' BORDER=0></div>" //<img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/today.png' width=500 height=500 style='position: absolute; font-size:0.1em'> </div>"	
+text +="<div id=picture style='position: absolute;'> <IMG SRC=DESIGN_LOCATION+'cal_27.gif' width = 50 height = 50 style='position: absolute;' BORDER=0></div>" //<img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/today.png' width=500 height=500 style='position: absolute; font-size:0.1em'> </div>"	
 
 	
 	
