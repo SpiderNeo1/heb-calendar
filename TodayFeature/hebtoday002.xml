@@ -368,8 +368,8 @@ text +="<div id=picture> <img src='http://heb-calendar.googlecode.com/svn/trunk/
 
 	// Set the left and top of image id.
 
-document.getElementById("picture").style.top = document.getElementById("headline").style.top
-document.getElementById("picture").style.left = document.getElementById("headline").style.left
+document.getElementById("picture").style.top = '50 px'
+document.getElementById("picture").style.left = '50 px'
 	
 	
 	// Change the cells calendar according to the current month and year.
