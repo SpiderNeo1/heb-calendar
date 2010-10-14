@@ -369,6 +369,8 @@ text +="<div id=picture> <img src='http://heb-calendar.googlecode.com/svn/trunk/
 	// Set the left and top of image id.
 docment.getElementById("picture").top = docment.getElementById("headline").top
 docment.getElementById("picture").left = docment.getElementById("headline").left
+alert(docment.getElementById("headline").left)
+alert("test");
 	
 	
 	// Change the cells calendar according to the current month and year.
