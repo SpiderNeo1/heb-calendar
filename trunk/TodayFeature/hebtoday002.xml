@@ -274,8 +274,8 @@ rabin.isMovable = 1;
 	// The headline cell
 	text +="<td id=headline background='"+DESIGN_LOCATION+"cal_05"+just+".jpg' width='140' colSpan='3' height='21'><center><b><font size='3'>"
 	text +="<div id=picture> <img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/today.png' width=40 height=40> </div>"
-	//text +=arrM[currMonth]
-	//text +="&nbsp;&nbsp;"+currYear
+	text +=arrM[currMonth]
+	text +="&nbsp;&nbsp;"+currYear
 	// The > cell
 	text +="<td id=nextmonth background='"+DESIGN_LOCATION+"cal_04"+just+".jpg' rowspan='2' colSpan='1' width='33' height='38' align='"+alNext+"'>"
 	text +="<a href='javascript:changedate(1,0)'><img src='"+DESIGN_LOCATION+"but_06"+just+".jpg' onmousedown='this.src=butB06.src' onmouseup='this.src=but06.src' border='0' /></a></td>"
@@ -461,7 +461,7 @@ text+="</table>"
 		document.getElementById("headline").style.fontWeight='bold'
 		document.getElementById("headline").align='center'
 		document.getElementById("headline").bgColor=HEADLINEBACKCOLOR
-		document.getElementById("headline").innerHTML=arrM[currMonth]+ "&nbsp;&nbsp;"+currYear
+		document.getElementById("headline").innerHTML="<div id=picture> <img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/today.png' width=40 height=40> </div>" + arrM[currMonth]+ "&nbsp;&nbsp;"+currYear
 	}
 
 /**
