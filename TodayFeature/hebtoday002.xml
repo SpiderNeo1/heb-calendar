@@ -355,7 +355,7 @@ text+="</table>"
 	/* TOOLTIP CODE END. */
 
 	/* Today Image Code */
-text +="<div id=picture> <img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/today.png' width=500 height=500 style='position: absolute; font-size:0.1em'> </div>"	
+text +="<div id=picture> IMG SRC='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/today.png' BORDER=0>" //<img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/today.png' width=500 height=500 style='position: absolute; font-size:0.1em'> </div>"	
 
 	
 	
@@ -367,8 +367,8 @@ text +="<div id=picture> <img src='http://heb-calendar.googlecode.com/svn/trunk/
 	msg = new _IG_MiniMessage(__MODULE_ID__, _gel("messageBox"));
 
 	// Set the left and top of image id.
-document.getElementById('picture').style.top = (document.getElementById('headline').offsetTop) + "px"
-document.getElementById('picture').style.left = (document.getElementById('headline').offsetLeft+document.getElementById('headline').offsetWidth) + "px"
+//document.getElementById('picture').style.top = (document.getElementById('headline').offsetTop) + "px"
+//document.getElementById('picture').style.left = (document.getElementById('headline').offsetLeft+document.getElementById('headline').offsetWidth) + "px"
 	
 	// Change the cells calendar according to the current month and year.
 	changeCal();
