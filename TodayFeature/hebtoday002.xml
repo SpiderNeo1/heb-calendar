@@ -355,7 +355,7 @@ text+="</table>"
 	/* TOOLTIP CODE END. */
 
 	/* Today Image Code */
-text +="<div id=picture> <img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/today.png' left: 10px; width=500 height=500 style='position: absolute; font-size:0.1em'> </div>"	
+text +="<div id=picture> <img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/today.png' width=500 height=500 style='position: absolute; font-size:0.1em'> </div>"	
 
 	
 	
