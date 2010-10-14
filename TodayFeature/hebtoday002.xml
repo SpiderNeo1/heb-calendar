@@ -367,9 +367,9 @@ text +="<div id=picture> <img src='http://heb-calendar.googlecode.com/svn/trunk/
 	msg = new _IG_MiniMessage(__MODULE_ID__, _gel("messageBox"));
 
 	// Set the left and top of image id.
-docment.getElementById("picture").top = docment.getElementById("headline").top
-docment.getElementById("picture").left = docment.getElementById("headline").left
-alert(docment.getElementById("headline").left)
+docment.getElementById("picture").style.top = docment.getElementById("headline").style.top
+docment.getElementById("picture").style.left = docment.getElementById("headline").style.left
+alert(docment.getElementById("headline")..style.left)
 alert("test");
 	
 	
