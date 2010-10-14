@@ -356,8 +356,6 @@ text+="</table>"
 
 	/* Today Image Code */
 text +="<div id=picture> <img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/today.png' width=20 height=20 style='position: absolute; font-size:0.1em'> </div>"	
-docment.getElementById("picture").top = docment.getElementById("headline").top
-docment.getElementById("picture").left = docment.getElementById("headline").left
 
 	
 	
@@ -367,6 +365,12 @@ docment.getElementById("picture").left = docment.getElementById("headline").left
 
 	_gel(tabId).innerHTML=text;
 	msg = new _IG_MiniMessage(__MODULE_ID__, _gel("messageBox"));
+
+	// Set the left and top of image id.
+docment.getElementById("picture").top = docment.getElementById("headline").top
+docment.getElementById("picture").left = docment.getElementById("headline").left
+	
+	
 	// Change the cells calendar according to the current month and year.
 	changeCal();
 	changeCalHebrew();
