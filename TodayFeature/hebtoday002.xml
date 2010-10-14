@@ -273,7 +273,6 @@ rabin.isMovable = 1;
 	text +="<a href='javascript:changedate(-1,0)'><img src='"+DESIGN_LOCATION+"but_04"+just+".jpg' onmousedown='this.src=butB04.src' onmouseup='this.src=but04.src' border='0' /></a></td>"
 	// The headline cell
 	text +="<td id=headline background='"+DESIGN_LOCATION+"cal_05"+just+".jpg' width='140' colSpan='3' height='21'><center><b><font size='3'>"
-	text +="<div id=picture> <img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/today.png' width=40 height=40> </div>"
 	text +=arrM[currMonth]
 	text +="&nbsp;&nbsp;"+currYear
 	// The > cell
@@ -355,6 +354,16 @@ text+="</table>"
 
 	/* TOOLTIP CODE END. */
 
+	/* Today Image Code */
+text +="<div id=picture> <img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/today.png' width=20 height=20 style='position: absolute; font-size:0.1em'> </div>"	
+docment.getElementById("picture").top = docment.getElementById("headline").top
+docment.getElementById("picture").left = docment.getElementById("headline").left
+
+	
+	
+	/* Today Image Code End */
+	
+	
 
 	_gel(tabId).innerHTML=text;
 	msg = new _IG_MiniMessage(__MODULE_ID__, _gel("messageBox"));
@@ -461,7 +470,8 @@ text+="</table>"
 		document.getElementById("headline").style.fontWeight='bold'
 		document.getElementById("headline").align='center'
 		document.getElementById("headline").bgColor=HEADLINEBACKCOLOR
-		document.getElementById("headline").innerHTML="<div id=picture> <img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/today.png' width=40 height=40> </div>" + arrM[currMonth]+ "&nbsp;&nbsp;"+currYear
+		document.getElementById("headline").innerHTML=arrM[currMonth]+ "&nbsp;&nbsp;"+currYear
+		
 	}
 
 /**
