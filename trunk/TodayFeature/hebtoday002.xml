@@ -333,7 +333,7 @@ rabin.isMovable = 1;
 	text += "</table>"
 	//text+="<div align=center>"
 
-text+="<table id='FeatureBoxOuter' margin-left:'auto' margin-right:'auto'  bordercolor="+BORDER_COLOR+" cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:hidden' border='1'>"
+text+="<table id='FeatureBoxOuter' margin-left:'auto' margin-right:'auto'  bordercolor="+BORDER_COLOR+" cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:hidden;' border='1'>"
 text+="<tr>"
 text+="<td bgcolor="+HINTCOLORBACKGROUND+"><font face='Arial' size='2' weight='bold'> <div id='featureBox'>"
 text+="</div></font></td>"
@@ -343,7 +343,7 @@ text+="</table>"
 
 // Clock Code
 
-text+="<table id='ClockBoxOuter' margin-left:'auto' margin-right:'auto'  bordercolor="+BORDER_COLOR+" cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:hidden'  border='1'>"
+text+="<table id='clockBoxOuter' margin-left:'auto' margin-right:'auto'  bordercolor="+BORDER_COLOR+" cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:hidden;'  border='1'>"
 text+="<tr>"
 text+="<td bgcolor="+HINTCOLORBACKGROUND+"><font face='Arial' size='2' weight='bold'> <div id='clockBox'>"
 text+="</div></font></td>"
