@@ -346,6 +346,10 @@ text+="</table>"
 
 // Leave an empty line.
 text+="<table id='emptyline' margin-left:'auto' margin-right:'auto'  bordercolor='white' cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:visible;'  border='1'>"
+text+="<tr>"
+text+="<td bgcolor="+HINTCOLORBACKGROUND+"><font face='Arial' size='2' weight='bold'> <div id='clockBox'>"
+text+="</div></font></td>"
+text+="</tr>"
 text+="</table>"
 
 // Clock Code
@@ -388,8 +392,8 @@ text +="<div id=picture style='position: absolute;'> <a href='javascript:firstRu
 	changeCal();
 	
 	// Set the left and top of image id.
-	document.getElementById('picture').style.top = (document.getElementById('headline').offsetTop + 55) + "px"
-	document.getElementById('picture').style.left = (document.getElementById('headline').offsetLeft+document.getElementById('headline').offsetWidth+103 ) + "px"
+	document.getElementById('picture').style.top = (document.getElementById('prevmonth').offsetTop + 55) + "px"
+	document.getElementById('picture').style.left = (document.getElementById('prevmonth').offsetLeft+document.getElementById('prevmonth').offsetWidth+103 ) + "px"
 	
 	changeCalHebrew();
 	// Changes the middle tab's name to "הוספת אירוע"
