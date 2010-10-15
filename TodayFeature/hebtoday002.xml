@@ -32,7 +32,7 @@
   	<EnumValue value="Show"/>    
   	<EnumValue value="Don't Show"/>
   </UserPref>
-  <UserPref name="clock" display_name="Display Shabbath Times" default_value="Show" datatype="enum">    
+  <UserPref name="clock" display_name="Display Clock" default_value="Show" datatype="enum">    
   	<EnumValue value="Show"/>    
   	<EnumValue value="Don't Show"/>
   </UserPref>  
