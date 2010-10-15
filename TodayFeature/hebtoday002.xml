@@ -275,19 +275,19 @@ rabin.isMovable = 1;
 	text +="<td id=prevyear background='"+DESIGN_LOCATION+"cal_03"+just+".jpg' rowspan='2' colSpan='2' width='45' height='38' align='"+alPrev+"'>"
 	text +="<a href='javascript:changedate(0,-1)'><img src='"+DESIGN_LOCATION+"but_02"+just+".jpg' onmousedown='this.src=butB02.src' onmouseup='this.src=but02.src' border='0' /></a></td>"
 	// The < cell.
-	text +="<td id=prevmonth background='"+DESIGN_LOCATION+"cal_04"+just+".jpg' rowspan='2' colSpan='2' width='33' height='38' align='"+alPrev+"'>"
+	text +="<td id=prevmonth background='"+DESIGN_LOCATION+"cal_04"+just+".jpg' rowspan='2' colSpan='1' width='33' height='38' align='"+alPrev+"'>"
 	text +="<a href='javascript:changedate(-1,0)'><img src='"+DESIGN_LOCATION+"but_04"+just+".jpg' onmousedown='this.src=butB04.src' onmouseup='this.src=but04.src' border='0' /></a></td>"
 
 	// The return to today cell.
-	text +="<td id=picture background='"+DESIGN_LOCATION+"cal_04"+just+".jpg' rowspan='1' colSpan='1' width='14' height='38' align='"+alPrev+"'>"
+	text +="<td id=picture background='"+DESIGN_LOCATION+"cal_04"+just+".jpg' rowspan='2' colSpan='1' width='14' height='38' align='"+alPrev+"'>"
 	text +="<a href='javascript:firstRun();changedate(0,0)'><img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/img1fin.gif' width='14' border='0' /></a></div>"
 
 	// The headline cell
-	text +="<td id=headline background='"+DESIGN_LOCATION+"cal_05"+just+".jpg' width='140' colSpan='5' height='21'><center><b><font size='3'>"
+	text +="<td id=headline background='"+DESIGN_LOCATION+"cal_05"+just+".jpg' width='140' colSpan='7' height='21'><center><b><font size='3'>"
 	text +=arrM[currMonth]
 	text +="&nbsp;&nbsp;"+currYear
 	// The > cell
-	text +="<td id=nextmonth background='"+DESIGN_LOCATION+"cal_04"+just+".jpg' rowspan='2' colSpan='2' width='33' height='38' align='"+alNext+"'>"
+	text +="<td id=nextmonth background='"+DESIGN_LOCATION+"cal_04"+just+".jpg' rowspan='2' colSpan='1' width='33' height='38' align='"+alNext+"'>"
 	text +="<a href='javascript:changedate(1,0)'><img src='"+DESIGN_LOCATION+"but_06"+just+".jpg' onmousedown='this.src=butB06.src' onmouseup='this.src=but06.src' border='0' /></a></td>"
 	// The >> cell
 	text +="<td id=nextyear valign='Middle' background='"+DESIGN_LOCATION+"cal_07"+just+".jpg' rowspan='2' colSpan='2' width='48' height='38'  align='"+alNext+"'>"
