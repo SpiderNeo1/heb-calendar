@@ -283,14 +283,14 @@ rabin.isMovable = 1;
 	text +="<a href='javascript:firstRun();changedate(0,0)'><img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/img1fin.gif' width='14' border='0' /></a></div>"
 
 	// The headline cell
-	text +="<td id=headline background='"+DESIGN_LOCATION+"cal_05"+just+".jpg' width='150' colSpan='5' height='21'><center><b><font size='3'>"
+	text +="<td id=headline background='"+DESIGN_LOCATION+"cal_05"+just+".jpg' width='126' colSpan='5' height='21'><center><b><font size='3'>"
 	text +=arrM[currMonth]
 	text +="&nbsp;&nbsp;"+currYear
 	// The > cell
 	text +="<td id=nextmonth background='"+DESIGN_LOCATION+"cal_04"+just+".jpg' rowspan='2' colSpan='2' width='33' height='38' align='"+alNext+"'>"
 	text +="<a href='javascript:changedate(1,0)'><img src='"+DESIGN_LOCATION+"but_06"+just+".jpg' onmousedown='this.src=butB06.src' onmouseup='this.src=but06.src' border='0' /></a></td>"
 	// The >> cell
-	text +="<td id=nextyear valign='Middle' background='"+DESIGN_LOCATION+"cal_07"+just+".jpg' rowspan='2' colSpan='2' width='49' height='38'  align='"+alNext+"'>"
+	text +="<td id=nextyear valign='Middle' background='"+DESIGN_LOCATION+"cal_07"+just+".jpg' rowspan='2' colSpan='2' width='45' height='38'  align='"+alNext+"'>"
 	text +="<a href='javascript:changedate(0,1)'><img src='"+DESIGN_LOCATION+"but_08"+just+".jpg' onmousedown='this.src=butB08.src' onmouseup='this.src=but08.src' border='0' /></a></td>"
 	text +="</tr><tr>"
 	// The hebrew month headline (headlineheb)
