@@ -399,8 +399,7 @@ document.getElementById('picture').style.left = (document.getElementById('headli
     //Calculate difference btw the two dates, and convert to days
     if(Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) < 30)
     {
-    	document.getElementById('featureBox').innerHTML="<a href='http://hebcalendar.blogspot.com/'  target='_blank'>תיק�
-        �ן עבור מעבר בין חודשים ובין שנים</a>";
+		document.getElementById('featureBox').innerHTML="<a href='http://hebcalendar.blogspot.com/'  target='_blank'>הוספת כפתור לחזרה להיום והצגת שעון</a>";
      }
 	setTimeout("autoAdjustHeight()",500);
 	RunningForTheFirstTime=false;
