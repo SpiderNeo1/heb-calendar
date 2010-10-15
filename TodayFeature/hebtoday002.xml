@@ -411,14 +411,14 @@ text+="</table>"
 
 
 	// Feature box will be displayed for 30 days.
-	var dateFeatureAdded = new Date(2010,8,14)
+	var dateFeatureAdded = new Date(2010,10,15)
 	var todaysDate = new Date()
 	
     // Value of one day in seconds - for calculation of difference between dates.
     var one_day=1000*60*60*24
 
     //Calculate difference btw the two dates, and convert to days
-    if(Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) < 30)
+    if(Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) < 31)
     {
 		document.getElementById('featureBoxOuter').style.visibility = "visible";
 		document.getElementById('featureBox').innerHTML="<a href='http://hebcalendar.blogspot.com/'  target='_blank'>הוספת כפתור לחזרה להיום והצגת שעון</a>";
