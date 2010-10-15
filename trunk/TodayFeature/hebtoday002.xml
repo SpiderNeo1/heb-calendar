@@ -344,7 +344,10 @@ text+="</div></font></td>"
 text+="</tr>"
 text+="</table>"
 
-text+="<br></br>"
+// Leave an empty line.
+text+="<table id='emptyline' margin-left:'auto' margin-right:'auto'  bordercolor='white' cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:visible;'  border='1'>"
+text+="</table>"
+
 // Clock Code
 
 text+="<table id='clockBoxOuter' margin-left:'auto' margin-right:'auto'  bordercolor="+BORDER_COLOR+" cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:hidden;'  border='1'>"
