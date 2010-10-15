@@ -277,8 +277,13 @@ rabin.isMovable = 1;
 	// The < cell.
 	text +="<td id=prevmonth background='"+DESIGN_LOCATION+"cal_04"+just+".jpg' rowspan='2' colSpan='1' width='33' height='38' align='"+alPrev+"'>"
 	text +="<a href='javascript:changedate(-1,0)'><img src='"+DESIGN_LOCATION+"but_04"+just+".jpg' onmousedown='this.src=butB04.src' onmouseup='this.src=but04.src' border='0' /></a></td>"
+
+	// The return to today cell.
+	text +="<td id=picture background='"+DESIGN_LOCATION+"cal_04"+just+".jpg' rowspan='2' colSpan='1' width='33' height='38' align='"+alPrev+"'>"
+	text +="<a href='javascript:firstRun();changedate(0,0)'><img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/img1fin.gif'border='0' /></a></td>"
 	// The headline cell
-	text +="<td id=headline background='"+DESIGN_LOCATION+"cal_05"+just+".jpg' width='140' colSpan='3' height='21'><center><b><font size='3'>"
+
+	text +="<td id=headline background='"+DESIGN_LOCATION+"cal_05"+just+".jpg' width='103' colSpan='3' height='21'><center><b><font size='3'>"
 	text +=arrM[currMonth]
 	text +="&nbsp;&nbsp;"+currYear
 	// The > cell
@@ -366,7 +371,7 @@ text+="</table>"
 // End clock code.
 
 		/* Today Image Code */
-text +="<div id=picture style='position: absolute;'> <a href='javascript:firstRun();changedate(0,0)'> <IMG SRC='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/img1fin.gif' width = 15 style='position: absolute;' BORDER=0></a></div>"
+
 		
 	/* Today Image Code End */
 
@@ -2471,10 +2476,7 @@ text+="</table>"
 
 	function autoAdjustHeight(){
 		_IG_AdjustIFrameHeight();
-		
-		document.getElementById('picture').style.top = (document.getElementById('headl').offsetTop + 15) + "px"
-		document.getElementById('picture').style.left = (document.getElementById('headl').offsetLeft+55) + "px"//document.getElementById('headl').offsetWidth-30 ) + "px"		
-		
+			
 	}
 		
 	//====================================== END OF UTILS - FREQUENTLY USED METHODS ===================================
