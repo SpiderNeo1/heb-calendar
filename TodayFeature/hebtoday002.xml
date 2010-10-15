@@ -2469,7 +2469,7 @@ text+="</table>"
 	function autoAdjustHeight(){
 		_IG_AdjustIFrameHeight();
 	document.getElementById('picture').style.top = (document.getElementById('headline').offsetTop + 55) + "px"
-	document.getElementById('picture').style.left = (document.getElementById('headline').offsetLeft+document.getElementById('headline').offsetWidth+103 ) + "px"		
+	document.getElementById('picture').style.left = (document.getElementById('headline').offsetLeft+document.getElementById('headline').offsetWidth+10 ) + "px"		
 	}
 		
 	//====================================== END OF UTILS - FREQUENTLY USED METHODS ===================================
