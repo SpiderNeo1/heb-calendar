@@ -268,6 +268,11 @@ rabin.isMovable = 1;
 	text="<br><center>"
 
 	text += "<table id='headl' borderColor="+BORDER_COLOR+" cellSpacing='0' cellPadding='0' style='border-collapse: collapse' border='0'>"
+		/* Today Image Code */
+text +="<div id=picture style='position: absolute;'> <a href='javascript:firstRun();changedate(0,0)'> <IMG SRC='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/img1fin.gif' width = 15 style='position: absolute;' BORDER=0></a></div>"
+		
+	/* Today Image Code End */
+
 	text +="<tbody><tr><td><table cellSpacing='0' cellPadding='0' border='0' bgcolor="+LIGHTBLUE_COLOR_CELLBACKGROUND+" width='290'><tbody><tr>"
 	// The << cell.
 	text +="<td id=prevyear background='"+DESIGN_LOCATION+"cal_03"+just+".jpg' rowspan='2' colSpan='1' width='45' height='38' align='"+alPrev+"'>"
@@ -347,7 +352,7 @@ text+="</table>"
 // Leave an empty line.
 text+="<table id='emptyline' margin-left:'auto' margin-right:'auto'  bordercolor='white' cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:visible;'  border='1'>"
 text+="<tr>"
-text+="<td bgcolor="+HINTCOLORBACKGROUND+"><font face='Arial' size='2' weight='bold'> <div id='clockBox'>"
+text+="<td bgcolor='white'><font face='Arial' size='1' weight='bold'> <div id='emptylineinner'> "
 text+="</div></font></td>"
 text+="</tr>"
 text+="</table>"
@@ -378,10 +383,6 @@ text+="</table>"
 
 	/* TOOLTIP CODE END. */
 
-	/* Today Image Code */
-text +="<div id=picture style='position: absolute;'> <a href='javascript:firstRun();changedate(0,0)'> <IMG SRC='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/img1fin.gif' width = 15 style='position: absolute;' BORDER=0></a></div>"
-		
-	/* Today Image Code End */
 	
 	
 
