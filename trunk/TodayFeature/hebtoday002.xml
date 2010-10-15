@@ -32,6 +32,10 @@
   	<EnumValue value="Show"/>    
   	<EnumValue value="Don't Show"/>
   </UserPref>
+  <UserPref name="clock" display_name="Display Clock" default_value="Show" datatype="enum">    
+  	<EnumValue value="Show"/>    
+  	<EnumValue value="Don't Show"/>
+  </UserPref>  
   <UserPref name="mylist" display_name="Add Events" datatype="hidden"/>
 	<Content type="html">     
 	<![CDATA[
@@ -340,6 +344,19 @@ text+="</div></font></td>"
 text+="</tr>"
 text+="</table>"
 
+
+// Clock Code
+
+text+="<table id='ClockBoxOuter' margin-left:'auto' margin-right:'auto'  bordercolor="+BORDER_COLOR+" cellspacing='0' cellpadding='2' style=' border-collapse: collapse ' border='1'>"
+text+="<tr>"
+text+="<td bgcolor="+HINTCOLORBACKGROUND+"><font face='Arial' size='2' weight='bold'> <div id='clockBox'>"
+text+="</div></font></td>"
+text+="</tr>"
+text+="</table>"
+
+// End clock code.
+
+
 //text+="</div>"
 	text+="<div id='messageBox' dir='rtl'></div>"
 	text+="<div id='googleAdsense' dir='rtl' style='position: absolute; font-size:0.1em;visibility:hidden;'>סוכות, poker, calendar, holidays</div>"
@@ -355,9 +372,8 @@ text+="</table>"
 	/* TOOLTIP CODE END. */
 
 	/* Today Image Code */
-text +="<div id=picture style='position: absolute;'> <a href='javascript:firstRun();changedate(0,0)'> <IMG SRC='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/img1fin.gif' width = 13 style='position: absolute;' BORDER=0></a></div>"
-	
-	
+text +="<div id=picture style='position: absolute;'> <a href='javascript:firstRun();changedate(0,0)'> <IMG SRC='http://heb-calendar.googlecode.com/svn/trunk/Today/img1fin.gif' width = 15 style='position: absolute;' BORDER=0></a></div>"
+		
 	/* Today Image Code End */
 	
 	
@@ -376,9 +392,30 @@ document.getElementById('picture').style.left = (document.getElementById('headli
 	if (!RunningForTheFirstTime) {
 		tabs.getTabs()[1].getNameContainer().innerHTML = "הוספת אירוע";
 	}
-	document.getElementById('featureBox').innerHTML="<a href='http://hebcalendar.blogspot.com/'  target='_blank'>תיקון עבור מעבר בין חודשים ובין שנים</a>";
+	
+	// Feature box will be displayed for 30 days.
+	var dateFeatureAdded = new Date(2010,10,14)
+	var todaysDate = new Date()
+	
+    // Value of one day in seconds - for calculation of difference between dates.
+    var one_day=1000*60*60*24
+
+    //Calculate difference btw the two dates, and convert to days
+    if(Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) < 30)
+    {
+    	document.getElementById('featureBox').innerHTML="<a href='http://hebcalendar.blogspot.com/'  target='_blank'>תיק�
+        �ן עבור מעבר בין חודשים ובין שנים</a>";
+     }
 	setTimeout("autoAdjustHeight()",500);
 	RunningForTheFirstTime=false;
+	
+	// If clock should be displayed set time and interval.
+	if (prefs.getString("clock")=="Show")
+	{
+	   updateClock()
+	   setInterval('updateClock()', 60000)
+	}
+	
 	
 	// Disable ability to select.
 	var alltables=document.getElementsByTagName("table")
@@ -647,6 +684,32 @@ document.getElementById('picture').style.left = (document.getElementById('headli
 		  return adWords;
 	 }
 
+	function updateClock ( )
+    {
+      var currentTime = new Date ( );
+    
+      var currentHours = currentTime.getHours ( );
+      var currentMinutes = currentTime.getMinutes ( );
+    
+      // Pad the minutes and seconds with leading zeros, if required
+      currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+    
+      // Choose either "AM" or "PM" as appropriate
+      var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+    
+      // Convert the hours component to 12-hour format if needed
+      currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+    
+      // Convert an hours component of "0" to "12"
+      currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+    
+      // Compose the string for display
+      var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+    
+      // Update the time display
+      document.getElementById("clockBox").innerHTML = currentTimeString;
+    }
+	
 	
 	/*
 	 * This function handles the style of different cells based on their type.
