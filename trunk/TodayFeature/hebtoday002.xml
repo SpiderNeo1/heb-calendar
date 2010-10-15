@@ -393,6 +393,11 @@ text+="</table>"
 	changeCal();
 	
 	// Set the left and top of image id.
+	alert((document.getElementById('prevmonth').offsetTop)
+	alert((document.getElementById('prevmonth').Top)
+	alert((document.getElementById('prevmonth').offsetLeft)
+	alert((document.getElementById('prevmonth').offsetWidth)	
+	
 	document.getElementById('picture').style.top = (document.getElementById('prevmonth').offsetTop + 55) + "px"
 	document.getElementById('picture').style.left = (document.getElementById('prevmonth').offsetLeft+document.getElementById('prevmonth').offsetWidth+103 ) + "px"
 	
