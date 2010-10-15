@@ -705,7 +705,7 @@ document.getElementById('picture').style.left = (document.getElementById('headli
       currentHours = ( currentHours == 0 ) ? 12 : currentHours;
     
       // Compose the string for display
-      var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+      var currentTimeString = currentHours + ":" + currentMinutes + ":" + timeOfDay;
     
 		alert(currentTimeString);
 	
