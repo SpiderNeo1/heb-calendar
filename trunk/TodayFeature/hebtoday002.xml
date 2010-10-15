@@ -275,7 +275,7 @@ rabin.isMovable = 1;
 	text +="<td id=prevyear background='"+DESIGN_LOCATION+"cal_03"+just+".jpg' rowspan='2' colSpan='1' width='45' height='38' align='"+alPrev+"'>"
 	text +="<a href='javascript:changedate(0,-1)'><img src='"+DESIGN_LOCATION+"but_02"+just+".jpg' onmousedown='this.src=butB02.src' onmouseup='this.src=but02.src' border='0' /></a></td>"
 	// The < cell.
-	text +="<td id=prevmonth background='"+DESIGN_LOCATION+"cal_04"+just+".jpg' rowspan='2' colSpan='1' width='33' height='38' align='"+alPrev+"'>"
+	text +="<td id=prevmonth background='"+DESIGN_LOCATION+"cal_04"+just+".jpg' rowspan='2' colSpan='1' width='33' height='38' align='right'>"
 	text +="<a href='javascript:changedate(-1,0)'><img src='"+DESIGN_LOCATION+"but_04"+just+".jpg' onmousedown='this.src=butB04.src' onmouseup='this.src=but04.src' border='0' /></a></td>"
 
 	// The return to today cell.
