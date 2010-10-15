@@ -2470,6 +2470,9 @@ text+="</table>"
 		_IG_AdjustIFrameHeight();
 	document.getElementById('picture').style.top = (document.getElementById('prevmonth').offsetTop + 55) + "px"
 	document.getElementById('picture').style.left = (document.getElementById('prevmonth').offsetLeft+document.getElementById('prevmonth').offsetWidth-30 ) + "px"		
+	alert( (document.getElementById('prevmonth').offsetTop + 55) )
+	alert (document.getElementById('prevmonth').offsetLeft)
+	alert(document.getElementById('prevmonth').offsetWidth)
 	}
 		
 	//====================================== END OF UTILS - FREQUENTLY USED METHODS ===================================
