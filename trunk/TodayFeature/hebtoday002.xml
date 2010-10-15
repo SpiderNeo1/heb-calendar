@@ -283,7 +283,7 @@ rabin.isMovable = 1;
 	text +="<a href='javascript:firstRun();changedate(0,0)'><img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/img1fin.gif' width='14' border='0' /></a></td>"
 	// The headline cell
 
-	text +="<td id=headline background='"+DESIGN_LOCATION+"cal_05"+just+".jpg' width='140' colSpan='3' height='21'><center><b><font size='3'>"
+	text +="<td id=headline background='"+DESIGN_LOCATION+"cal_05"+just+".jpg' width='150' colSpan='3' height='21'><center><b><font size='3'>"
 	text +=arrM[currMonth]
 	text +="&nbsp;&nbsp;"+currYear
 	// The > cell
