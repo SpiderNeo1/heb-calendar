@@ -269,7 +269,7 @@ rabin.isMovable = 1;
 
 	text += "<table id='headl' borderColor="+BORDER_COLOR+" cellSpacing='0' cellPadding='0' style='border-collapse: collapse' border='0'>"
 		/* Today Image Code */
-text +="<div id=picture style='position: absolute;'> <a href='javascript:firstRun();changedate(0,0)'> <IMG SRC='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/img1fin.gif' width = 15 style='position: absolute;' BORDER=0></a></div>"
+text +="<div id=picture style='position: relative;'> <a href='javascript:firstRun();changedate(0,0)'> <IMG SRC='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/img1fin.gif' width = 15 style='position: absolute;' BORDER=0></a></div>"
 		
 	/* Today Image Code End */
 
