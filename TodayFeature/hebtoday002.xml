@@ -32,6 +32,10 @@
   	<EnumValue value="Show"/>    
   	<EnumValue value="Don't Show"/>
   </UserPref>
+  <UserPref name="clock" display_name="Display Shabbath Times" default_value="Show" datatype="enum">    
+  	<EnumValue value="Show"/>    
+  	<EnumValue value="Don't Show"/>
+  </UserPref>  
   <UserPref name="mylist" display_name="Add Events" datatype="hidden"/>
 	<Content type="html">     
 	<![CDATA[
@@ -368,7 +372,7 @@ text+="</table>"
 	/* TOOLTIP CODE END. */
 
 	/* Today Image Code */
-text +="<div id=picture style='position: absolute;'> <a href='javascript:firstRun();changedate(0,0)'> <IMG SRC='http://heb-calendar.googlecode.com/svn/trunk/Today/img1fin.gif' width = 15 style='position: absolute;' BORDER=0></a></div>"
+text +="<div id=picture style='position: absolute;'> <a href='javascript:firstRun();changedate(0,0)'> <IMG SRC='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/img1fin.gif' width = 15 style='position: absolute;' BORDER=0></a></div>"
 		
 	/* Today Image Code End */
 	
