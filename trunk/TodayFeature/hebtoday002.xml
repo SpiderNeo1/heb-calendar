@@ -333,7 +333,7 @@ rabin.isMovable = 1;
 	text += "</table>"
 	//text+="<div align=center>"
 
-text+="<table id='FeatureBoxOuter' margin-left:'auto' margin-right:'auto'  bordercolor="+BORDER_COLOR+" cellspacing='0' cellpadding='2' style=' border-collapse: collapse ' border='1'>"
+text+="<table id='FeatureBoxOuter' margin-left:'auto' margin-right:'auto'  bordercolor="+BORDER_COLOR+" cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:hidden' border='1'>"
 text+="<tr>"
 text+="<td bgcolor="+HINTCOLORBACKGROUND+"><font face='Arial' size='2' weight='bold'> <div id='featureBox'>"
 text+="</div></font></td>"
@@ -343,7 +343,7 @@ text+="</table>"
 
 // Clock Code
 
-text+="<table id='ClockBoxOuter' margin-left:'auto' margin-right:'auto'  bordercolor="+BORDER_COLOR+" cellspacing='0' cellpadding='2' style=' border-collapse: collapse ' border='1'>"
+text+="<table id='ClockBoxOuter' margin-left:'auto' margin-right:'auto'  bordercolor="+BORDER_COLOR+" cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:hidden'  border='1'>"
 text+="<tr>"
 text+="<td bgcolor="+HINTCOLORBACKGROUND+"><font face='Arial' size='2' weight='bold'> <div id='clockBox'>"
 text+="</div></font></td>"
@@ -399,6 +399,7 @@ document.getElementById('picture').style.left = (document.getElementById('headli
     //Calculate difference btw the two dates, and convert to days
     if(Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) < 30)
     {
+		document.getElementById('featureBoxOuter').style.visibility = "visible";
 		document.getElementById('featureBox').innerHTML="<a href='http://hebcalendar.blogspot.com/'  target='_blank'>הוספת כפתור לחזרה להיום והצגת שעון</a>";
      }
 	setTimeout("autoAdjustHeight()",500);
@@ -407,6 +408,7 @@ document.getElementById('picture').style.left = (document.getElementById('headli
 	// If clock should be displayed set time and interval.
 	if (prefs.getString("clock")=="Show")
 	{
+	   document.getElementById('clockBoxOuter').style.visibility = "visible";
 	   updateClock()
 	   setInterval('updateClock()', 60000)
 	}
@@ -701,6 +703,8 @@ document.getElementById('picture').style.left = (document.getElementById('headli
       // Compose the string for display
       var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
     
+		alert(currentTimeString);
+	
       // Update the time display
       document.getElementById("clockBox").innerHTML = currentTimeString;
     }
