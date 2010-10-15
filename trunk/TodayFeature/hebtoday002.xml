@@ -290,7 +290,7 @@ rabin.isMovable = 1;
 	text +="<td id=nextmonth background='"+DESIGN_LOCATION+"cal_04"+just+".jpg' rowspan='2' colSpan='2' width='33' height='38' align='"+alNext+"'>"
 	text +="<a href='javascript:changedate(1,0)'><img src='"+DESIGN_LOCATION+"but_06"+just+".jpg' onmousedown='this.src=butB06.src' onmouseup='this.src=but06.src' border='0' /></a></td>"
 	// The >> cell
-	text +="<td id=nextyear valign='Middle' background='"+DESIGN_LOCATION+"cal_07"+just+".jpg' rowspan='2' colSpan='2' width='48' height='38'  align='"+alNext+"'>"
+	text +="<td id=nextyear valign='Middle' background='"+DESIGN_LOCATION+"cal_07"+just+".jpg' rowspan='2' colSpan='2' width='49' height='38'  align='"+alNext+"'>"
 	text +="<a href='javascript:changedate(0,1)'><img src='"+DESIGN_LOCATION+"but_08"+just+".jpg' onmousedown='this.src=butB08.src' onmouseup='this.src=but08.src' border='0' /></a></td>"
 	text +="</tr><tr>"
 	// The hebrew month headline (headlineheb)
