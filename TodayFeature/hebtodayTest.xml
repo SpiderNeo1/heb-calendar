@@ -355,7 +355,8 @@ text+="</table>"
 	/* TOOLTIP CODE END. */
 
 	/* Today Image Code */
-text +="<div id=picture style='position: absolute;'> <a href='javascript:firstRun();changedate(0,0)'> <IMG SRC='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/img1fin.gif' width = 17 style='position: absolute;' BORDER=0></a></div>"
+text +="<div id=picture style='position: absolute;'> <IMG SRC='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/Today.gif' width = 50 height = 50 style='position: absolute;' BORDER=0></div>" //<img src='http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/today.png' width=500 height=500 style='position: absolute; font-size:0.1em'> </div>"	
+
 	
 	
 	/* Today Image Code End */
@@ -366,8 +367,8 @@ text +="<div id=picture style='position: absolute;'> <a href='javascript:firstRu
 	msg = new _IG_MiniMessage(__MODULE_ID__, _gel("messageBox"));
 
 	// Set the left and top of image id.
-document.getElementById('picture').style.top = (document.getElementById('headline').offsetTop + 55) + "px"
-document.getElementById('picture').style.left = (document.getElementById('headline').offsetLeft+document.getElementById('headline').offsetWidth+103 ) + "px"
+document.getElementById('picture').style.top = (document.getElementById('headline').offsetTop + 10) + "px"
+document.getElementById('picture').style.left = (document.getElementById('headline').offsetLeft+document.getElementById('headline').offsetWidth+80 ) + "px"
 	
 	// Change the cells calendar according to the current month and year.
 	changeCal();
