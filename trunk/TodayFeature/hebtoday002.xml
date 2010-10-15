@@ -628,7 +628,7 @@ text+="</table>"
 		document.getElementById("heb"+i).style.font='10px Arial'
 	}
 	// Create the hebrew heading.
-	document.getElementById("headlineheb").style.font='10.5px Arial'
+	document.getElementById("headlineheb").style.font='10px Arial'
 	var currBeginDate=(GregToHeb(new Date(currYear,currMonth,1))).split("/")
 	var currEndDate=(GregToHeb(new Date(currYear,currMonth,parseInt(maxDays(currMonth,currYear))))).split("/")
 	var currMonthMid=(GregToHeb(new Date(currYear,currMonth,16))).split("/")
