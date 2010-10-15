@@ -678,11 +678,10 @@ text+="</table>"
 	//document.getElementById('googleAdsense').style.visibility = "hidden";	
 	document.getElementById('googleAdsense').innerHTML += googleText;
 	
-	document.getElementById('picture').style.top = (document.getElementById('headl').offsetTop + 15) + "px"
-	document.getElementById('picture').style.left = (document.getElementById('headl').offsetLeft+55) + "px"//document.getElementById('headl').offsetWidth-30 ) + "px"		
 
 	}
 
+	
 	/*
 	 * This function Generates the google ad words. 
 	 */
@@ -2472,6 +2471,10 @@ text+="</table>"
 
 	function autoAdjustHeight(){
 		_IG_AdjustIFrameHeight();
+		
+		document.getElementById('picture').style.top = (document.getElementById('headl').offsetTop + 15) + "px"
+		document.getElementById('picture').style.left = (document.getElementById('headl').offsetLeft+55) + "px"//document.getElementById('headl').offsetWidth-30 ) + "px"		
+		
 	}
 		
 	//====================================== END OF UTILS - FREQUENTLY USED METHODS ===================================
