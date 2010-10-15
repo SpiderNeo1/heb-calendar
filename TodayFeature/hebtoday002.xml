@@ -2468,8 +2468,8 @@ text+="</table>"
 
 	function autoAdjustHeight(){
 		_IG_AdjustIFrameHeight();
-	document.getElementById('picture').style.top = (document.getElementById('headline').offsetTop + 55) + "px"
-	document.getElementById('picture').style.left = (document.getElementById('headline').offsetLeft+document.getElementById('headline').offsetWidth-30 ) + "px"		
+	document.getElementById('picture').style.top = (document.getElementById('prevmonth').offsetTop + 55) + "px"
+	document.getElementById('picture').style.left = (document.getElementById('prevmonth').offsetLeft+document.getElementById('prevmonth').offsetWidth-30 ) + "px"		
 	}
 		
 	//====================================== END OF UTILS - FREQUENTLY USED METHODS ===================================
