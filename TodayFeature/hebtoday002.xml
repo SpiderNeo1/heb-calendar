@@ -294,7 +294,7 @@ rabin.isMovable = 1;
 	text +="<a href='javascript:changedate(0,1)'><img src='"+DESIGN_LOCATION+"but_08"+just+".jpg' onmousedown='this.src=butB08.src' onmouseup='this.src=but08.src' border='0' /></a></td>"
 	text +="</tr><tr>"
 	// The hebrew month headline (headlineheb)
-	text +="<td  background='"+DESIGN_LOCATION+"cal_09"+just+".jpg' width='141' colSpan='5' height='17'><center><b><font size='0.5em' color="+HEADLINEFONT_COLOR+"><span id=headlineheb>"
+	text +="<td  background='"+DESIGN_LOCATION+"cal_09"+just+".jpg' width='141' colSpan='5' height='17'><center><b><font size='10px' color="+HEADLINEFONT_COLOR+"><span id=headlineheb>"
 	text +="אלול תשסז - תשרי תשסח"
 	text +="</span></font></td></tr></tbody></table></table>"
 	text += "<table cellSpacing='0' cellPadding='0' style='border-collapse: collapse'>"
