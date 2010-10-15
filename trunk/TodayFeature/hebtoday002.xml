@@ -344,7 +344,7 @@ text+="</div></font></td>"
 text+="</tr>"
 text+="</table>"
 
-
+text+="<br>"
 // Clock Code
 
 text+="<table id='clockBoxOuter' margin-left:'auto' margin-right:'auto'  bordercolor="+BORDER_COLOR+" cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:hidden;'  border='1'>"
@@ -705,10 +705,8 @@ document.getElementById('picture').style.left = (document.getElementById('headli
       currentHours = ( currentHours == 0 ) ? 12 : currentHours;
     
       // Compose the string for display
-      var currentTimeString = currentHours + ":" + currentMinutes + ":" + timeOfDay;
+      var currentTimeString = currentHours + ":" + currentMinutes + timeOfDay;
     
-		alert(currentTimeString);
-	
       // Update the time display
       document.getElementById("clockBox").innerHTML = currentTimeString;
     }
