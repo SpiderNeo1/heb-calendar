@@ -50,7 +50,7 @@
 
 	_IG_RegisterOnloadHandler(init);
 // Colour consts
-
+	var chosenLanguage = "hebrew"
 	var BORDER_COLOR='#000000'
 	var LIGHTBLUE_COLOR_CELLBACKGROUND='#c3d9ff'
 	var HEADLINEFONT_COLOR='#ffffff'	
@@ -278,8 +278,15 @@ rabin.isMovable = 1;
 				for (var j = 0; j < nodeList.length ; j++) 
 				{
 					var node= nodeList.item(j);
-					alert(node.nodeName);
-
+					//alert(node.nodeName);
+					if ((chosenLanguage="hebrew") && (node.nodeName == "hebrew"))
+					{
+						var hebrewList = node.item(j).childNodes;								
+						for (var k = 0; k < hebrewList.length ; k++) 
+						{
+							alert(node.nodeName);
+						}
+					}
 				}
 			}
 	   
