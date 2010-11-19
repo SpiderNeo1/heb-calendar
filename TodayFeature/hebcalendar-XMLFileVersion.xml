@@ -265,14 +265,26 @@ rabin.isMovable = 1;
               return;
            }
 		   
-		   var list = response.getElementsByTagName("Language").item(0).childNodes;
-		   alert(list.item(0).nodeValue);
-		   alert(list.item(1));
-
-		   alert(response.getElementsByTagName("roshHashana1").item(0).nodeValue)
-		   alert(response.getElementsByTagName("roshHashana1").item(1).nodeValue)
+		   var list = response.getElementsByTagName("Language");
 		   
-		   alert(list.firstChild.nodeValue);
+		   for (var i = 0; i < itemList.length ; i++) 
+			{
+		
+				 // For each <Language> node, get child nodes.
+				 var nodeList = itemList.item(i).childNodes;
+
+				 // Loop through child nodes. Extract data from the text nodes that are
+				 // the children of the associated name, price, and calories element nodes.
+				for (var j = 0; j < nodeList.length ; j++) 
+				{
+					var node= nodeList.item(j);
+					if (node.nodeName == "HebrewMonths") {
+						alert(node.firstChild.nodeValue);
+					}
+					alert(node.firstChild.nodeValue);
+				}
+			}
+	   
 		   
 		});
 
