@@ -267,9 +267,9 @@ rabin.isMovable = 1;
 		   
 		   var list = response.getElementsByTagName("Language").childNodes;
 		   alert(list);
-		}
+		});
 
-		}
+	}
 		
 	/*
 	 * Initialize dynamic tabs.
