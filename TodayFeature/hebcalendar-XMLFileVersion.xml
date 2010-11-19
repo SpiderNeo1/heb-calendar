@@ -285,7 +285,7 @@ rabin.isMovable = 1;
 						for (var k = 0; k < englishList.length ; k++) 
 						{
 							//alert(hebrewList.item(k).nodeName);
-							if (hebrewList.item(k).nodeName == "HebrewMonths")
+							if (englishList.item(k).nodeName == "HebrewMonths")
 							{
 								arrHebMonths = englishList.item(k).firstChild.nodeValue;
 								alert(arrHebMonths);
