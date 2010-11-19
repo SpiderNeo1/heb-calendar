@@ -277,11 +277,11 @@ rabin.isMovable = 1;
 				 // the children of the associated name, price, and calories element nodes.
 				for (var j = 0; j < nodeList.length ; j++) 
 				{
-					var node= nodeList.item(j);
+					var node = nodeList.item(j);
 					//alert(node.nodeName);
-					if ((chosenLanguage="hebrew") && (node.nodeName == "hebrew"))
+					if ((chosenLanguage == "hebrew") && (node.nodeName == "hebrew"))
 					{
-						var hebrewList = node.item(j).childNodes;								
+						var hebrewList = node.childNodes;								
 						for (var k = 0; k < hebrewList.length ; k++) 
 						{
 							alert(node.nodeName);
