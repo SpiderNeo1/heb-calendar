@@ -287,9 +287,9 @@ rabin.isMovable = 1;
 							//alert(hebrewList.item(k).nodeName);
 							if (englishList.item(k).nodeName == "HebrewMonths")
 							{
-								alert(arrHebMonths);
-								arrHebMonths = englishList.item(k).firstChild.nodeValue;
-								alert(arrHebMonths);
+								var tmp = englishList.item(k).firstChild.nodeValue;
+								arrHebMonths = tmp.split(",");
+								//alert(arrHebMonths);
 							}
 						}
 					}
