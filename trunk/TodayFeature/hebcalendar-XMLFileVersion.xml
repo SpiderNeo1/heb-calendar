@@ -266,7 +266,7 @@ rabin.isMovable = 1;
            }
 		   
 		   var list = response.getElementsByTagName("Language").item(0).childNodes;
-		   alert(list.item(0));
+		   alert(list.item(0).nodeValue);
 		   alert(list.item(1));
 
 		   alert(response.getElementsByTagName("roshHashana1").item(0).nodeValue)
