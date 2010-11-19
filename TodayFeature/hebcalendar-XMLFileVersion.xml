@@ -278,10 +278,8 @@ rabin.isMovable = 1;
 				for (var j = 0; j < nodeList.length ; j++) 
 				{
 					var node= nodeList.item(j);
-					if (node.nodeName == "HebrewMonths") {
-						alert(node.firstChild.nodeValue);
-					}
-					//alert(node.firstChild.nodeValue);
+					alert(node.nodeName);
+
 				}
 			}
 	   
