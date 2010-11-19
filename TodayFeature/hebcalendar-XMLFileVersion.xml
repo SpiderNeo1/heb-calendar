@@ -265,8 +265,13 @@ rabin.isMovable = 1;
               return;
            }
 		   
-		   var list = response.getElementsByTagName("Language").childNodes;
+		   var list = response.getElementsByTagName("Language").item(0).childNodes;
 		   alert(list);
+		   alert(list.nodeValue);
+		   alert(list.firstChild.nodeValue);
+		   
+		   alert(response.getElementsByTagName("roshHashana1").item(0).nodeValue)
+		   alert(response.getElementsByTagName("roshHashana1").item(1).nodeValue)
 		});
 
 	}
