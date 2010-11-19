@@ -279,12 +279,17 @@ rabin.isMovable = 1;
 				{
 					var node = nodeList.item(j);
 					//alert(node.nodeName);
-					if ((chosenLanguage == "hebrew") && (node.nodeName == "hebrew"))
+					if ((chosenLanguage == "hebrew") && (node.nodeName == "english"))
 					{
-						var hebrewList = node.childNodes;								
-						for (var k = 0; k < hebrewList.length ; k++) 
+						var englishList = node.childNodes;								
+						for (var k = 0; k < englishList.length ; k++) 
 						{
-							alert(hebrewList.item(k).nodeName);
+							//alert(hebrewList.item(k).nodeName);
+							if (hebrewList.item(k).nodeName == "HebrewMonths")
+							{
+								arrHebMonths = hebrewList.item(k).firstChild.nodeValue;
+								alert(arrHebMonths);
+							}
 						}
 					}
 				}
