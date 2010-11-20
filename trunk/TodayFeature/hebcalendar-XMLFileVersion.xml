@@ -306,9 +306,9 @@ rabin.isMovable = 1;
 									if (holidayList.item(l).nodeName != null)
 									{
 										alert(holidayList.item(l));
-										var tmp = holidayList.item(l).nodeValue;
+										var tmp = holidayList.item(l).firstChild.nodeValue;
 										alert(tmp);
-										alert(ENUM_Holiday);
+										alert(ENUM_Holidays);
 										ENUM_Holiday[l] = "test";
 										alert(ENUM_Holiday);
 									}
