@@ -62,13 +62,16 @@
 	var OTHERMONTH_FORECOLOR_WITHEVENT='#acacac'	
 	var SHABBATHCELLBACKGROUND_COLOR_FIREFOX='rgb(128, 175, 255)'	
 	var OTHERMONTH_FORECOLOR_WITHEVENT_FIREFOX='rgb(172, 172, 172)'	
+	
+
 // End of colour consts
 	var editingIndex=0;
 	var arrGregMonths = new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
 	var arrComulativeDays = new Array(1, 32, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366);
-	var arrHebDates = new Array("א","ב","ג","ד","ה","ו","ז","ח","ט","י","יא","יב","יג","יד","טו","טז","יז","יח","יט","כ","כא","כב","כג","כד","כה","כו","כז","כח","כט","ל");
+	var arrHebDate = new Array("א","ב","ג","ד","ה","ו","ז","ח","ט","י","יא","יב","יג","יד","טו","טז","יז","יח","יט","כ","כא","כב","כג","כד","כה","כו","כז","כח","כט","ל");
 	var arrHebMonths = new Array("תשרי","חשוון","כסלו","טבת","שבט","אדר א","אדר","ניסן","אייר","סיוון","תמוז","אב","אלול");
 	var arrM = new Array("ינואר","פברואר","מרץ","אפריל","מאי","יוני","יולי","אוגוסט","ספטמבר","אוקטובר","נובמבר","דצמבר");
+	var arrD = new Array("א","ב","ג","ד","ה","ו","ש")
 	var currentGregOrHeb;
 	var prefs = new _IG_Prefs();
 	var msg;
@@ -321,7 +324,7 @@ rabin.isMovable = 1;
 	function writeCalendar(tabId){	
 	editMode=false;
 	currentGregOrHeb="";
-	var arrD = new Array("א","ב","ג","ד","ה","ו","ש")
+
 	var text = ""
 	// Create the table for the calendar.
 	text="<br><center>"
@@ -513,7 +516,7 @@ text+="</table>"
 	 * The following function, changes the Gregorian dates displayed in the calendar.
 	 */
 	function changeCal(){
-	var arrM = new Array("ינואר","פברואר","מרץ","אפריל","מאי","יוני","יולי","אוגוסט","ספטמבר","אוקטובר","נובמבר","דצמבר")
+
 	var now = new Date
 	var dd = now.getDate()
 	currDay = dd
@@ -599,8 +602,7 @@ text+="</table>"
 	dismissMiniMessages();
 	autoAdjustHeight();
 	// Hebrew date array.
-	var arrHebDate = new Array("א","ב","ג","ד","ה","ו","ז","ח","ט","י","יא","יב","יג","יד","טו","טז","יז","יח","יט","כ","כא","כב","כג","כד","כה","כו","כז","כח","כט","ל")
-	var arrHebMonth = arrHebMonths;//new Array("תשרי","חשוון","כסלו","טבת","שבט","אדר א","אדר","ניסן","אייר","סיוון","תמוז","אב","אלול")
+
 	var arrN = new Array(42)
 	// Get the first date that appears in the calendar.
 	var firstDateGregorian=parseInt(getFirstDayGregorian())
@@ -701,25 +703,25 @@ text+="</table>"
 	if (intCurrMonthEnd!=1)
 	{
 		if (IsLeapYear(intCurrYear)){
-			arrHebMonth[6]="אדר ב"
+			arrHebMonths[6]="אדר ב"
 		}
 		// If the hebrew month of the 1st and the last days of the Gregorian month are the same display only
 		// the specific month.
 		if (intCurrMonthBegin==intCurrMonthEnd){
-			document.getElementById("headlineheb").innerHTML=arrHebMonth[intCurrMonthEnd-1] + ' '+Nyear2Hyear(intCurrYear)	
+			document.getElementById("headlineheb").innerHTML=arrHebMonths[intCurrMonthEnd-1] + ' '+Nyear2Hyear(intCurrYear)	
 		}
 		// Fix for specific gregorian months were 3 hebrew months appear (January 1949)
 		else if ((intCurrMonthBegin!=intCurrMonthMid) && (intCurrMonthMid!=intCurrMonthEnd)){
-			document.getElementById("headlineheb").innerHTML=arrHebMonth[intCurrMonthBegin-1]+' - '+arrHebMonth[intCurrMonthMid-1] +' - '+arrHebMonth[intCurrMonthEnd-1] + ' '+Nyear2Hyear(intCurrYear)
+			document.getElementById("headlineheb").innerHTML=arrHebMonths[intCurrMonthBegin-1]+' - '+arrHebMonths[intCurrMonthMid-1] +' - '+arrHebMonths[intCurrMonthEnd-1] + ' '+Nyear2Hyear(intCurrYear)
 		}
 		else // If there are exactly 2 months to be displayed.
 		{
-		document.getElementById("headlineheb").innerHTML=arrHebMonth[intCurrMonthBegin-1]+' - '+arrHebMonth[intCurrMonthEnd-1] + ' '+Nyear2Hyear(intCurrYear)
+		document.getElementById("headlineheb").innerHTML=arrHebMonths[intCurrMonthBegin-1]+' - '+arrHebMonths[intCurrMonthEnd-1] + ' '+Nyear2Hyear(intCurrYear)
 		}
 	}
 	else
 	{	
-		document.getElementById("headlineheb").innerHTML= arrHebMonth[intCurrMonthBegin-1]+' '+Nyear2Hyear(intCurrYear)+' - '+arrHebMonth[intCurrMonthEnd-1]+' '+Nyear2Hyear(intCurrYear+1)
+		document.getElementById("headlineheb").innerHTML= arrHebMonths[intCurrMonthBegin-1]+' '+Nyear2Hyear(intCurrYear)+' - '+arrHebMonths[intCurrMonthEnd-1]+' '+Nyear2Hyear(intCurrYear+1)
 	}
 	// Clear the tooltip text from the previous displayed month.
 	for (ii=0;ii<=41;ii++){
@@ -1995,8 +1997,7 @@ text+="</table>"
 		if (GregOrHeb == currentGregOrHeb)
 			return;
 		currentGregOrHeb=GregOrHeb;
-		var arrHebDate = new Array("א","ב","ג","ד","ה","ו","ז","ח","ט","י","יא","יב","יג","יד","טו","טז","יז","יח","יט","כ","כא","כב","כג","כד","כה","כו","כז","כח","כט","ל")
-		var arrHebMonth = new Array("תשרי","חשוון","כסלו","טבת","שבט","אדר א","אדר","ניסן","אייר","סיוון","תמוז","אב","אלול")
+
 		// Clear all previous options.
 		while (elemDay.options.length > 0){
 			elemDay.options[0]=null;
@@ -2052,16 +2053,16 @@ text+="</table>"
 						// adar (not adar bet)
 					if (currYearLeap)
 					{
-						arrHebMonth[6]="אדר ב"
+						arrHebMonths[6]="אדר ב"
 					}
 					else 
 					{
-						arrHebMonth[6]="אדר"
+						arrHebMonths[6]="אדר"
 						continue;
 					}
 				}
 				var optn = document.createElement("OPTION");
-				optn.text = arrHebMonth[i];
+				optn.text = arrHebMonths[i];
 				optn.value = i//+1;
 				elemMonth.options.add(optn);
 			}	
@@ -2189,8 +2190,6 @@ text+="</table>"
 		var elemDay = document.getElementById("EventDay")
 		var monthSelected = parseInt(elemMonth.options[elemMonth.selectedIndex].value);
 		var yearSelected = parseInt(elemYear.options[elemYear.selectedIndex].value)
-		var arrHebDate = new Array("א","ב","ג","ד","ה","ו","ז","ח","ט","י","יא","יב","יג","יד","טו","טז","יז","יח","יט","כ","כא","כב","כג","כד","כה","כו","כז","כח","כט","ל")
-		var arrHebMonth = new Array("תשרי","חשוון","כסלו","טבת","שבט","אדר א","אדר","ניסן","אייר","סיוון","תמוז","אב","אלול")
 	
 		var getMaxDays;
 			// If the current form is by the gregorian calendar, simply update the days (no months are added
@@ -2202,13 +2201,13 @@ text+="</table>"
 				  // If the current displayed year is a leap year add adar bet.
 				if (IsLeapYear(yearSelected)) {
 					if (elemMonth.options[6].text!="אדר ב"){
-						arrHebMonth[6]="אדר ב";
+						arrHebMonths[6]="אדר ב";
 						for (i=5;i<12;i++){
-							elemMonth.options[i].text=arrHebMonth[i];
+							elemMonth.options[i].text=arrHebMonths[i];
 							elemMonth.options[i].value=i+1;
 						}
 					var optn = document.createElement("OPTION");
-					optn.text = arrHebMonth[12];
+					optn.text = arrHebMonths[12];
 					optn.value = 12;
 					elemMonth.options.add(optn);
 					}
@@ -2478,7 +2477,7 @@ text+="</table>"
  	 */
 	function Nyear2Hyear(numYear){ //converts numeric Hebrew year to letter Hebrew year (e.g. 5768 -> תשס"ח)
 		var gim = new Array(1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100,200,300,400)
-		var alphabet = new Array("א","ב","ג","ד","ה","ו","ז","ח","ט","י","כ","ל","מ","נ","ס","ע","פ","צ","ק","ר","ש","ת")
+		//var alphabet = new Array("א","ב","ג","ד","ה","ו","ז","ח","ט","י","כ","ל","מ","נ","ס","ע","פ","צ","ק","ר","ש","ת")
 		var i
 		var hebYear=""
 		
@@ -2494,7 +2493,7 @@ text+="</table>"
 					{
 						hebYear += "\"" //Inserting " (e.g. תשסח -> תשס"ח)
 					}
-					hebYear += alphabet[i] //concatenates next letter
+					hebYear += arrHebDate[i] //concatenates next letter
 				}
 				else
 				{
