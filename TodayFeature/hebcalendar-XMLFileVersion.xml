@@ -286,7 +286,7 @@ rabin.isMovable = 1;
 				{
 					var node = nodeList.item(j);
 					//alert(node.nodeName);
-					if ((chosenLanguage == "hebrew") && (node.nodeName == "hebrew"))
+					if ((chosenLanguage == "hebrew") && (node.nodeName == "english"))
 					{
 						var englishList = node.childNodes;								
 						for (var k = 0; k < englishList.length ; k++) 
@@ -306,12 +306,8 @@ rabin.isMovable = 1;
 								{
 									if (holidayList.item(l).firstChild != null)
 									{										
-										alert(holidayList.item(l).nodeValue);
 										var tmp = holidayList.item(l).firstChild.nodeValue;
-										alert(tmp);
-										alert(ENUM_Holidays);
 										ENUM_Holidays[count] = tmp;
-										alert(ENUM_Holidays);
 										count++;
 									}
 								}
