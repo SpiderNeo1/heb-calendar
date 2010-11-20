@@ -286,7 +286,7 @@ rabin.isMovable = 1;
 				{
 					var node = nodeList.item(j);
 					//alert(node.nodeName);
-					if ((chosenLanguage == "hebrew") && (node.nodeName == "english"))
+					if ((chosenLanguage == "hebrew") && (node.nodeName == "hebrew"))
 					{
 						var englishList = node.childNodes;								
 						for (var k = 0; k < englishList.length ; k++) 
@@ -297,6 +297,17 @@ rabin.isMovable = 1;
 								var tmp = englishList.item(k).firstChild.nodeValue;
 								arrHebMonths = tmp.split(",");
 								// alert(arrHebMonths);
+							}
+							if (englishList.item(k).nodeName == "Holidays")
+							{
+								var holidayList = englishList.item(k).childNodes;								
+								for (var l = 0; l < holidayList.length; l++)
+								{
+									var tmp = holidayList.item(l).firstChild.nodeValue;
+									alert(ENUM_Holiday);
+									ENUM_Holiday[l] = "test";
+									alert(ENUM_Holiday);
+								}
 							}
 						}
 					}
@@ -2497,7 +2508,7 @@ text+="</table>"
 					{
 						hebYear += "\"" //Inserting " (e.g. תשסח -> תשס"ח)
 					}
-					hebYear += arrHebDate[i] //concatenates next letter
+					hebYear += alphabet[i] //concatenates next letter
 				}
 				else
 				{
