@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<XMLStart>
+﻿<?xml version=1.0 encoding=utf-8?>
+
   <Language>
     <english>
-      <HebrewMonths>"Tishrei","Cheshvan","Kislev","Tevet","Shvat","Adar A","Adar","Nissan","Iyar","Sivan", "Tamuz","Av", "Elul"</HebrewMonths>
+      <HebrewMonths>Tishrei,Cheshvan,Kislev,Tevet,Shvat,Adar A,Adar,Nissan,Iyar,Sivan, Tamuz,Av, Elul</HebrewMonths>
       <HebrewDates>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30</HebrewDates>
-      <GregorianMonths>"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"</GregorianMonths>
+      <GregorianMonths>Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec</GregorianMonths>
       <Holidays>
         <!-- TISHREI 1 -->
         <roshHashana1>Rosh Hashana 1</roshHashana1>
@@ -67,12 +67,12 @@
         <erevRoshHashana>Evening of Rosh Hashana</erevRoshHashana>
       </Holidays>
       <TabsName>
-        <Calendar>"Calendar"</Calendar>
+        <Calendar>Calendar</Calendar>
         <EditEvent>Edit Event</EditEvent>
         <AddEvent>Add Event</AddEvent>
         <EventsList>List Of Events</EventsList>
       </TabsName>
-      <DaysOfTheWeek>"Su","Mo","Tu","We","Th","Fr","Sa"</DaysOfTheWeek>
+      <DaysOfTheWeek>Su,Mo,Tu,We,Th,Fr,Sa</DaysOfTheWeek>
       <ShabbathText>
         <ShabbathStart>Shabbath Start: </ShabbathStart>
         <ShabbathEnd>Shabbath Ends: </ShabbathEnd>
@@ -112,77 +112,77 @@
       </FeatureBox>
     </english>
     <hebrew>
-      <HebrewMonths>"תשרי","חשוון","כסלו","טבת","שבט","אדר א","אדר","ניסן","אייר","סיוון","תמוז","אב","אלול"</HebrewMonths>
-      <HebrewDates>"א","ב","ג","ד","ה","ו","ז","ח","ט","י","יא","יב","יג","יד","טו","טז","יז","יח","יט","כ","כא","כב","כג","כד","כה","כו","כז","כח","כט","ל"</HebrewDates>
-      <GregorianMonths>"ינואר","פברואר","מרץ","אפריל","מאי","יוני","יולי","אוגוסט","ספטמבר","אוקטובר","נובמבר","דצמבר"</GregorianMonths>
+      <HebrewMonths>תשרי,חשוון,כסלו,טבת,שבט,אדר א,אדר,ניסן,אייר,סיוון,תמוז,אב,אלול</HebrewMonths>
+      <HebrewDates>א,ב,ג,ד,ה,ו,ז,ח,ט,י,יא,יב,יג,יד,טו,טז,יז,יח,יט,כ,כא,כב,כג,כד,כה,כו,כז,כח,כט,ל</HebrewDates>
+      <GregorianMonths>ינואר,פברואר,מרץ,אפריל,מאי,יוני,יולי,אוגוסט,ספטמבר,אוקטובר,נובמבר,דצמבר</GregorianMonths>
       <Holidays>
         <!-- TISHREI 1 -->
-        <roshHashana1>"א' ראש השנה"</roshHashana1>
-        <roshHashana2>"ב' ראש השנה"</roshHashana2>
-        <tzomGdalia>"צום גדליה"</tzomGdalia>
-        <erevYomKipur>"ערב יום כיפור"</erevYomKipur>
-        <YomKipur>"יום הכיפורים"</YomKipur>
-        <erevSukot>"ערב סוכות"</erevSukot>
-        <sukot>"סוכות"</sukot>
-        <sukot_holHamoed1>"א' חוהמ\"ס"</sukot_holHamoed1>
-        <sukot_holHamoed2>"ב' חוהמ\"ס"</sukot_holHamoed2>
-        <sukot_holHamoed3>"ג' חוהמ\"ס"</sukot_holHamoed3>
-        <sukot_holHamoed4>"ד' חוהמ\"ס"</sukot_holHamoed4>
-        <sukot_holHamoed5>"ה' חוהמ\"ס"</sukot_holHamoed5>
-        <sukot_hoshaanaRaba>"הושענא רבה"</sukot_hoshaanaRaba>
-        <sukot_shminiAtzeret>"שמיני עצרת ושמחת תורה"</sukot_shminiAtzeret>
+        <roshHashana1>א' ראש השנה</roshHashana1>
+        <roshHashana2>ב' ראש השנה</roshHashana2>
+        <tzomGdalia>צום גדליה</tzomGdalia>
+        <erevYomKipur>ערב יום כיפור</erevYomKipur>
+        <YomKipur>יום הכיפורים</YomKipur>
+        <erevSukot>ערב סוכות</erevSukot>
+        <sukot>סוכות</sukot>
+        <sukot_holHamoed1>א' חוהמ\ס</sukot_holHamoed1>
+        <sukot_holHamoed2>ב' חוהמ\ס</sukot_holHamoed2>
+        <sukot_holHamoed3>ג' חוהמ\ס</sukot_holHamoed3>
+        <sukot_holHamoed4>ד' חוהמ\ס</sukot_holHamoed4>
+        <sukot_holHamoed5>ה' חוהמ\ס</sukot_holHamoed5>
+        <sukot_hoshaanaRaba>הושענא רבה</sukot_hoshaanaRaba>
+        <sukot_shminiAtzeret>שמיני עצרת ושמחת תורה</sukot_shminiAtzeret>
         <!-- HESHVAN 2 -->
-        <rabin>"יום הזיכרון ליצחק רבין"</rabin>
+        <rabin>יום הזיכרון ליצחק רבין</rabin>
         <!-- KISLEV 3 -->
-        <erevHanuka>"ערב חנוכה"</erevHanuka>
-        <hanuka1>"א' חנוכה"</hanuka1>
-        <hanuka2>"ב' חנוכה"</hanuka2>
-        <hanuka3>"ג' חנוכה"</hanuka3>
-        <hanuka4>"ד' חנוכה"</hanuka4>
-        <hanuka5>"ה' חנוכה"</hanuka5>
+        <erevHanuka>ערב חנוכה</erevHanuka>
+        <hanuka1>א' חנוכה</hanuka1>
+        <hanuka2>ב' חנוכה</hanuka2>
+        <hanuka3>ג' חנוכה</hanuka3>
+        <hanuka4>ד' חנוכה</hanuka4>
+        <hanuka5>ה' חנוכה</hanuka5>
         <!-- TEVET 4 -->
-        <hanuka6>"ו' חנוכה"</hanuka6>
-        <hanuka7>"ז' חנוכה"</hanuka7>
-        <hanuka8>"ח' חנוכה"</hanuka8>
-        <tzomYudBetevet>"צום י' בטבת"</tzomYudBetevet>
+        <hanuka6>ו' חנוכה</hanuka6>
+        <hanuka7>ז' חנוכה</hanuka7>
+        <hanuka8>ח' חנוכה</hanuka8>
+        <tzomYudBetevet>צום י' בטבת</tzomYudBetevet>
         <!-- SHVAT 5 -->
-        <tuBeshvat>"ט\"ו בשבט"</tuBeshvat>
+        <tuBeshvat>ט\ו בשבט</tuBeshvat>
         <!-- ADAR 7 -->
-        <tzomTaanitEster>"תענית אסתר"</tzomTaanitEster>
-        <purim>"פורים"</purim>
-        <shushanPurim>"שושן פורים"</shushanPurim>
+        <tzomTaanitEster>תענית אסתר</tzomTaanitEster>
+        <purim>פורים</purim>
+        <shushanPurim>שושן פורים</shushanPurim>
         <!-- NISAN 8 -->
-        <erevPesah>"ערב פסח"</erevPesah>
-        <Pesah>"פסח"</Pesah>
-        <pesah_holHamoed1>"א' חוהמ\"פ"</pesah_holHamoed1>
-        <pesah_holHamoed2>"ב' חוהמ\"פ"</pesah_holHamoed2>
-        <pesah_holHamoed3>"ג' חוהמ\"פ"</pesah_holHamoed3>
-        <pesah_holHamoed4>"ד' חוהמ\"פ"</pesah_holHamoed4>
-        <pesah_holHamoed5>"ה' חוהמ\"פ"</pesah_holHamoed5>
-        <pesah_hagSheni>"שביעי של פסח"</pesah_hagSheni>
-        <yomHashoa>"יום הזיכרון לשואה ולגבורה"</yomHashoa>
+        <erevPesah>ערב פסח</erevPesah>
+        <Pesah>פסח</Pesah>
+        <pesah_holHamoed1>א' חוהמ\פ</pesah_holHamoed1>
+        <pesah_holHamoed2>ב' חוהמ\פ</pesah_holHamoed2>
+        <pesah_holHamoed3>ג' חוהמ\פ</pesah_holHamoed3>
+        <pesah_holHamoed4>ד' חוהמ\פ</pesah_holHamoed4>
+        <pesah_holHamoed5>ה' חוהמ\פ</pesah_holHamoed5>
+        <pesah_hagSheni>שביעי של פסח</pesah_hagSheni>
+        <yomHashoa>יום הזיכרון לשואה ולגבורה</yomHashoa>
         <!-- IYAR 9 -->
-        <yomHazikaron>"יום הזיכרון לחללי מערכות ישראל"</yomHazikaron>
-        <yomHaatzmaut>"יום העצמאות"</yomHaatzmaut>
-        <lagBaomer>"ל\"ג בעומר"</lagBaomer>
-        <yomYerushalaim>"יום ירושלים"</yomYerushalaim>
+        <yomHazikaron>יום הזיכרון לחללי מערכות ישראל</yomHazikaron>
+        <yomHaatzmaut>יום העצמאות</yomHaatzmaut>
+        <lagBaomer>ל\ג בעומר</lagBaomer>
+        <yomYerushalaim>יום ירושלים</yomYerushalaim>
         <!-- SIVAN 10 -->
-        <erevShavuot>"ערב שבועות"</erevShavuot>
-        <Shavuot>"שבועות"</Shavuot>
+        <erevShavuot>ערב שבועות</erevShavuot>
+        <Shavuot>שבועות</Shavuot>
         <!-- TAMUZ 11 -->
-        <tzomYudZain>"צום י\"ז בתמוז"</tzomYudZain>
+        <tzomYudZain>צום י\ז בתמוז</tzomYudZain>
         <!-- AV 12 -->
-        <tzomTetBeAv>"צום ט' באב"</tzomTetBeAv>
+        <tzomTetBeAv>צום ט' באב</tzomTetBeAv>
         <!-- ALUL 13 -->
-        <erevRoshHashana>"ערב ראש השנה"</erevRoshHashana>
+        <erevRoshHashana>ערב ראש השנה</erevRoshHashana>
       </Holidays>
       <TabsName>
-        <Calendar>"לוח שנה"</Calendar>
+        <Calendar>לוח שנה</Calendar>
         <EditEvent>עריכת אירוע</EditEvent>
-        <AddEvent>"הוספת אירוע"</AddEvent>
-        <EventsList>"רשימת אירועים"</EventsList>
+        <AddEvent>הוספת אירוע</AddEvent>
+        <EventsList>רשימת אירועים</EventsList>
       </TabsName>
-      <DaysOfTheWeek>"א","ב","ג","ד","ה","ו","ש"</DaysOfTheWeek>
+      <DaysOfTheWeek>א,ב,ג,ד,ה,ו,ש</DaysOfTheWeek>
       <ShabbathText>
         <ShabbathStart>כניסת שבת: </ShabbathStart>
         <ShabbathEnd>צאת שבת :</ShabbathEnd>
@@ -216,10 +216,5 @@
         <AdarBet>אדר ב</AdarBet>
         <Adar>אדר</Adar>
       </AdarBetCases>
-      <FeatureBox>
-        <Date>15/10/2010</Date>
-        <Text>הוספת כפתור לחזרה להיום והצגת שעון</Text>
-      </FeatureBox>
     </hebrew>
   </Language>
-</XMLStart>
