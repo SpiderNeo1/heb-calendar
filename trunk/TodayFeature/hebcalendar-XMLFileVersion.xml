@@ -289,7 +289,7 @@ rabin.isMovable = 1;
 							{
 								var tmp = englishList.item(k).firstChild.nodeValue;
 								arrHebMonths = tmp.split(",");
-								//alert(arrHebMonths);
+								// alert(arrHebMonths);
 							}
 						}
 					}
