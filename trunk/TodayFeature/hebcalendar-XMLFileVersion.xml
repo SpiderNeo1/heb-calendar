@@ -1436,7 +1436,7 @@ text+="</table>"
 					tempholiday.desc += " - נדחה"
 				}
 			}
-			else if (tempholiday.desc=="ו' חנוכה" || tempholiday.desc=="ז' חנוכה" || tempholiday.desc=="ח' חנוכה")
+			else if (tempholiday.desc==ENUM_Holidays.hanuka6 || tempholiday.desc==ENUM_Holidays.hanuka7 || tempholiday.desc==ENUM_Holidays.hanuka8)
 			{
 				if (hebDateExists(currHebYear, 3, 30))  // Kislev 30th exists - Hanuka 6th is on Kislev 30th instead of Tevet 1st and so on
 				{
