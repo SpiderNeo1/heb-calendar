@@ -303,10 +303,13 @@ rabin.isMovable = 1;
 								var holidayList = englishList.item(k).childNodes;								
 								for (var l = 0; l < holidayList.length; l++)
 								{
-									var tmp = holidayList.item(l).firstChild.nodeValue;
-									alert(ENUM_Holiday);
-									ENUM_Holiday[l] = "test";
-									alert(ENUM_Holiday);
+									if (englishList.item(k).nodeName != null)
+									{
+										var tmp = holidayList.item(l).firstChild.nodeValue;
+										alert(ENUM_Holiday);
+										ENUM_Holiday[l] = "test";
+										alert(ENUM_Holiday);
+									}
 								}
 							}
 						}
