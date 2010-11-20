@@ -309,7 +309,7 @@ rabin.isMovable = 1;
 										var tmp = holidayList.item(l).firstChild.nodeValue;
 										alert(tmp);
 										alert(ENUM_Holidays);
-										ENUM_Holiday[l] = "test";
+										ENUM_Holidays[l] = "test";
 										alert(ENUM_Holidays);
 									}
 								}
