@@ -303,8 +303,8 @@ rabin.isMovable = 1;
 								var holidayList = englishList.item(k).childNodes;								
 								for (var l = 0; l < holidayList.length; l++)
 								{
-									if (holidayList.item(l).nodeName != null)
-									{
+									if (holidayList.item(l).firstChild != null)
+									{										
 										alert(holidayList.item(l).nodeValue);
 										var tmp = holidayList.item(l).firstChild.nodeValue;
 										alert(tmp);
