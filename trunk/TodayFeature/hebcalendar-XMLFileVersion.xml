@@ -214,7 +214,7 @@ rabin.isMovable = 1;
 			tzomYudZain.isTzom=1;
 			tzomYudZain.isMovable=1;
 	//---AV-12-//
-	var tzomTetBeAv = new holiday(ENUM_HolidaystzomTetBeAv, 12, 9, NONE);
+	var tzomTetBeAv = new holiday(ENUM_Holidays.tzomTetBeAv, 12, 9, NONE);
 			tzomTetBeAv.isTzom=1;
 			tzomTetBeAv.isMovable=1;
 	//---ALUL-13-//
