@@ -283,7 +283,7 @@ rabin.isMovable = 1;
 		   var languagesAvailableList = response.getElementsByTagName("Language");
 		   		
 				 // For each <Language> node, get child nodes.
-				 var nodeList = languagesAvailableList.item(i).childNodes;
+				 var nodeList = languagesAvailableList.item(1).childNodes;
 
 				 // Loop through child nodes. Extract data from the text nodes that are
 				 // the children of the associated name, price, and calories element nodes.
