@@ -389,7 +389,8 @@ rabin.isMovable = 1;
 					}
 				}
 				*/
-				FromListToEnum(generalTextList);
+				FromListToEnum(generalTextList,ENUM_GeneralText_EarliedOrPostponed);
+				alert(ENUM_GeneralText_EarliedOrPostponed);
 				//var ENUM_XML_Nodes = { GeneralText: 8, EventTabText: 9, AdarBetCases : 10, FeatureBox : 11 };
 				
 				
