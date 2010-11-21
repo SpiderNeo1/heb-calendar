@@ -261,8 +261,9 @@
 	function SetAllHolidays()
 	{
 	//--------------------------------------J E W I S H  H O L I D A Y S------------------------------------------------- 	
-		 //alert("IN SET " + ENUM_Holidays[1]);
+		alert("IN SET " + ENUM_Holidays[1]);
 		//---TISHREY-1-//
+		
 		//var roshHashana1 = new holiday("א' ראש השנה", 1, 1,FULL_DAY);
 		var roshHashana1 = new holiday(ENUM_Holidays[1], 1, 1,FULL_DAY);
 		var roshHashana2 = new holiday(ENUM_Holidays.roshHashana2, 1, 2,FULL_DAY);
