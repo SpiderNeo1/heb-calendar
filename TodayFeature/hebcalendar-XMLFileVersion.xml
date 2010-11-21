@@ -73,8 +73,7 @@
 	
 	//var Holidays = {"sunday" : 0, "monday" : 1, "tuesday" : 3, "wednesday" : 4, "thursday" : 5, "friday" : 6, "saturday" : 7};
 
-	var arrHolidays = new Array( "Rosh Hashana 1",  "Rosh Hashana 2",  "Tzom Gdalia",  "Evening of Yom Kippur",  "Yom Kippur",  "Evening of Sukkot",  "Sukkot",  "Sukkot 1 (ch'm)",  "Sukkot 2 (ch'm)",  "Sukkot 3 (ch'm)",  "Sukkot 4 (ch'm)",  "Sukkot 5 (ch'm)",  "Hoshana Raba",  "Shmini Atzert and Simhat Tora.",  "Itzhak Rabin Memorial Day",  "Evening of Chanukah",  "Chanukah 1",  "Chanukah 2",  "Chanukah 3",  "Chanukah 4",  "Chanukah 5",  "Chanukah 6",  "Chanukah 7",  "Chanukah 8",  "Tzom Asara B'Tevet",  "Tu B'Shvat",  "Ta'anit Esther",  "Purim",  "Shushan Purim",  "Evening of Passover",  "Passover",  "Passover 1",  "Passover 2",  "Passover 3",  "Passover 4",  "Passover 5",  "7th of Passover",  "Holocaust Memorial Day",  "Yom Hazikaron",  "Independence day",  "Lag B'Omer",  "Jerusalem Day",  "Evening of Shavuot",  "Shavuot",  "Tzom 17th of Tamuz",  "Tisha B'Av",  "Evening of Rosh Hashana");
-	var ENUM_Holidays = {roshHashana1: "", roshHashana2: "Rosh Hashana 2", tzomGdalia: "Tzom Gdalia", erevYomKipur: "Evening of Yom Kippur", YomKipur: "Yom Kippur", erevSukot: "Evening of Sukkot", sukot: "Sukkot", sukot_holHamoed1: "Sukkot 1 (ch'm)", sukot_holHamoed2: "Sukkot 2 (ch'm)", sukot_holHamoed3: "Sukkot 3 (ch'm)", sukot_holHamoed4: "Sukkot 4 (ch'm)", sukot_holHamoed5: "Sukkot 5 (ch'm)", sukot_hoshaanaRaba: "Hoshana Raba", sukot_shminiAtzeret: "Shmini Atzert and Simhat Tora.", rabin: "Itzhak Rabin Memorial Day", erevHanuka: "Evening of Chanukah", hanuka1: "Chanukah 1", hanuka2: "Chanukah 2", hanuka3: "Chanukah 3", hanuka4: "Chanukah 4", hanuka5: "Chanukah 5", hanuka6: "Chanukah 6", hanuka7: "Chanukah 7", hanuka8: "Chanukah 8", tzomYudBetevet: "Tzom Asara B'Tevet", tuBeshvat: "Tu B'Shvat", tzomTaanitEster: "Ta'anit Esther", purim: "Purim", shushanPurim: "Shushan Purim", erevPesah: "Evening of Passover", Pesah: "Passover", pesah_holHamoed1: "Passover 1", pesah_holHamoed2: "Passover 2", pesah_holHamoed3: "Passover 3", pesah_holHamoed4: "Passover 4", pesah_holHamoed5: "Passover 5", pesah_hagSheni: "7th of Passover", yomHashoa: "Holocaust Memorial Day", yomHazikaron: "Yom Hazikaron", yomHaatzmaut: "Independence day", lagBaomer: "Lag B'Omer", yomYerushalaim: "Jerusalem Day", erevShavuot: "Evening of Shavuot", Shavuot: "Shavuot", tzomYudZain: "Tzom 17th of Tamuz", tzomTetBeAv: "Tisha B'Av", erevRoshHashana: "Evening of Rosh Hashana"};
+	var ENUM_Holidays = {roshHashana1: "Rosh Hashana 1", roshHashana2: "Rosh Hashana 2", tzomGdalia: "Tzom Gdalia", erevYomKipur: "Evening of Yom Kippur", YomKipur: "Yom Kippur", erevSukot: "Evening of Sukkot", sukot: "Sukkot", sukot_holHamoed1: "Sukkot 1 (ch'm)", sukot_holHamoed2: "Sukkot 2 (ch'm)", sukot_holHamoed3: "Sukkot 3 (ch'm)", sukot_holHamoed4: "Sukkot 4 (ch'm)", sukot_holHamoed5: "Sukkot 5 (ch'm)", sukot_hoshaanaRaba: "Hoshana Raba", sukot_shminiAtzeret: "Shmini Atzert and Simhat Tora.", rabin: "Itzhak Rabin Memorial Day", erevHanuka: "Evening of Chanukah", hanuka1: "Chanukah 1", hanuka2: "Chanukah 2", hanuka3: "Chanukah 3", hanuka4: "Chanukah 4", hanuka5: "Chanukah 5", hanuka6: "Chanukah 6", hanuka7: "Chanukah 7", hanuka8: "Chanukah 8", tzomYudBetevet: "Tzom Asara B'Tevet", tuBeshvat: "Tu B'Shvat", tzomTaanitEster: "Ta'anit Esther", purim: "Purim", shushanPurim: "Shushan Purim", erevPesah: "Evening of Passover", Pesah: "Passover", pesah_holHamoed1: "Passover 1", pesah_holHamoed2: "Passover 2", pesah_holHamoed3: "Passover 3", pesah_holHamoed4: "Passover 4", pesah_holHamoed5: "Passover 5", pesah_hagSheni: "7th of Passover", yomHashoa: "Holocaust Memorial Day", yomHazikaron: "Yom Hazikaron", yomHaatzmaut: "Independence day", lagBaomer: "Lag B'Omer", yomYerushalaim: "Jerusalem Day", erevShavuot: "Evening of Shavuot", Shavuot: "Shavuot", tzomYudZain: "Tzom 17th of Tamuz", tzomTetBeAv: "Tisha B'Av", erevRoshHashana: "Evening of Rosh Hashana"};
 	
 	var ENUM_TabsNames = {Calendar: "",EditEvent:"",AddEvent:"",EventsList:""};
 	var arrDaysOfTheWeek = new Array( "Su", "Mo", "Tu", "We", "Th", "Fr", "Sa");
@@ -160,106 +159,8 @@
 	var butB08 = new Image(26,38);
 	butB08.src = DESIGN_LOCATION+"butB_08"+just+".jpg";
 
-//--------------------------------------J E W I S H  H O L I D A Y S------------------------------------------------- 	
- 	 
-	//---TISHREY-1-//
-	//var roshHashana1 = new holiday("א' ראש השנה", 1, 1,FULL_DAY);
-	var roshHashana1 = new holiday(arrHolidays[0], 1, 1,FULL_DAY);
-	var roshHashana2 = new holiday(arrHolidays[1], 1, 2,FULL_DAY);
-	var tzomGdalia = new holiday(ENUM_Holidays.tzomGdalia, 1, 3,NONE);
-			tzomGdalia.isTzom=1;
-			tzomGdalia.isMovable=1;
-	var erevYomKipur = new holiday(ENUM_Holidays.erevYomKipur, 1, 9,HALF_DAY);
-	var YomKipur = new holiday(ENUM_Holidays.YomKipur, 1, 10,FULL_DAY);
-	var erevSukot = new holiday(ENUM_Holidays.erevSukot, 1, 14, HALF_DAY);
-	var sukot = new holiday(ENUM_Holidays.sukot, 1, 15, FULL_DAY);
-	var sukot_holHamoed1 = new holiday(ENUM_Holidays.sukot_holHamoed1, 1, 16,HALF_DAY);
-	var sukot_holHamoed2 = new holiday(ENUM_Holidays.sukot_holHamoed2, 1, 17,HALF_DAY);
-	var sukot_holHamoed3 = new holiday(ENUM_Holidays.sukot_holHamoed3, 1, 18,HALF_DAY);
-	var sukot_holHamoed4 = new holiday(ENUM_Holidays.sukot_holHamoed4, 1, 19,HALF_DAY);
-	var sukot_holHamoed5 = new holiday(ENUM_Holidays.sukot_holHamoed5, 1, 20,HALF_DAY);
-	var sukot_hoshaanaRaba = new holiday(ENUM_Holidays.sukot_hoshaanaRaba, 1, 21,HALF_DAY);
-	var sukot_shminiAtzeret = new holiday(ENUM_Holidays.sukot_shminiAtzeret, 1, 22, FULL_DAY);
-	//---HESHVAN-2-//
-	var rabin = new holiday(ENUM_Holidays.rabin, 2, 12, NONE);
-rabin.isMovable = 1;
-			rabin.isHistoricalEvent=1;
-	//---KISLEV-3-//
-	var erevHanuka = new holiday(ENUM_Holidays.erevHanuka, 3, 24, NONE);
-	var hanuka1 = new holiday(ENUM_Holidays.hanuka1, 3, 25, NONE);
-	var hanuka2 = new holiday(ENUM_Holidays.hanuka2, 3, 26, NONE);
-	var hanuka3 = new holiday(ENUM_Holidays.hanuka3, 3, 27, NONE);
-	var hanuka4 = new holiday(ENUM_Holidays.hanuka4, 3, 28, NONE);
-	var hanuka5 = new holiday(ENUM_Holidays.hanuka5, 3, 29, NONE);
-	//---TEVET-4-//
-	var hanuka6 = new holiday(ENUM_Holidays.hanuka6, 4, 1, NONE);
-			hanuka6.isMovable=1;
-	var hanuka7 = new holiday(ENUM_Holidays.hanuka7, 4, 2, NONE);
-			hanuka7.isMovable=1;
-	var hanuka8 = new holiday(ENUM_Holidays.hanuka8, 4, 3, NONE);
-			hanuka8.isMovable=1;
-	var tzomYudBetevet = new holiday(ENUM_Holidays.tzomYudBetevet, 4, 10, NONE);
-			tzomYudBetevet.isTzom=1;
-			tzomYudBetevet.isMovable=1;
-	//---SHVAT-5-//
-	var tuBeshvat = new holiday(ENUM_Holidays.tuBeshvat, 5, 15, NONE);
-	//---ADAR-7-//
-	var tzomTaanitEster = new holiday(ENUM_Holidays.tzomTaanitEster, 7, 13,NONE);
-			//not maked as regular tzom since it's not postponed to Sunday when falls on Saturday
-			tzomTaanitEster.isMovable=1;
-	var purim = new holiday(ENUM_Holidays.purim, 7, 14, HALF_DAY);
-	var shushanPurim = new holiday(ENUM_Holidays.shushanPurim, 7, 15, NONE);
-	//---NISAN-8-//
-	var erevPesah = new holiday(ENUM_Holidays.erevPesah, 8,14,HALF_DAY);
-	var Pesah = new holiday(ENUM_Holidays.Pesah, 8,15,FULL_DAY);
-	var pesah_holHamoed1 = new holiday(ENUM_Holidays.pesah_holHamoed1, 8, 16,HALF_DAY);
-	var pesah_holHamoed2 = new holiday(ENUM_Holidays.pesah_holHamoed2, 8, 17,HALF_DAY);
-	var pesah_holHamoed3 = new holiday(ENUM_Holidays.pesah_holHamoed3, 8, 18,HALF_DAY);
-	var pesah_holHamoed4 = new holiday(ENUM_Holidays.pesah_holHamoed4, 8, 19,HALF_DAY);
-	var pesah_holHamoed5 = new holiday(ENUM_Holidays.pesah_holHamoed5, 8, 20,HALF_DAY);
-	var pesah_hagSheni = new holiday(ENUM_Holidays.pesah_hagSheni, 8, 21, FULL_DAY);
-	var yomHashoa = new holiday(ENUM_Holidays.yomHashoa, 8, 27, NONE);
-			yomHashoa.isMovable=1;
-			yomHashoa.isHistoricalEvent=1;
-	//---IYAR-9-//
-	var yomHazikaron = new holiday(ENUM_Holidays.yomHazikaron, 9, 4,HALF_DAY);
-			yomHazikaron.isMovable=1;
-			yomHazikaron.isHistoricalEvent=1;
-	var yomHaatzmaut = new holiday(ENUM_Holidays.yomHaatzmaut, 9, 5, FULL_DAY);
-			yomHaatzmaut.isHistoricalEvent=1;
-			yomHaatzmaut.isMovable=1;
-	var lagBaomer = new holiday(ENUM_Holidays.lagBaomer, 9, 18, NONE);
-	var yomYerushalaim = new holiday(ENUM_Holidays.yomYerushalaim, 9, 28, NONE);
-			yomYerushalaim.isHistoricalEvent=1;
-	//---SIVAN-10-//
-	var erevShavuot = new holiday(ENUM_Holidays.erevShavuot, 10, 5, HALF_DAY);
-	var Shavuot = new holiday(ENUM_Holidays.Shavuot, 10, 6, FULL_DAY);
-	//---TAMUZ-11-//
-	var tzomYudZain = new holiday(ENUM_Holidays.tzomYudZain, 11, 17, NONE);
-			tzomYudZain.isTzom=1;
-			tzomYudZain.isMovable=1;
-	//---AV-12-//
-	var tzomTetBeAv = new holiday(ENUM_Holidays.tzomTetBeAv, 12, 9, NONE);
-			tzomTetBeAv.isTzom=1;
-			tzomTetBeAv.isMovable=1;
-	//---ALUL-13-//
-	var erevRoshHashana = new holiday(ENUM_Holidays.erevRoshHashana, 13, 29,HALF_DAY);
-	//----------End of holidays----------//
-	var holidays_01 = new Array(roshHashana1, roshHashana2, tzomGdalia, erevYomKipur, YomKipur, erevSukot, sukot, sukot_holHamoed1, sukot_holHamoed2, sukot_holHamoed3, sukot_holHamoed4, sukot_holHamoed5, sukot_hoshaanaRaba, sukot_shminiAtzeret);
-	var holidays_02 = new Array(rabin);
-	var holidays_03 = new Array(erevHanuka,hanuka1,hanuka2,hanuka3,hanuka4,hanuka5);
-	var holidays_04 = new Array(hanuka6,hanuka7,hanuka8, tzomYudBetevet);
-	var holidays_05 = new Array(tuBeshvat);
-	var holidays_06 = new Array();
-	var holidays_07 = new Array(tzomTaanitEster, purim, shushanPurim);
-	var holidays_08 = new Array(erevPesah, Pesah, pesah_holHamoed1,pesah_holHamoed2,pesah_holHamoed3,pesah_holHamoed4,pesah_holHamoed5, pesah_hagSheni, yomHashoa);
-	var holidays_09 = new Array(yomHazikaron, yomHaatzmaut, lagBaomer, yomYerushalaim);
-	var holidays_10 = new Array(erevShavuot, Shavuot);
-	var holidays_11 = new Array(tzomYudZain);
-	var holidays_12 = new Array(tzomTetBeAv);
-	var holidays_13 = new Array(erevRoshHashana);
-	
-	var holidays = new Array(holidays_01,holidays_02,holidays_03,holidays_04,holidays_05,holidays_06,holidays_07,holidays_08,holidays_09,holidays_10,holidays_11,holidays_12,holidays_13);
+	// Will hold all holidays in an array of array of holidays in each month.
+	var holidays;
 
 //===================================================================================================================	
 //======================================E N D  O F  G L O B A L  V A R I A B L E S===================================
@@ -312,20 +213,10 @@ rabin.isMovable = 1;
 
 				// Set Holidays			
 				var holidayList = chosenLanguageXMLList.item((ENUM_XML_Nodes.Holidays * 2) + 1).childNodes;								
-				var count = 0;
-
-				for (var i = 0; i < holidayList.length; i++)
-				{
-					// If isn't a text entry (each xml entry is followed by a text entry)
-					if (holidayList.item(i).firstChild != null)
-					{									
-						arrHolidays[count] = holidayList.item(i).firstChild.nodeValue;
-					}
-				}
+				FromListToEnum(tabsList,ENUM_Holidays);
 				
 				// Create tabs list enum.
 				var tabsList = chosenLanguageXMLList.item((ENUM_XML_Nodes.TabsName * 2) + 1).childNodes
-				count = 0;
 				
 				FromListToEnum(tabsList,ENUM_TabsNames);
 
@@ -335,8 +226,7 @@ rabin.isMovable = 1;
 
 				// Create shabbathText enum.
 				var shabbathList = chosenLanguageXMLList.item((ENUM_XML_Nodes.ShabbathText * 2) + 1).childNodes
-				count = 0;
-				
+			
 				FromListToEnum(shabbathList,ENUM_ShabbathText);
 								
 				// Annuall text for annual events.
@@ -344,23 +234,18 @@ rabin.isMovable = 1;
 
 				// Create GeneralText enum.
 				var generalTextList = chosenLanguageXMLList.item((ENUM_XML_Nodes.GeneralText * 2) + 1).childNodes
-				count = 0;
 
 				FromListToEnum(generalTextList,ENUM_GeneralText_EarliedOrPostponed);
 				alert(ENUM_GeneralText_EarliedOrPostponed[0]);
 				//var ENUM_XML_Nodes = { GeneralText: 8, EventTabText: 9, AdarBetCases : 10, FeatureBox : 11 };
-				
-				
-				
-				
 					   
 		});
-
+		SetAllHolidays();
 	}
 	
 	function FromListToEnum(list,arrEnum)
 	{
-		count = 0;
+		var count = 0;
 		// loop over all Tabs Names
 		for (var l = 0; l < list.length; l++)
 		{
@@ -375,6 +260,112 @@ rabin.isMovable = 1;
 				count++;
 			}
 		}				
+	}
+		
+	function SetAllHolidays()
+	{
+	//--------------------------------------J E W I S H  H O L I D A Y S------------------------------------------------- 	
+		 
+		//---TISHREY-1-//
+		//var roshHashana1 = new holiday("א' ראש השנה", 1, 1,FULL_DAY);
+		var roshHashana1 = new holiday(ENUM_Holidays.roshHashana1, 1, 1,FULL_DAY);
+		var roshHashana2 = new holiday(ENUM_Holidays.roshHashana2, 1, 2,FULL_DAY);
+		var tzomGdalia = new holiday(ENUM_Holidays.tzomGdalia, 1, 3,NONE);
+				tzomGdalia.isTzom=1;
+				tzomGdalia.isMovable=1;
+		var erevYomKipur = new holiday(ENUM_Holidays.erevYomKipur, 1, 9,HALF_DAY);
+		var YomKipur = new holiday(ENUM_Holidays.YomKipur, 1, 10,FULL_DAY);
+		var erevSukot = new holiday(ENUM_Holidays.erevSukot, 1, 14, HALF_DAY);
+		var sukot = new holiday(ENUM_Holidays.sukot, 1, 15, FULL_DAY);
+		var sukot_holHamoed1 = new holiday(ENUM_Holidays.sukot_holHamoed1, 1, 16,HALF_DAY);
+		var sukot_holHamoed2 = new holiday(ENUM_Holidays.sukot_holHamoed2, 1, 17,HALF_DAY);
+		var sukot_holHamoed3 = new holiday(ENUM_Holidays.sukot_holHamoed3, 1, 18,HALF_DAY);
+		var sukot_holHamoed4 = new holiday(ENUM_Holidays.sukot_holHamoed4, 1, 19,HALF_DAY);
+		var sukot_holHamoed5 = new holiday(ENUM_Holidays.sukot_holHamoed5, 1, 20,HALF_DAY);
+		var sukot_hoshaanaRaba = new holiday(ENUM_Holidays.sukot_hoshaanaRaba, 1, 21,HALF_DAY);
+		var sukot_shminiAtzeret = new holiday(ENUM_Holidays.sukot_shminiAtzeret, 1, 22, FULL_DAY);
+		//---HESHVAN-2-//
+		var rabin = new holiday(ENUM_Holidays.rabin, 2, 12, NONE);
+	rabin.isMovable = 1;
+				rabin.isHistoricalEvent=1;
+		//---KISLEV-3-//
+		var erevHanuka = new holiday(ENUM_Holidays.erevHanuka, 3, 24, NONE);
+		var hanuka1 = new holiday(ENUM_Holidays.hanuka1, 3, 25, NONE);
+		var hanuka2 = new holiday(ENUM_Holidays.hanuka2, 3, 26, NONE);
+		var hanuka3 = new holiday(ENUM_Holidays.hanuka3, 3, 27, NONE);
+		var hanuka4 = new holiday(ENUM_Holidays.hanuka4, 3, 28, NONE);
+		var hanuka5 = new holiday(ENUM_Holidays.hanuka5, 3, 29, NONE);
+		//---TEVET-4-//
+		var hanuka6 = new holiday(ENUM_Holidays.hanuka6, 4, 1, NONE);
+				hanuka6.isMovable=1;
+		var hanuka7 = new holiday(ENUM_Holidays.hanuka7, 4, 2, NONE);
+				hanuka7.isMovable=1;
+		var hanuka8 = new holiday(ENUM_Holidays.hanuka8, 4, 3, NONE);
+				hanuka8.isMovable=1;
+		var tzomYudBetevet = new holiday(ENUM_Holidays.tzomYudBetevet, 4, 10, NONE);
+				tzomYudBetevet.isTzom=1;
+				tzomYudBetevet.isMovable=1;
+		//---SHVAT-5-//
+		var tuBeshvat = new holiday(ENUM_Holidays.tuBeshvat, 5, 15, NONE);
+		//---ADAR-7-//
+		var tzomTaanitEster = new holiday(ENUM_Holidays.tzomTaanitEster, 7, 13,NONE);
+				//not maked as regular tzom since it's not postponed to Sunday when falls on Saturday
+				tzomTaanitEster.isMovable=1;
+		var purim = new holiday(ENUM_Holidays.purim, 7, 14, HALF_DAY);
+		var shushanPurim = new holiday(ENUM_Holidays.shushanPurim, 7, 15, NONE);
+		//---NISAN-8-//
+		var erevPesah = new holiday(ENUM_Holidays.erevPesah, 8,14,HALF_DAY);
+		var Pesah = new holiday(ENUM_Holidays.Pesah, 8,15,FULL_DAY);
+		var pesah_holHamoed1 = new holiday(ENUM_Holidays.pesah_holHamoed1, 8, 16,HALF_DAY);
+		var pesah_holHamoed2 = new holiday(ENUM_Holidays.pesah_holHamoed2, 8, 17,HALF_DAY);
+		var pesah_holHamoed3 = new holiday(ENUM_Holidays.pesah_holHamoed3, 8, 18,HALF_DAY);
+		var pesah_holHamoed4 = new holiday(ENUM_Holidays.pesah_holHamoed4, 8, 19,HALF_DAY);
+		var pesah_holHamoed5 = new holiday(ENUM_Holidays.pesah_holHamoed5, 8, 20,HALF_DAY);
+		var pesah_hagSheni = new holiday(ENUM_Holidays.pesah_hagSheni, 8, 21, FULL_DAY);
+		var yomHashoa = new holiday(ENUM_Holidays.yomHashoa, 8, 27, NONE);
+				yomHashoa.isMovable=1;
+				yomHashoa.isHistoricalEvent=1;
+		//---IYAR-9-//
+		var yomHazikaron = new holiday(ENUM_Holidays.yomHazikaron, 9, 4,HALF_DAY);
+				yomHazikaron.isMovable=1;
+				yomHazikaron.isHistoricalEvent=1;
+		var yomHaatzmaut = new holiday(ENUM_Holidays.yomHaatzmaut, 9, 5, FULL_DAY);
+				yomHaatzmaut.isHistoricalEvent=1;
+				yomHaatzmaut.isMovable=1;
+		var lagBaomer = new holiday(ENUM_Holidays.lagBaomer, 9, 18, NONE);
+		var yomYerushalaim = new holiday(ENUM_Holidays.yomYerushalaim, 9, 28, NONE);
+				yomYerushalaim.isHistoricalEvent=1;
+		//---SIVAN-10-//
+		var erevShavuot = new holiday(ENUM_Holidays.erevShavuot, 10, 5, HALF_DAY);
+		var Shavuot = new holiday(ENUM_Holidays.Shavuot, 10, 6, FULL_DAY);
+		//---TAMUZ-11-//
+		var tzomYudZain = new holiday(ENUM_Holidays.tzomYudZain, 11, 17, NONE);
+				tzomYudZain.isTzom=1;
+				tzomYudZain.isMovable=1;
+		//---AV-12-//
+		var tzomTetBeAv = new holiday(ENUM_Holidays.tzomTetBeAv, 12, 9, NONE);
+				tzomTetBeAv.isTzom=1;
+				tzomTetBeAv.isMovable=1;
+		//---ALUL-13-//
+		var erevRoshHashana = new holiday(ENUM_Holidays.erevRoshHashana, 13, 29,HALF_DAY);
+		//----------End of holidays----------//
+		var holidays_01 = new Array(roshHashana1, roshHashana2, tzomGdalia, erevYomKipur, YomKipur, erevSukot, sukot, sukot_holHamoed1, sukot_holHamoed2, sukot_holHamoed3, sukot_holHamoed4, sukot_holHamoed5, sukot_hoshaanaRaba, sukot_shminiAtzeret);
+		var holidays_02 = new Array(rabin);
+		var holidays_03 = new Array(erevHanuka,hanuka1,hanuka2,hanuka3,hanuka4,hanuka5);
+		var holidays_04 = new Array(hanuka6,hanuka7,hanuka8, tzomYudBetevet);
+		var holidays_05 = new Array(tuBeshvat);
+		var holidays_06 = new Array();
+		var holidays_07 = new Array(tzomTaanitEster, purim, shushanPurim);
+		var holidays_08 = new Array(erevPesah, Pesah, pesah_holHamoed1,pesah_holHamoed2,pesah_holHamoed3,pesah_holHamoed4,pesah_holHamoed5, pesah_hagSheni, yomHashoa);
+		var holidays_09 = new Array(yomHazikaron, yomHaatzmaut, lagBaomer, yomYerushalaim);
+		var holidays_10 = new Array(erevShavuot, Shavuot);
+		var holidays_11 = new Array(tzomYudZain);
+		var holidays_12 = new Array(tzomTetBeAv);
+		var holidays_13 = new Array(erevRoshHashana);
+			
+		// Load holidays into holiday array.
+		holidays = new Array(holidays_01,holidays_02,holidays_03,holidays_04,holidays_05,holidays_06,holidays_07,holidays_08,holidays_09,holidays_10,holidays_11,holidays_12,holidays_13);
+	
 	}
 		
 	/*
