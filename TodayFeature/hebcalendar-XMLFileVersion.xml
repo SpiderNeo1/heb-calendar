@@ -401,7 +401,7 @@ rabin.isMovable = 1;
 
 	}
 	
-	function FromListToEnum(var list, var arrEnum)
+	function FromListToEnum(list,arrEnum)
 	{
 		count = 0;
 		// loop over all Tabs Names
