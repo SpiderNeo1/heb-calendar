@@ -73,7 +73,7 @@
 	
 	//var Holidays = {"sunday" : 0, "monday" : 1, "tuesday" : 3, "wednesday" : 4, "thursday" : 5, "friday" : 6, "saturday" : 7};
 
-	//ENUM_Holidays[1]="AAAA";
+	
 	//var arrHolidaysFromXML;
 	var ENUM_Holidays = {roshHashana1: "Rosh Hashana 1", roshHashana2: "Rosh Hashana 2", tzomGdalia: "Tzom Gdalia", erevYomKipur: "Evening of Yom Kippur", YomKipur: "Yom Kippur", erevSukot: "Evening of Sukkot", sukot: "Sukkot", sukot_holHamoed1: "Sukkot 1 (ch'm)", sukot_holHamoed2: "Sukkot 2 (ch'm)", sukot_holHamoed3: "Sukkot 3 (ch'm)", sukot_holHamoed4: "Sukkot 4 (ch'm)", sukot_holHamoed5: "Sukkot 5 (ch'm)", sukot_hoshaanaRaba: "Hoshana Raba", sukot_shminiAtzeret: "Shmini Atzert and Simhat Tora.", rabin: "Itzhak Rabin Memorial Day", erevHanuka: "Evening of Chanukah", hanuka1: "Chanukah 1", hanuka2: "Chanukah 2", hanuka3: "Chanukah 3", hanuka4: "Chanukah 4", hanuka5: "Chanukah 5", hanuka6: "Chanukah 6", hanuka7: "Chanukah 7", hanuka8: "Chanukah 8", tzomYudBetevet: "Tzom Asara B'Tevet", tuBeshvat: "Tu B'Shvat", tzomTaanitEster: "Ta'anit Esther", purim: "Purim", shushanPurim: "Shushan Purim", erevPesah: "Evening of Passover", Pesah: "Passover", pesah_holHamoed1: "Passover 1", pesah_holHamoed2: "Passover 2", pesah_holHamoed3: "Passover 3", pesah_holHamoed4: "Passover 4", pesah_holHamoed5: "Passover 5", pesah_hagSheni: "7th of Passover", yomHashoa: "Holocaust Memorial Day", yomHazikaron: "Yom Hazikaron", yomHaatzmaut: "Independence day", lagBaomer: "Lag B'Omer", yomYerushalaim: "Jerusalem Day", erevShavuot: "Evening of Shavuot", Shavuot: "Shavuot", tzomYudZain: "Tzom 17th of Tamuz", tzomTetBeAv: "Tisha B'Av", erevRoshHashana: "Evening of Rosh Hashana"};
 	
@@ -209,7 +209,7 @@
 				// Set Holidays			
 				var holidayList = chosenLanguageXMLList.item((ENUM_XML_Nodes.Holidays * 2) + 1).childNodes;								
 				FromListToEnum(holidayList,ENUM_Holidays);
-				alert(ENUM_Holidays[0]);
+
 							
 				// Create tabs list enum.
 				var tabsList = chosenLanguageXMLList.item((ENUM_XML_Nodes.TabsName * 2) + 1).childNodes
@@ -262,7 +262,9 @@
 	function SetAllHolidays()
 	{
 	//--------------------------------------J E W I S H  H O L I D A Y S------------------------------------------------- 	
+		alert("SHHABBATH TEXT" + ENUM_ShabbathText[0])
 		alert("IN SET " + ENUM_Holidays[1]);
+		
 		//---TISHREY-1-//
 		
 		//var roshHashana1 = new holiday("א' ראש השנה", 1, 1,FULL_DAY);
@@ -364,8 +366,6 @@
 		// Load holidays into holiday array.
 		holidays = new Array(holidays_01,holidays_02,holidays_03,holidays_04,holidays_05,holidays_06,holidays_07,holidays_08,holidays_09,holidays_10,holidays_11,holidays_12,holidays_13);
 	
-		alert(ENUM_TabsNames[0]);
-		alert(arrDaysOfTheWeek[0]);
 	}
 		
 	/*
