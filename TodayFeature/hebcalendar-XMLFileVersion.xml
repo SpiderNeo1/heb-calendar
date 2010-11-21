@@ -85,17 +85,10 @@
 	var ENUM_AdarBetCases = {AdarB: "", Adar :""};
 	var ENUM_FeatureBox = {Date : "", Text :""};
 	
-	
-	
-	
-	
-	
-
 // End of colour consts
 	var editingIndex=0;
 	
 	var arrComulativeDays = new Array(1, 32, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366);
-	
 	
 	var arrM = new Array("ינואר","פברואר","מרץ","אפריל","מאי","יוני","יולי","אוגוסט","ספטמבר","אוקטובר","נובמבר","דצמבר");
 	var arrD = new Array("א","ב","ג","ד","ה","ו","ש")
@@ -242,6 +235,7 @@
 				//var ENUM_XML_Nodes = { GeneralText: 8, EventTabText: 9, AdarBetCases : 10, FeatureBox : 11 };
 					   
 		});
+		alert(ENUM_Holidays[1]);
 		SetAllHolidays();
 	}
 	
@@ -267,7 +261,7 @@
 	function SetAllHolidays()
 	{
 	//--------------------------------------J E W I S H  H O L I D A Y S------------------------------------------------- 	
-		 
+		 alert("IN SET " + ENUM_Holidays[1]);
 		//---TISHREY-1-//
 		//var roshHashana1 = new holiday("א' ראש השנה", 1, 1,FULL_DAY);
 		var roshHashana1 = new holiday(ENUM_Holidays.roshHashana1, 1, 1,FULL_DAY);
