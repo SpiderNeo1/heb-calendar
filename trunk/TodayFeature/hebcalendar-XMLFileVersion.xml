@@ -319,7 +319,7 @@ rabin.isMovable = 1;
 					// If isn't a text entry (each xml entry is followed by a text entry)
 					if (holidayList.item(i).firstChild != null)
 					{									
-						arrHolidays[count] = holidayList.item(l).firstChild.nodeValue;
+						arrHolidays[count] = holidayList.item(i).firstChild.nodeValue;
 					}
 				}
 				
