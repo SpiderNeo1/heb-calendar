@@ -215,6 +215,8 @@
 				var holidayList = chosenLanguageXMLList.item((ENUM_XML_Nodes.Holidays * 2) + 1).childNodes;								
 				FromListToEnum(holidayList,ENUM_Holidays);
 				
+				alert(ENUM_Holidays[1]);
+				
 				// Create tabs list enum.
 				var tabsList = chosenLanguageXMLList.item((ENUM_XML_Nodes.TabsName * 2) + 1).childNodes
 				
@@ -236,7 +238,7 @@
 				var generalTextList = chosenLanguageXMLList.item((ENUM_XML_Nodes.GeneralText * 2) + 1).childNodes
 
 				FromListToEnum(generalTextList,ENUM_GeneralText_EarliedOrPostponed);
-				alert(ENUM_GeneralText_EarliedOrPostponed[0]);
+				//alert(ENUM_GeneralText_EarliedOrPostponed[0]);
 				//var ENUM_XML_Nodes = { GeneralText: 8, EventTabText: 9, AdarBetCases : 10, FeatureBox : 11 };
 					   
 		});
