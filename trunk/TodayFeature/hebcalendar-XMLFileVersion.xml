@@ -72,7 +72,7 @@
 	var arrGregMonths = new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
 	
 	//var Holidays = {"sunday" : 0, "monday" : 1, "tuesday" : 3, "wednesday" : 4, "thursday" : 5, "friday" : 6, "saturday" : 7};
-	var ENUM_Holidays = {roshHashana1: "Rosh Hashana 1", roshHashana2: "Rosh Hashana 2", tzomGdalia: "Tzom Gdalia", erevYomKipur: "Evening of Yom Kippur", YomKipur: "Yom Kippur", erevSukot: "Evening of Sukkot", sukot: "Sukkot", sukot_holHamoed1: "Sukkot 1 (ch'm)", sukot_holHamoed2: "Sukkot 2 (ch'm)", sukot_holHamoed3: "Sukkot 3 (ch'm)", sukot_holHamoed4: "Sukkot 4 (ch'm)", sukot_holHamoed5: "Sukkot 5 (ch'm)", sukot_hoshaanaRaba: "Hoshana Raba", sukot_shminiAtzeret: "Shmini Atzert and Simhat Tora.", rabin: "Itzhak Rabin Memorial Day", erevHanuka: "Evening of Chanukah", hanuka1: "Chanukah 1", hanuka2: "Chanukah 2", hanuka3: "Chanukah 3", hanuka4: "Chanukah 4", hanuka5: "Chanukah 5", hanuka6: "Chanukah 6", hanuka7: "Chanukah 7", hanuka8: "Chanukah 8", tzomYudBetevet: "Tzom Asara B'Tevet", tuBeshvat: "Tu B'Shvat", tzomTaanitEster: "Ta'anit Esther", purim: "Purim", shushanPurim: "Shushan Purim", erevPesah: "Evening of Passover", Pesah: "Passover", pesah_holHamoed1: "Passover 1", pesah_holHamoed2: "Passover 2", pesah_holHamoed3: "Passover 3", pesah_holHamoed4: "Passover 4", pesah_holHamoed5: "Passover 5", pesah_hagSheni: "7th of Passover", yomHashoa: "Holocaust Memorial Day", yomHazikaron: "Yom Hazikaron", yomHaatzmaut: "Independence day", lagBaomer: "Lag B'Omer", yomYerushalaim: "Jerusalem Day", erevShavuot: "Evening of Shavuot", Shavuot: "Shavuot", tzomYudZain: "Tzom 17th of Tamuz", tzomTetBeAv: "Tisha B'Av", erevRoshHashana: "Evening of Rosh Hashana"};
+	var ENUM_Holidays = {roshHashana1: "", roshHashana2: "Rosh Hashana 2", tzomGdalia: "Tzom Gdalia", erevYomKipur: "Evening of Yom Kippur", YomKipur: "Yom Kippur", erevSukot: "Evening of Sukkot", sukot: "Sukkot", sukot_holHamoed1: "Sukkot 1 (ch'm)", sukot_holHamoed2: "Sukkot 2 (ch'm)", sukot_holHamoed3: "Sukkot 3 (ch'm)", sukot_holHamoed4: "Sukkot 4 (ch'm)", sukot_holHamoed5: "Sukkot 5 (ch'm)", sukot_hoshaanaRaba: "Hoshana Raba", sukot_shminiAtzeret: "Shmini Atzert and Simhat Tora.", rabin: "Itzhak Rabin Memorial Day", erevHanuka: "Evening of Chanukah", hanuka1: "Chanukah 1", hanuka2: "Chanukah 2", hanuka3: "Chanukah 3", hanuka4: "Chanukah 4", hanuka5: "Chanukah 5", hanuka6: "Chanukah 6", hanuka7: "Chanukah 7", hanuka8: "Chanukah 8", tzomYudBetevet: "Tzom Asara B'Tevet", tuBeshvat: "Tu B'Shvat", tzomTaanitEster: "Ta'anit Esther", purim: "Purim", shushanPurim: "Shushan Purim", erevPesah: "Evening of Passover", Pesah: "Passover", pesah_holHamoed1: "Passover 1", pesah_holHamoed2: "Passover 2", pesah_holHamoed3: "Passover 3", pesah_holHamoed4: "Passover 4", pesah_holHamoed5: "Passover 5", pesah_hagSheni: "7th of Passover", yomHashoa: "Holocaust Memorial Day", yomHazikaron: "Yom Hazikaron", yomHaatzmaut: "Independence day", lagBaomer: "Lag B'Omer", yomYerushalaim: "Jerusalem Day", erevShavuot: "Evening of Shavuot", Shavuot: "Shavuot", tzomYudZain: "Tzom 17th of Tamuz", tzomTetBeAv: "Tisha B'Av", erevRoshHashana: "Evening of Rosh Hashana"};
 	
 	var ENUM_TabsNames = {Calendar: "",EditEvent:"",AddEvent:"",EventsList:""};
 	var arrDaysOfTheWeek = new Array( "Su", "Mo", "Tu", "We", "Th", "Fr", "Sa");
@@ -306,44 +306,20 @@ rabin.isMovable = 1;
 				
 				// Set Greogrian Months.
 				tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.GregorianMonths * 2) + 1).firstChild.nodeValue;
-				arrHebDate = tmp.split(",");
+				arrGregMonths = tmp.split(",");
 
 				// Set Holidays			
 				var holidayList = chosenLanguageXMLList.item((ENUM_XML_Nodes.Holidays * 2) + 1).childNodes;								
 				var count = 0;
-				// loop over all holidays.
-				for (var l = 0; l < holidayList.length; l++)
-				{
-					// If isn't a text entry (each xml entry is followed by a text entry)
-					if (holidayList.item(l).firstChild != null)
-					{										
-						// Get the text string that represents the holiday.
-						var tmp = holidayList.item(l).firstChild.nodeValue;
-						// Set text of holiday in holiday description enum.
-						ENUM_Holidays[count] = tmp;
-						// Increment number of hildays.
-						count++;
-					}
-				}
+
+				FromListToEnum(holidayList,ENUM_Holidays);
 				
 				// Create tabs list enum.
 				var tabsList = chosenLanguageXMLList.item((ENUM_XML_Nodes.TabsName * 2) + 1).childNodes
 				count = 0;
-				// loop over all Tabs Names
-				for (var l = 0; l < tabsList.length; l++)
-				{
-					// If isn't a text entry (each xml entry is followed by a text entry)
-					if (tabsList.item(l).firstChild != null)
-					{										
-						// Get the text string that represents the holiday.
-						var tmp = tabsList.item(l).firstChild.nodeValue;
-						// Set text of holiday in holiday description enum.
-						ENUM_TabsNames[count] = tmp;
-						// Increment number of hildays.
-						count++;
-					}
-				}
 				
+				FromListToEnum(tabsList,ENUM_TabsNames);
+
 				// Set Days Of Week.
 				tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.DaysOfWeek * 2) + 1).firstChild.nodeValue;
 				arrDaysOfTheWeek = tmp.split(",");
@@ -351,44 +327,16 @@ rabin.isMovable = 1;
 				// Create shabbathText enum.
 				var shabbathList = chosenLanguageXMLList.item((ENUM_XML_Nodes.ShabbathText * 2) + 1).childNodes
 				count = 0;
-				// loop over all Tabs Names
-				for (var l = 0; l < shabbathList.length; l++)
-				{
-					// If isn't a text entry (each xml entry is followed by a text entry)
-					if (shabbathList.item(l).firstChild != null)
-					{										
-						// Get the text string that represents the holiday.
-						var tmp = shabbathList.item(l).firstChild.nodeValue;
-						// Set text of holiday in holiday description enum.
-						ENUM_ShabbathText[count] = tmp;
-						// Increment number of hildays.
-						count++;
-					}
-				}
 				
-				
+				FromListToEnum(shabbathList,ENUM_ShabbathText);
+								
 				// Annuall text for annual events.
 				eventTextYearly = chosenLanguageXMLList.item((ENUM_XML_Nodes.EventTextAnnually * 2) + 1).childNodes
 
 				// Create GeneralText enum.
 				var generalTextList = chosenLanguageXMLList.item((ENUM_XML_Nodes.GeneralText * 2) + 1).childNodes
 				count = 0;
-				/*
-				// loop over all Tabs Names
-				for (var l = 0; l < generalTextList.length; l++)
-				{
-					// If isn't a text entry (each xml entry is followed by a text entry)
-					if (generalTextList.item(l).firstChild != null)
-					{										
-						// Get the text string that represents the holiday.
-						var tmp = generalTextList.item(l).firstChild.nodeValue;
-						// Set text of holiday in holiday description enum.
-						ENUM_GeneralText_EarliedOrPostponed[count] = tmp;
-						// Increment number of hildays.
-						count++;
-					}
-				}
-				*/
+
 				FromListToEnum(generalTextList,ENUM_GeneralText_EarliedOrPostponed);
 				alert(ENUM_GeneralText_EarliedOrPostponed[0]);
 				//var ENUM_XML_Nodes = { GeneralText: 8, EventTabText: 9, AdarBetCases : 10, FeatureBox : 11 };
