@@ -364,6 +364,8 @@
 		// Load holidays into holiday array.
 		holidays = new Array(holidays_01,holidays_02,holidays_03,holidays_04,holidays_05,holidays_06,holidays_07,holidays_08,holidays_09,holidays_10,holidays_11,holidays_12,holidays_13);
 	
+		alert(ENUM_TabsNames[0]);
+		alert(arrDaysOfTheWeek[0]);
 	}
 		
 	/*
