@@ -1749,11 +1749,11 @@ text+="</table>"
 	text+="&nbsp;&nbsp; <input type='Checkbox' id='Daily' value='ON' onclick='updateDayField()'>&nbsp;אירוע יומיי</p>"	
 	text+="</p>"
 	text+="<p dir='rtl'>&nbsp;&nbsp;&nbsp;&nbsp;<span lang='he'>&#1495;&#1493;&#1491;&#1513;:&nbsp;<select size='1' id='EventMonth' onchange='updateDays()'></select> &nbsp;&nbsp;&nbsp; </span>"
-	text+="&nbsp;&nbsp; <input type='Checkbox' id='Monthly' value='ON' onclick='updateMonthField()'>&nbsp;אירוע חודשי</p>"	
+	text+="&nbsp;&nbsp; <input type='Checkbox' id='Monthly' value='ON' onclick='updateDayField()'>&nbsp;אירוע חודשי</p>"	
 	text+="<p dir='rtl'>&nbsp;&nbsp;&nbsp;<span lang='he'> &#1513;&#1504;&#1492;:&nbsp;"
 	text+="<select size='1' id='EventYear' onchange='updateDays()'></select></span>"
 	text+="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-	text+="<input type='Checkbox' id='annually' value='ON' onclick='updateYearField()'>&nbsp;אירוע שנתי </p>"
+	text+="<input type='Checkbox' id='annually' value='ON' onclick='updateDayField()'>&nbsp;אירוע שנתי </p>"
 	text+="<p dir='rtl'>&nbsp;&nbsp;&nbsp;"
 	text+="<input type='button' value='&#1492;&#1493;&#1505;&#1507; &#1488;&#1497;&#1512;&#1493;&#1506;' id='add' onclick='submitEvent()'>&nbsp;&nbsp;&nbsp; <input type='button' value='&#1488;&#1497;&#1508;&#1493;&#1505;' id='reset' onclick='clearText()'></p>"
 	text+="</font></form>"
@@ -2138,15 +2138,26 @@ text+="</table>"
 	 * When monthly checkbox is clicked, this function is called to disable / enable the choose month and year in data list.
 	 */
 	function updateDayField(){
-		if (document.getElementById("Daily").checked){
-			document.getElementById("EventYear").disabled=true;
-			document.getElementById("EventMonth").disabled=true;
-			document.getElementById("EventDay").disabled=true;
+		if (document.getElementById("Daily").checked)
+		{
+				document.getElementById("EventYear").disabled=true;
+				document.getElementById("EventMonth").disabled=true;
+				document.getElementById("EventDay").disabled=true;
 			return;
 		}
-		document.getElementById("EventYear").disabled=false;
-		document.getElementById("EventMonth").disabled=false;
-		document.getElementById("EventDay").disabled=false;
+		else if (document.getElementById("Monthly").checked)
+		{
+			document.getElementById("EventYear").disabled=true;
+			document.getElementById("EventMonth").disabled=true;
+			document.getElementById("EventDay").disabled=false;
+			return;
+		}
+		else if (document.getElementById("Annually").checked)
+		{
+			document.getElementById("EventYear").disabled=true;
+			document.getElementById("EventMonth").disabled=false;
+			document.getElementById("EventDay").disabled=false;
+		}
 	}
 
 	
