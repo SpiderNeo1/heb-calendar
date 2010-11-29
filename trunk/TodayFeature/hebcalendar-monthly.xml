@@ -2158,6 +2158,9 @@ text+="</table>"
 			document.getElementById("EventMonth").disabled=false;
 			document.getElementById("EventDay").disabled=false;
 		}
+		document.getElementById("EventYear").disabled=false;
+		document.getElementById("EventMonth").disabled=false;
+		document.getElementById("EventDay").disabled=false;		
 	}
 
 	
