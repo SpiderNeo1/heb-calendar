@@ -2138,11 +2138,12 @@ text+="</table>"
 	 * When monthly checkbox is clicked, this function is called to disable / enable the choose month and year in data list.
 	 */
 	function updateDayField(){
+		
 		if (document.getElementById("Daily").checked)
 		{
-				document.getElementById("EventYear").disabled=true;
-				document.getElementById("EventMonth").disabled=true;
-				document.getElementById("EventDay").disabled=true;
+			document.getElementById("EventYear").disabled=true;
+			document.getElementById("EventMonth").disabled=true;
+			document.getElementById("EventDay").disabled=true;
 			return;
 		}
 		else if (document.getElementById("Monthly").checked)
@@ -2152,7 +2153,7 @@ text+="</table>"
 			document.getElementById("EventDay").disabled=false;
 			return;
 		}
-		else if (document.getElementById("Annually").checked)
+		else if (document.getElementById("annually").checked)
 		{
 			document.getElementById("EventYear").disabled=true;
 			document.getElementById("EventMonth").disabled=false;
