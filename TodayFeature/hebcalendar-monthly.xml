@@ -1746,12 +1746,14 @@ text+="</table>"
 	text+="<input type='radio' value='AddGregDate' checked id = 'R1' name='R1' onclick='updateDropDownBoxes()'><span lang='he'> &#1514;&#1488;&#1512;&#1497;&#1498; &#1500;&#1493;&#1506;&#1494;&#1497;</span></p>"
 	text+="<p dir='rtl'>&nbsp;&nbsp;&nbsp;&nbsp;<span lang='he'>&#1514;&#1497;&#1488;&#1493;&#1512;: <input type='text' id='EventDescription' size='21' maxlength='21'></span></p>"
 	text+="<p dir='rtl'>&nbsp;&nbsp;&nbsp;&nbsp;<span lang='he'>&#1497;&#1493;&#1501;: <select size='1' id='EventDay'></select> &nbsp;&nbsp;&nbsp; "
-	text+="&#1495;&#1493;&#1491;&#1513;:&nbsp;<select size='1' id='EventMonth' onchange='updateDays()'></select> &nbsp;&nbsp;&nbsp; </span></p>"
+	text+="&nbsp;&nbsp; <input type='Checkbox' id='Daily' value='ON' onclick='updateDayField()'>&nbsp;אירוע יומיי</p>"	
+	text+="</p>"
+	text+="<p dir='rtl'>&nbsp;&nbsp;&nbsp;&nbsp;<span lang='he'>&#1495;&#1493;&#1491;&#1513;:&nbsp;<select size='1' id='EventMonth' onchange='updateDays()'></select> &nbsp;&nbsp;&nbsp; </span>"
+	text+="&nbsp;&nbsp; <input type='Checkbox' id='Monthly' value='ON' onclick='updateMonthField()'>&nbsp;אירוע חודשי</p>"	
 	text+="<p dir='rtl'>&nbsp;&nbsp;&nbsp;<span lang='he'> &#1513;&#1504;&#1492;:&nbsp;"
 	text+="<select size='1' id='EventYear' onchange='updateDays()'></select></span>"
 	text+="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-	text+="<input type='Checkbox' id='annually' value='ON' onclick='updateYearField()'>&nbsp;אירוע שנתי"
-	text+="&nbsp;&nbsp; <input type='Checkbox' id='Monthly' value='ON' onclick='updateMonthField()'>&nbsp;אירוע חודשי"
+	text+="<input type='Checkbox' id='annually' value='ON' onclick='updateYearField()'>&nbsp;אירוע שנתי </p>"
 	text+="<p dir='rtl'>&nbsp;&nbsp;&nbsp;"
 	text+="<input type='button' value='&#1492;&#1493;&#1505;&#1507; &#1488;&#1497;&#1512;&#1493;&#1506;' id='add' onclick='submitEvent()'>&nbsp;&nbsp;&nbsp; <input type='button' value='&#1488;&#1497;&#1508;&#1493;&#1505;' id='reset' onclick='clearText()'></p>"
 	text+="</font></form>"
@@ -2118,6 +2120,35 @@ text+="</table>"
 		}
 		document.getElementById("EventYear").disabled=false;
 	}
+
+	/*
+	 * When monthly checkbox is clicked, this function is called to disable / enable the choose month and year in data list.
+	 */
+	function updateMonthField(){
+		if (document.getElementById("Monthly").checked){
+			document.getElementById("EventYear").disabled=true;
+			document.getElementById("EventMonth").disabled=true;
+			return;
+		}
+		document.getElementById("EventYear").disabled=false;
+		document.getElementById("EventMonth").disabled=false;
+	}
+
+	/*
+	 * When monthly checkbox is clicked, this function is called to disable / enable the choose month and year in data list.
+	 */
+	function updateDayField(){
+		if (document.getElementById("Daily").checked){
+			document.getElementById("EventYear").disabled=true;
+			document.getElementById("EventMonth").disabled=true;
+			document.getElementById("EventDay").disabled=true;
+			return;
+		}
+		document.getElementById("EventYear").disabled=false;
+		document.getElementById("EventMonth").disabled=false;
+		document.getElementById("EventDay").disabled=false;
+	}
+
 	
 	/*
 	 * Whenever the form is to be changed for example when a user chooses a different month
