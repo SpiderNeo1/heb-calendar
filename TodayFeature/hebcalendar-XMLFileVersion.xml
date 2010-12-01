@@ -1917,7 +1917,7 @@ text+="</table>"
 	tabs.getTabs()[1].getNameContainer().innerHTML = ENUM_TabsNames[2];
 	var events = (prefs.getString("mylist")).split("|")
 	var i,eventCount = events.length;
-	var writeText;
+	var writeText ="";
 	// set direction according to input language - ltr for english/ ..., rtl for hebrew.
 	var directionOfForm = "ltr";
 	// Direction of most of the text in the form, description, date will be aligned according to the rtl or rtl of the chosen
