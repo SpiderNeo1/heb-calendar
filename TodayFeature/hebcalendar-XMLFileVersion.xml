@@ -176,6 +176,10 @@
 		currMonth=now.getMonth()
 		currYear=now.getUTCFullYear()
 		currDay = now.getDate()
+	}
+	
+	function CallXMLAndSetData()
+	{
 		var url = "http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/NamesXML.xml";
 		//var url = "http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/Loading.jpg";
 		
@@ -183,7 +187,6 @@
 		params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.DOM;
 		
 		gadgets.io.makeRequest(url,response,params)
-		loaded = false;
 	}
 
 	function response(obj)
@@ -259,7 +262,7 @@
 		tabs.getTabs()[0].getNameContainer().innerHTML = "Test";	
 		tabs.getTabs()[1].getNameContainer().innerHTML = ENUM_TabsNames.AddEvent;
 		tabs.getTabs()[2].getNameContainer().innerHTML = ENUM_TabsNames.EventsList;
-		alert("set Tab Names");
+		loaded = true;
 	
 			
 	}
@@ -404,7 +407,6 @@
 	 	tabs.addDynamicTab("לוח שנה", writeCalendar);
 	 	tabs.addDynamicTab("הוספת אירוע", addEventForm);
 	 	tabs.addDynamicTab("רשימת אירועים", listEvents);
-		alert("INIT DONE!");
 	 }
 
 	//======================================= WRITE CALENDAR ==========================================================
@@ -413,6 +415,12 @@
 	 * This function actually creates the calendar's backbone. 
 	 */
 	function writeCalendar(tabId){	
+	// XML has yet to be loaded.
+	if (loaded == false)
+	{
+		setTimeout("writeCalendar(tabId)", 1000);
+		return;
+	}
 	editMode=false;
 	currentGregOrHeb="";
 
