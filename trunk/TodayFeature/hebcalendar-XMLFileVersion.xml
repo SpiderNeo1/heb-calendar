@@ -1449,7 +1449,7 @@ text+="</table>"
 					{
 					// direction of MiniMessage depends on the input language - if hebrew should be right to left.
 						var directionOfMiniMessage = (chosenLanguage == "hebrew" ? "rtl" : "ltr");
-						messages[messages.length] = msg.createStaticMessage("<p dir='ltr'>"+eventToString(tempEvent) + " - " +  tempEvent.desc +"</p>", _IG_AdjustIFrameHeight);	//Creating user mini messages
+						messages[messages.length] = msg.createStaticMessage("<p dir='"+directionOfMiniMessage+"'>"+eventToString(tempEvent) + " - " +  tempEvent.desc +"</p>", _IG_AdjustIFrameHeight);	//Creating user mini messages
 					}
 				if (toolTipCellText[cell] != "")		//event description will be displayed in a new line
 					toolTipCellText[cell] += "<BR>"
