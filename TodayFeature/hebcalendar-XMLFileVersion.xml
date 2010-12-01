@@ -216,9 +216,9 @@
 		}
 		
 		// Set hebrew months array.
-		var tmp =  objectData.getElementsByTagName("Language").item(j).getElementsByTagName("HebrewMonths");
+		var tmp =  objectData.getElementsByTagName("HebrewMonths");
 		alert(tmp);
-		tmp = tmp.firstChild.nodeValue;
+		tmp = tmp.item(j).firstChild.nodeValue;
 		alert(tmp);
 		//var tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.HebrewMonths * 2) + 1).firstChild.nodeValue;
 		arrHebMonths = tmp.split(",");
