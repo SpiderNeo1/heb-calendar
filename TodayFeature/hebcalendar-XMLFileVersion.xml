@@ -296,7 +296,6 @@
 		//---TISHREY-1-//
 		
 		//var roshHashana1 = new holiday("א' ראש השנה", 1, 1,FULL_DAY);
-	
 		var roshHashana1 = new holiday(ENUM_Holidays[0], 1, 1,FULL_DAY);
 		var roshHashana2 = new holiday(ENUM_Holidays[1], 1, 2,FULL_DAY);
 		var tzomGdalia = new holiday(ENUM_Holidays[2], 1, 3,NONE);
@@ -1523,14 +1522,16 @@ text+="</table>"
 					tempholiday.desc += " - נדחה"
 				}
 			}
-			else if (tempholiday.desc==ENUM_Holidays.hanuka6 || tempholiday.desc==ENUM_Holidays.hanuka7 || tempholiday.desc==ENUM_Holidays.hanuka8)
+			// ENUM_Holidays[21] = hanuka6, 22 - hanuka7, 23 - hanuka 8
+			else if (tempholiday.desc==ENUM_Holidays[21] || tempholiday.desc==ENUM_Holidays[22] || tempholiday.desc==ENUM_Holidays[23])
 			{
 				if (hebDateExists(currHebYear, 3, 30))  // Kislev 30th exists - Hanuka 6th is on Kislev 30th instead of Tevet 1st and so on
 				{
 					cell-=1
 				}
 			}
-			else if (tempholiday.desc==ENUM_Holidays.tzomTaanitEster)
+			// Tzom taanit ester.
+			else if (tempholiday.desc==ENUM_Holidays[26])
 			{
 				if (cell % 7 == 6)
 				{
@@ -1538,7 +1539,8 @@ text+="</table>"
 					tempholiday.desc += " - הוקדם"
 				}
 			}
-			else if (tempholiday.desc==ENUM_Holidays.yomHazikaron)
+			// 38 - yom hazikaron.
+			else if (tempholiday.desc==ENUM_Holidays[38])
 			{
 				if (cell % 7 == 5) // Friday
 				{
@@ -1551,7 +1553,8 @@ text+="</table>"
 					tempholiday.desc += " - נדחה"
 				}
 			}
-			else if (tempholiday.desc==ENUM_Holidays.rabin)
+			// 14 - Rabin.
+			else if (tempholiday.desc==ENUM_Holidays[14])
 			{
 				if (cell % 7 == 5) // Friday
 				{
@@ -1564,7 +1567,8 @@ text+="</table>"
 					tempholiday.desc += " - הוקדם"
 				}
 			}
-			else if (tempholiday.desc==ENUM_Holidays.yomHazikaron)
+			// Yom Hazikaron - 38
+			else if (tempholiday.desc==ENUM_Holidays[38])
 			{
 				if (currYear == 1950)
 				{
@@ -1591,11 +1595,12 @@ text+="</table>"
 					}
 				}
 			}
-			else if (tempholiday.desc==ENUM_Holidays.yomHaatzmaut)
+			// 39 - yom haatzmauut.
+			else if (tempholiday.desc==ENUM_Holidays[39])
 			{
 				if (currYear == 1950)
 				{
-					toolTipCellText[cell]="ערב "+ENUM_Holidays.yomHaaztzmaut+" נדחה - ";   //"ערב יום העצמאות - נדחה"
+					toolTipCellText[cell]="ערב "+ENUM_Holidays[39]+" נדחה - ";   //"ערב יום העצמאות - נדחה"
 					cell +=1
 					tempholiday.desc += " - נדחה"
 				}
@@ -1631,27 +1636,32 @@ text+="</table>"
 		var flag=true
 		if (currYear < 1997)
 		{
-			if (toCheck.desc==ENUM_Holidays.rabin)
+			// 14 - Rabin.
+			if (toCheck.desc==ENUM_Holidays[14])
 				flag = false
 		}
 		if (currYear < 1968)
 		{
-			if (toCheck.desc==ENUM_Holidays.yomYerushalaim)
+			// 41 - yom yerushalaim.
+			if (toCheck.desc==ENUM_Holidays[41])
 				flag = false
 		}
 		if (currYear < 1959)
 		{
-			if (toCheck.desc==ENUM_Holidays.yomHashoa)
+			// 37 - Yom Hashoa
+			if (toCheck.desc==ENUM_Holidays[37])
 				flag = false
 		}
 		if (currYear < 1950)
 		{
-			if (toCheck.desc==ENUM_Holidays.yomHazikaron)
+			// Yom Hazikaron.
+			if (toCheck.desc==ENUM_Holidays[38])
 				flag = false
 		}
 		if (currYear < 1949)
 		{
-			if (toCheck.desc==ENUM_Holidays.yomHaatzmaut)
+			// Yom Haatzmaut.
+			if (toCheck.desc==ENUM_Holidays[39])
 				flag = false
 		}
 		return flag  						
