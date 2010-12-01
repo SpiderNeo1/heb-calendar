@@ -210,6 +210,7 @@
 			
 			if (chosenLanguage == node.nodeName )
 			{				
+				alert(node.nodename);
 				chosenLanguageXMLList = node.childNodes;	
 				break;
 			}
