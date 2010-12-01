@@ -76,14 +76,14 @@
 
 	var ENUM_TabsNames = new Array (5);
 	var arrDaysOfTheWeek = new Array(7);
-	var ENUM_ShabbathText = new Array(2);
+	var ENUM_ShabbathText = new Array(3);
 	var eventTextYearly = "Annually";
 	var ENUM_GeneralText_EarliedOrPostponed = new Array(2);
 	var ENUM_EventTabText = new Array(20);
 	var ENUM_EventTabMessagesToUser = new Array(7);
 	var ENUM_ListEventsTabText = new Array(5);
-	var ENUM_AdarBetCases = new Array(2);
-	var ENUM_FeatureBox = new Array(2);
+	var ENUM_AdarBetCases = new Array(3);
+	var ENUM_FeatureBox = new Array(3);
 	
 // End of colour consts
 	var editingIndex=0;
@@ -242,11 +242,12 @@
 		tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.DaysOfWeek * 2) + 1).firstChild.nodeValue;
 		arrDaysOfTheWeek = tmp.split(",");
 
-		alert("UP IN HERE2");
+		alert("UP IN HERE22");
 		
 		// Create shabbathText enum.
 		var shabbathList = chosenLanguageXMLList.item((ENUM_XML_Nodes.ShabbathText * 2) + 1).childNodes
 	
+	alert("UP IN HERE222");
 		FromListToEnum(shabbathList,ENUM_ShabbathText);
 						
 		alert("UP IN HERE3");
