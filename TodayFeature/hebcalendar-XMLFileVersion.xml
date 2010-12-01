@@ -435,8 +435,8 @@
 
 	// Helper function - load XML before starting.
 	// functionToRun - function in string format to run.
-	// singleParam - parameter for the function.
-	function ExecuteFunctionAfterReadingXML(functionToRun, singleParam)
+	// tabId - tab id of the current tab to display a loading message.
+	function ExecuteFunctionAfterReadingXML(functionToRun, tabId)
 	{
 		if (FirstRunReadFromXML == true)
 		{
@@ -445,7 +445,7 @@
 			ReadXMLAndSetData();
 			FirstRunReadFromXML = false;
 		}
-		setTimeout(functionToRun+"('"+singleParam+"')", 500);
+		setTimeout(functionToRun+"('"+tabId+"')", 500);
 	}
 	 
 	 
