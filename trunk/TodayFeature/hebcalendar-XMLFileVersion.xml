@@ -263,12 +263,13 @@
 		var messagesToUserInEventTabText = chosenLanguageXMLList.item((ENUM_XML_Nodes.MessagesToUserInEventTab * 2) + 1).childNodes
 
 		FromListToEnum(messagesToUserInEventTabText,ENUM_EventTabMessagesToUser);		
+		alert(ENUM_EventTabMessagesToUser[0]);
 		
 		// Create Adarbetcases enum.
 		var messagesAdarBetCasesText = chosenLanguageXMLList.item((ENUM_XML_Nodes.AdarBetCases * 2) + 1).childNodes
 
 		FromListToEnum(messagesAdarBetCasesText,ENUM_AdarBetCases);		
-		
+		alert(ENUM_AdarBetCases[0]);
 		// Create featurebox enum.
 		var messagesFeatureBoxText = chosenLanguageXMLList.item((ENUM_XML_Nodes.FeatureBox * 2) + 1).childNodes
 
