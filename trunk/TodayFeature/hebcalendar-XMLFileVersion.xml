@@ -178,7 +178,7 @@
 		currDay = now.getDate()
 		var url = "http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/NamesXML.xml";
 		var url = "http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/Loading.jpg";
-		_IG_FetchXmlContent(url, function (response)); 
+		_IG_FetchXmlContent(url,response); 
 		loaded = false;
 	}
 		function response()
@@ -277,8 +277,8 @@
 	function SetAllHolidays()
 	{
 	//--------------------------------------J E W I S H  H O L I D A Y S------------------------------------------------- 	
-		alert("SHHABBATH TEXT" + ENUM_ShabbathText[0])
-		alert("IN SET " + ENUM_Holidays[1]);
+		//alert("SHHABBATH TEXT" + ENUM_ShabbathText[0])
+		
 		
 		//---TISHREY-1-//
 		
