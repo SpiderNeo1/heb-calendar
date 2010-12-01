@@ -259,7 +259,7 @@
 		tabs.getTabs()[0].getNameContainer().innerHTML = tabsList[0];	
 		tabs.getTabs()[1].getNameContainer().innerHTML = tabsList[1];
 		tabs.getTabs()[2].getNameContainer().innerHTML = tabsList[2];
-		
+	
 			
 	}
 
@@ -277,8 +277,6 @@
 				// Get the text string that represents the holiday.
 				var tmp = list.item(l).firstChild.nodeValue;
 				alert(tmp);
-				alert(tmp.nodeValue);
-				alert(tmp.firstChild.nodeValue);
 				// Set text of holiday in holiday description enum.
 				arrEnum[count] = tmp;
 				// Increment number of hildays.
