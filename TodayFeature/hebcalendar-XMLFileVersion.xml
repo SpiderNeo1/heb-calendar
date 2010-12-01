@@ -450,7 +450,7 @@
 	// The headline cell
 
 	text +="<td id=headline background='"+DESIGN_LOCATION+"cal_05"+just+".jpg' width='125' colSpan='3' height='21'><center><b><font size='3'>"
-	text +=arrM[currMonth]
+	text +=arrGregMonths[currMonth]
 	text +="&nbsp;&nbsp;"+currYear
 	// The > cell
 	text +="<td id=nextmonth background='"+DESIGN_LOCATION+"cal_04"+just+".jpg' rowspan='2' colSpan='1' width='33' height='38' align='"+alNext+"'>"
@@ -693,7 +693,7 @@ text+="</table>"
 		document.getElementById("headline").style.fontWeight='bold'
 		document.getElementById("headline").align='center'
 		document.getElementById("headline").bgColor=HEADLINEBACKCOLOR
-		document.getElementById("headline").innerHTML=arrM[currMonth]+ "&nbsp;&nbsp;"+currYear
+		document.getElementById("headline").innerHTML=arrGregMonths[currMonth]+ "&nbsp;&nbsp;"+currYear
 		
 	}
 
@@ -1480,7 +1480,7 @@ text+="</table>"
 			str += "" + userEvent.Hday
 			str += " "
 			str += "ב"
-			str += arrM[userEvent.Hmonth]
+			str += arrGregMonths[userEvent.Hmonth]
 			str += ", "
 			str += (userEvent.year == -1 ? "שנתי" : ("" + userEvent.year))
 		}
@@ -2125,7 +2125,7 @@ text+="</table>"
 				// Add all Gregorian months.
 			for (i=0;i<12;i++){
 				var optn = document.createElement("OPTION");
-				optn.text = arrM[i];
+				optn.text = arrGregMonths[i];
 				optn.value = i;
 				elemMonth.options.add(optn);
 			}
