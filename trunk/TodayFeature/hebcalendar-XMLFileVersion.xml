@@ -75,7 +75,7 @@
 	var ENUM_Holidays = new Array(MAX_HOLIDAYS_COUNT);
 
 	var ENUM_TabsNames = new Array (5);
-	var arrDaysOfTheWeek = {"A","B","C","D","E","F","G"};//new Array(7);
+	var arrDaysOfTheWeek = new Array{"A","B","C","D","E","F","G"};//new Array(7);
 	var ENUM_ShabbathText = new Array(3);
 	var eventTextYearly = "Annually";
 	var ENUM_GeneralText_EarliedOrPostponed = new Array(2);
