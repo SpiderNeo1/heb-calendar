@@ -1504,6 +1504,7 @@ text+="</table>"
 			// Can't leave an XML node empty but want that possiblity to not add anything between day and month.
 			// SO.. if this node is equal empty,
 			// do not connect the day and month with anything.
+			alert(ENUM_ListEventsTabText[1]);
 			if (ENUM_ListEventsTabText[1] != "Empty")
 			{
 				str += ENUM_ListEventsTabText[1];
