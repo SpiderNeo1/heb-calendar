@@ -73,7 +73,7 @@
     </TabsName>
     <DaysOfTheWeek>Su,Mo,Tu,We,Th,Fr,Sa</DaysOfTheWeek>
     <ShabbathText>
-      <ShabbathStart>Shabbath Start: </ShabbathStart>
+      <ShabbathStart>Shabbath Starts: </ShabbathStart>
       <ShabbathEnd>Shabbath Ends: </ShabbathEnd>
     </ShabbathText>
     <EventTextAnnually>Annually</EventTextAnnually>
