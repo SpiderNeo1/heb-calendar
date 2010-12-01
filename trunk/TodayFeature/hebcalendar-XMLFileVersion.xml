@@ -234,8 +234,8 @@
 		// Set Holidays			
 		var tmp =  objectData.getElementsByTagName("Holidays");
 		alert(tmp);
-		tmp = tmp.item(j).childNodes;				
-		alert(tmp);
+		var holidayList = tmp.item(j).childNodes;				
+		alert(holidayList);
 			
 		FromListToEnum(holidayList,ENUM_Holidays);
 		alert(ENUM_Holidays[0]);
