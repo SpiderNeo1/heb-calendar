@@ -110,6 +110,7 @@
 	
 	var LeftToRight=true;
 	var DESIGN_LOCATION="http://heb-calendar.googlecode.com/svn/trunk/images/design/"
+	var loadingImageUrl = "http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/loading.gif";
 	var TD_W5H9 = "width='5' align='center' height='9' style='font-size:1px;' "
 	var TD_W40H9 = "width='40' align='center' height='9' style='font-size:1px;' "
 	var FULL_DAY = 5;
@@ -420,6 +421,8 @@
 	{
 		if (FirstRunReadFromXML == true)
 		{
+			var loadingImageHTML = "<img src='"+loadingImageUrl+"' border='0' />";
+			_gel(tabId).innerHTML=loadingImageHTML;
 			ReadXMLAndSetData();
 			FirstRunReadFromXML = false;
 		}
