@@ -210,8 +210,6 @@
 			
 			if (chosenLanguage == node.nodeName )
 			{				
-				alert(node.nodeName);			
-				//chosenLanguageXMLList = node.childNodes;	
 				break;
 			}
 		}
@@ -226,7 +224,6 @@
 		
 		// Set hebrew months array.
 		var tmp =  objectData.getElementsByTagName("HebrewMonths");
-		alert(j);
 		tmp = tmp.item(j).firstChild.nodeValue;
 		arrHebMonths = tmp.split(",");
 
@@ -2323,7 +2320,7 @@ text+="</table>"
 		separator = "|";
 	}
 	prefs.set("mylist",finalEvents);
-	tabs.setSelectedTab(0);
+	tabs.setSelectedTab(1);
 	tabs.setSelectedTab(2);	 
  	}
  	
