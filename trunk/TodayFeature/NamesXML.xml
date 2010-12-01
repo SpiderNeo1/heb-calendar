@@ -80,6 +80,7 @@
     <GeneralText>
       <PushedEarlier>Earlied</PushedEarlier>
       <Postponed>Postponed</Postponed>
+      <Eve>Eve of</Eve>
     </GeneralText>
     <EventTabText>
       <JewishDate>Jewish Date</JewishDate>
@@ -121,11 +122,11 @@
       <YomKipur>יום הכיפורים</YomKipur>
       <erevSukot>ערב סוכות</erevSukot>
       <sukot>סוכות</sukot>
-      <sukot_holHamoed1>א' חוהמ\ס</sukot_holHamoed1>
-      <sukot_holHamoed2>ב' חוהמ\ס</sukot_holHamoed2>
-      <sukot_holHamoed3>ג' חוהמ\ס</sukot_holHamoed3>
-      <sukot_holHamoed4>ד' חוהמ\ס</sukot_holHamoed4>
-      <sukot_holHamoed5>ה' חוהמ\ס</sukot_holHamoed5>
+      <sukot_holHamoed1>א' חוה"מ</sukot_holHamoed1>
+      <sukot_holHamoed2>ב' חוהמ"ס</sukot_holHamoed2>
+      <sukot_holHamoed3>ג' חוהמ"ס</sukot_holHamoed3>
+      <sukot_holHamoed4>ד' חוהמ"ס</sukot_holHamoed4>
+      <sukot_holHamoed5>ה' חוהמ"ס</sukot_holHamoed5>
       <sukot_hoshaanaRaba>הושענא רבה</sukot_hoshaanaRaba>
       <sukot_shminiAtzeret>שמיני עצרת ושמחת תורה</sukot_shminiAtzeret>
       <!-- HESHVAN 2 -->
@@ -143,7 +144,7 @@
       <hanuka8>ח' חנוכה</hanuka8>
       <tzomYudBetevet>צום י' בטבת</tzomYudBetevet>
       <!-- SHVAT 5 -->
-      <tuBeshvat>ט\ו בשבט</tuBeshvat>
+      <tuBeshvat>ט"ו בשבט</tuBeshvat>
       <!-- ADAR 7 -->
       <tzomTaanitEster>תענית אסתר</tzomTaanitEster>
       <purim>פורים</purim>
@@ -151,23 +152,23 @@
       <!-- NISAN 8 -->
       <erevPesah>ערב פסח</erevPesah>
       <Pesah>פסח</Pesah>
-      <pesah_holHamoed1>א' חוהמ\פ</pesah_holHamoed1>
-      <pesah_holHamoed2>ב' חוהמ\פ</pesah_holHamoed2>
-      <pesah_holHamoed3>ג' חוהמ\פ</pesah_holHamoed3>
-      <pesah_holHamoed4>ד' חוהמ\פ</pesah_holHamoed4>
-      <pesah_holHamoed5>ה' חוהמ\פ</pesah_holHamoed5>
+      <pesah_holHamoed1>א' חוהמ"פ</pesah_holHamoed1>
+      <pesah_holHamoed2>ב' חוהמ"פ</pesah_holHamoed2>
+      <pesah_holHamoed3>ג' חוהמ"פ</pesah_holHamoed3>
+      <pesah_holHamoed4>ד' חוהמ"פ</pesah_holHamoed4>
+      <pesah_holHamoed5>ה' חוהמ"פ</pesah_holHamoed5>
       <pesah_hagSheni>שביעי של פסח</pesah_hagSheni>
       <yomHashoa>יום הזיכרון לשואה ולגבורה</yomHashoa>
       <!-- IYAR 9 -->
       <yomHazikaron>יום הזיכרון לחללי מערכות ישראל</yomHazikaron>
       <yomHaatzmaut>יום העצמאות</yomHaatzmaut>
-      <lagBaomer>ל\ג בעומר</lagBaomer>
+      <lagBaomer>ל"ג בעומר</lagBaomer>
       <yomYerushalaim>יום ירושלים</yomYerushalaim>
       <!-- SIVAN 10 -->
       <erevShavuot>ערב שבועות</erevShavuot>
       <Shavuot>שבועות</Shavuot>
       <!-- TAMUZ 11 -->
-      <tzomYudZain>צום י\ז בתמוז</tzomYudZain>
+      <tzomYudZain>צום י"ז בתמוז</tzomYudZain>
       <!-- AV 12 -->
       <tzomTetBeAv>צום ט' באב</tzomTetBeAv>
       <!-- ALUL 13 -->
@@ -188,6 +189,7 @@
     <GeneralText>
       <PushedEarlier>הוקדם</PushedEarlier>
       <Postponed>נדחה</Postponed>
+      <Eve>ערב</Eve>
     </GeneralText>
     <EventTabText>
       <JewishDate>תאריך עברי</JewishDate>
