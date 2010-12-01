@@ -188,6 +188,7 @@
 
 	function response(obj)
 	{
+		alert(obj);
            if (obj == null || typeof(obj) != "object" || 
                       obj.firstChild == null) {
               document.getElementById("content_div").innerHTML = "<i>Invalid data.</i>";
