@@ -132,6 +132,8 @@
 	var doubleClickFlag=0;
  	var editMode=false;
  	var RunningForTheFirstTime=true;
+	// Variable used to initiate reading from XML upon first execution only.
+	var FirstRunReadFromXML = true;
  	
 //--------------------------------------I M A G E S  V A R S  AND  S E T T I N G S----------------------------------------------- 	 	
  	if (prefs.getString("DocDirection")=="Right to Left")
@@ -420,11 +422,14 @@
 	// XML has yet to be loaded.
 	if (loaded == false)
 	{
+		if (FirstRunReadFromXML == true)
+		{
+			XMLAndSetData();
+			FirstRunReadFromXML = false;
+		}
 		setTimeout("writeCalendar('tl_0_0')", 1000);
-		alert("still false");
 		return;
 	}
-	alert("true");
 	editMode=false;
 	currentGregOrHeb="";
 
