@@ -415,11 +415,10 @@
 	 * This function actually creates the calendar's backbone. 
 	 */
 	function writeCalendar(tabId){	
-	alert(tabId);
 	// XML has yet to be loaded.
 	if (loaded == false)
 	{
-		setTimeout("writeCalendar('tabId')", 1000);
+		setTimeout("writeCalendar('tl_0_0')", 1000);
 		return;
 	}
 	editMode=false;
