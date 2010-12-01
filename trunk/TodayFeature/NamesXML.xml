@@ -102,6 +102,9 @@
     </MessagesToUserInEventTab>
     <ListEventsText>
       <NoEvents>No personal events were added</NoEvents>
+      <Of>of</Of>
+      <Events>Events</Events>
+      <OneEvent>1 Event</OneEvent>
     </ListEventsText>
     <AdarBetCases>
       <AdarBet>Adar B</AdarBet>
@@ -214,6 +217,9 @@
     </MessagesToUserInEventTab>
     <ListEventsText>
       <NoEvents>לא נוספו אירועים אישיים</NoEvents>
+      <Of>ב</Of>
+      <Events>אירועים</Events>
+      <OneEvent>אירוע 1</OneEvent>
     </ListEventsText>
     <AdarBetCases>
       <AdarBet>אדר ב</AdarBet>
