@@ -320,7 +320,7 @@
 		//---KISLEV-3-//
 		var erevHanuka = new holiday(ENUM_Holidays[15], 3, 24, NONE);
 		var hanuka1 = new holiday(ENUM_Holidays[16], 3, 25, NONE);
-		var hanuka2 = new holidayENUM_Holidays[17], 3, 26, NONE);
+		var hanuka2 = new holiday(ENUM_Holidays[17], 3, 26, NONE);
 		var hanuka3 = new holiday(ENUM_Holidays[18], 3, 27, NONE);
 		var hanuka4 = new holiday(ENUM_Holidays[19], 3, 28, NONE);
 		var hanuka5 = new holiday(ENUM_Holidays[20], 3, 29, NONE);
