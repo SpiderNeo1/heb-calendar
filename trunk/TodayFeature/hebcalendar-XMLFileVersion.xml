@@ -188,13 +188,13 @@
 
 	function response(obj)
 	{
-           if (response == null || typeof(response) != "object" || 
-                      response.firstChild == null) {
+           if (obj == null || typeof(obj) != "object" || 
+                      obj.firstChild == null) {
               document.getElementById("content_div").innerHTML = "<i>Invalid data.</i>";
               return;
            }
 		   
-		   var languagesAvailableList = response.getElementsByTagName("Language");
+		   var languagesAvailableList = obj.getElementsByTagName("Language");
 		   		
 				 // For each <Language> node, get child nodes.
 				 var nodeList = languagesAvailableList.item(0).childNodes;
