@@ -258,7 +258,7 @@
 		FromListToEnum(shabbathList,ENUM_ShabbathText);
 											
 		// Annuall text for annual events.
-		var tmp =  objectData.getElementsByTagName("DaysOfTheWeek");
+		var tmp =  objectData.getElementsByTagName("EventTextAnnually");
 		eventTextYearly = tmp.item(j).firstChild.nodeValue;
 		
 		
