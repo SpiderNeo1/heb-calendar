@@ -2369,7 +2369,7 @@ text+="</table>"
 			document.getElementById("rr1").checked=true
 		if (currEvent.year == -1)
 			elemAnnually.checked=true;
-		document.getElementById("add").value="עריכת אירוע"
+		document.getElementById("add").value=ENUM_TabsNames[1];
 		elemDescription.value = currEvent.desc;
 		updateDropDownBoxes();
 		updateYearField();
