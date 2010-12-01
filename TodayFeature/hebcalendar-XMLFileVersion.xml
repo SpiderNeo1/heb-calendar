@@ -258,11 +258,12 @@
 			   
 			
 		SetAllHolidays();
+		loaded = true;
 		// Set tab names
-		tabs.getTabs()[0].getNameContainer().innerHTML = "Test";	
+		/*tabs.getTabs()[0].getNameContainer().innerHTML = "Test";	
 		tabs.getTabs()[1].getNameContainer().innerHTML = ENUM_TabsNames.AddEvent;
 		tabs.getTabs()[2].getNameContainer().innerHTML = ENUM_TabsNames.EventsList;
-		loaded = true;
+		*/
 	
 			
 	}
@@ -419,8 +420,10 @@
 	if (loaded == false)
 	{
 		setTimeout("writeCalendar('tl_0_0')", 1000);
+		alert("still false");
 		return;
 	}
+	alert("true");
 	editMode=false;
 	currentGregOrHeb="";
 
