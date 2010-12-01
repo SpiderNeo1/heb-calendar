@@ -2331,7 +2331,7 @@ text+="</table>"
 				else
 				{
 						// Else, if adar bet is in the month list, remove it.
-					if (elemMonth.options[6].text==ENUM_AdarBetCases[0]{
+					if (elemMonth.options[6].text==ENUM_AdarBetCases[0]){
 						elemMonth.options[5].text=ENUM_AdarBetCases[1]
 						elemMonth.options[5].value=6
 						elemMonth.options[6]=null;
