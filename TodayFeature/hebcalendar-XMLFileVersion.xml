@@ -1938,7 +1938,6 @@ text+="</table>"
 	if (events[0]=="") {
 		writeText +="<div align='center' dir='"+directionOfForm+"'><font face='Arial' style='font-size: 9pt; font-weight: 700'><BR>"+ENUM_ListEventsTabText[0]+ " </font></div>";	
 	}
-	}
 	else
 	{
 		// Create the table of events.
