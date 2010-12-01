@@ -302,7 +302,6 @@
 		
 		SetAllHolidays();
 		loaded = true;
-		alert("Completed reading");
 		// Set tab names
 		tabs.getTabs()[0].getNameContainer().innerHTML = ENUM_TabsNames[0];	
 		tabs.getTabs()[1].getNameContainer().innerHTML = ENUM_TabsNames[2];
@@ -481,7 +480,6 @@
 		//alert("In Write Calendar");
 		return;
 	}
-	alert("Loaded 3");
 	editMode=false;
 	currentGregOrHeb="";
 
