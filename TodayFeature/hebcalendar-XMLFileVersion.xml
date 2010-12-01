@@ -87,8 +87,8 @@
 	var ENUM_EventTabText = new Array(20);
 	
 	var ENUM_EventTabMessagesToUser = new Array(7);
-	var ENUM_AdarBetCases = New Array(2);
-	var ENUM_FeatureBox = New Array(2);
+	var ENUM_AdarBetCases = new Array(2);
+	var ENUM_FeatureBox = new Array(2);
 	
 // End of colour consts
 	var editingIndex=0;
