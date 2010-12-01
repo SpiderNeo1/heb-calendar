@@ -51,7 +51,7 @@
 //===================================================================================================================
 //======================================G L O B A L  V A R I A B L E S===============================================
 //===================================================================================================================
-
+	var tabs;
 	_IG_RegisterOnloadHandler(init);
 	var loaded = false;
 // Colour consts
@@ -110,7 +110,7 @@
 	var messages = new Array();
 	var events = (prefs.getString("mylist")).split("|");
 	var eventCount;
-	var tabs;
+	
 	var LeftToRight=true;
 	var DESIGN_LOCATION="http://heb-calendar.googlecode.com/svn/trunk/images/design/"
 	var TD_W5H9 = "width='5' align='center' height='9' style='font-size:1px;' "
