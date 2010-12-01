@@ -196,7 +196,7 @@
 		}
 
 		var languagesAvailableList = objectData.getElementsByTagName("Language");
-		alert(languagesAvailableList);
+		//alert(languagesAvailableList);
 		var chosenLanguageXMLList;
 		 // For each <Language> node, get child nodes.
 		 var nodeList = languagesAvailableList.item(0).childNodes;
@@ -232,9 +232,6 @@
 		var tabsList = chosenLanguageXMLList.item((ENUM_XML_Nodes.TabsName * 2) + 1).childNodes
 		
 		FromListToEnum(tabsList,ENUM_TabsNames);
-		alert(tabsList[0]);
-		alert(tabsList[1]);
-		alert(tabsList[2]);
 		
 		
 		// Set Days Of Week.
@@ -279,6 +276,9 @@
 			{										
 				// Get the text string that represents the holiday.
 				var tmp = list.item(l).firstChild.nodeValue;
+				alert(tmp);
+				alert(tmp.nodeValue);
+				alert(tmp.firstChild.nodeValue);
 				// Set text of holiday in holiday description enum.
 				arrEnum[count] = tmp;
 				// Increment number of hildays.
