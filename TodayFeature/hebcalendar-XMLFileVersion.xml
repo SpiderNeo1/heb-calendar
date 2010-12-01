@@ -207,10 +207,8 @@
 		{
 			var node = nodeList.item(j);
 			
-			alert(chosenLanguage);
 			if (chosenLanguage == node.nodeName )
 			{				
-				alert("! "+ node.nodeName);
 				chosenLanguageXMLList = node.childNodes;	
 			}
 		}
@@ -230,12 +228,15 @@
 		var holidayList = chosenLanguageXMLList.item((ENUM_XML_Nodes.Holidays * 2) + 1).childNodes;								
 		FromListToEnum(holidayList,ENUM_Holidays);
 
-					
 		// Create tabs list enum.
 		var tabsList = chosenLanguageXMLList.item((ENUM_XML_Nodes.TabsName * 2) + 1).childNodes
 		
 		FromListToEnum(tabsList,ENUM_TabsNames);
-
+		alert(tabsList[0]);
+		alert(tabsList[1]);
+		alert(tabsList[2]);
+		
+		
 		// Set Days Of Week.
 		tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.DaysOfWeek * 2) + 1).firstChild.nodeValue;
 		arrDaysOfTheWeek = tmp.split(",");
