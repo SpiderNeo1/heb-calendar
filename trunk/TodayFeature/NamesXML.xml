@@ -102,7 +102,7 @@
     </MessagesToUserInEventTab>
     <ListEventsText>
       <NoEvents>No personal events were added</NoEvents>
-      <Of> </Of>
+      <Of>on </Of>
       <Events>Events</Events>
       <OneEvent>1 Event</OneEvent>
     </ListEventsText>
@@ -111,7 +111,7 @@
       <Adar>Adar</Adar>
     </AdarBetCases>
     <FeatureBox>
-      <Date>15/10/2010</Date> 
+      <Date>15/10/2010</Date>
       <Text>Added button for returning to current date</Text>
     </FeatureBox>
   </english>
