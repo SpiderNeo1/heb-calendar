@@ -390,17 +390,17 @@
 				yomYerushalaim.isHistoricalEvent=1;
 		//---SIVAN-10-//
 		var erevShavuot = new holiday(ENUM_Holidays[42], 10, 5, HALF_DAY);
-		var Shavuot = new holiday(ENUM_Holidays[7], 10, 6, FULL_DAY);
+		var Shavuot = new holiday(ENUM_Holidays[43], 10, 6, FULL_DAY);
 		//---TAMUZ-11-//
-		var tzomYudZain = new holiday(ENUM_Holidays[43], 11, 17, NONE);
+		var tzomYudZain = new holiday(ENUM_Holidays[44], 11, 17, NONE);
 				tzomYudZain.isTzom=1;
 				tzomYudZain.isMovable=1;
 		//---AV-12-//
-		var tzomTetBeAv = new holiday(ENUM_Holidays[44], 12, 9, NONE);
+		var tzomTetBeAv = new holiday(ENUM_Holidays[45], 12, 9, NONE);
 				tzomTetBeAv.isTzom=1;
 				tzomTetBeAv.isMovable=1;
 		//---ALUL-13-//
-		var erevRoshHashana = new holiday(ENUM_Holidays[45], 13, 29,HALF_DAY);
+		var erevRoshHashana = new holiday(ENUM_Holidays[46], 13, 29,HALF_DAY);
 		//----------End of holidays----------//
 		var holidays_01 = new Array(roshHashana1, roshHashana2, tzomGdalia, erevYomKipur, YomKipur, erevSukot, sukot, sukot_holHamoed1, sukot_holHamoed2, sukot_holHamoed3, sukot_holHamoed4, sukot_holHamoed5, sukot_hoshaanaRaba, sukot_shminiAtzeret);
 		var holidays_02 = new Array(rabin);
@@ -609,7 +609,8 @@ text+="</table>"
     // Value of one day in seconds - for calculation of difference between dates.
     var one_day=1000*60*60*24
 
-	alert( Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) );
+	//alert( Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) );
+	alert(dateFeatureAdded);
 	
     //Calculate difference btw the two dates, and convert to days
     if(Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) < 31)
@@ -1548,7 +1549,7 @@ text+="</table>"
 				if (cell % 7 == 6) //tzom is on Saturday
 				{
 					cell +=1
-					tempholiday.desc += ENUM_GeneralText_EarliedOrPostponed[1] + " - ";
+					tempholiday.desc += " - " + ENUM_GeneralText_EarliedOrPostponed[1];
 				}
 			}
 			// ENUM_Holidays[21] = hanuka6, 22 - hanuka7, 23 - hanuka 8
@@ -1565,7 +1566,7 @@ text+="</table>"
 				if (cell % 7 == 6)
 				{
 					cell -=2
-					tempholiday.desc += ENUM_GeneralText_EarliedOrPostponed[0] + " - ";
+					tempholiday.desc += " - " + ENUM_GeneralText_EarliedOrPostponed[0];
 				}
 			}
 			// 38 - yom hazikaron.
@@ -1574,12 +1575,12 @@ text+="</table>"
 				if (cell % 7 == 5) // Friday
 				{
 					cell -=1
-					tempholiday.desc += ENUM_GeneralText_EarliedOrPostponed[0] + " - ";
+					tempholiday.desc += " - " +ENUM_GeneralText_EarliedOrPostponed[0];
 				}
 				else if (cell % 7 == 0) //Sunday
 				{
 					cell +=1
-					tempholiday.desc += ENUM_GeneralText_EarliedOrPostponed[1] + " - ";
+					tempholiday.desc += " - " +ENUM_GeneralText_EarliedOrPostponed[1];
 				}
 			}
 			// 14 - Rabin.
@@ -1588,12 +1589,12 @@ text+="</table>"
 				if (cell % 7 == 5) // Friday
 				{
 					cell -=1
-					tempholiday.desc += ENUM_GeneralText_EarliedOrPostponed[0] + " - ";
+					tempholiday.desc += " - " +ENUM_GeneralText_EarliedOrPostponed[0];
 				}
 				else if (cell % 7 == 6) //Saturday
 				{
 					cell -=2
-					tempholiday.desc +=ENUM_GeneralText_EarliedOrPostponed[0] + " - ";
+					tempholiday.desc += " - " +ENUM_GeneralText_EarliedOrPostponed[0];
 				}
 			}
 			// Yom Hazikaron - 38
@@ -1602,7 +1603,7 @@ text+="</table>"
 				if (currYear == 1950)
 				{
 					cell -=1
-					tempholiday.desc += ENUM_GeneralText_EarliedOrPostponed[0] + " - ";
+					tempholiday.desc += " - " +ENUM_GeneralText_EarliedOrPostponed[0];
 					tempholiday.eventType=NONE	// ONLY this time it's not coordinated with erevYomHaatzmaut
 				}
 				else
@@ -1610,17 +1611,17 @@ text+="</table>"
 					if (cell % 7 == 5) // Friday
 					{
 						cell -=2
-						tempholiday.desc += ENUM_GeneralText_EarliedOrPostponed[0] + " - ";
+						tempholiday.desc += " - " +ENUM_GeneralText_EarliedOrPostponed[0];
 					}
 					else if (cell % 7 == 4) // Thursday
 					{
 						cell -=1
-						tempholiday.desc += ENUM_GeneralText_EarliedOrPostponed[0] + " - ";
+						tempholiday.desc += " - " +ENUM_GeneralText_EarliedOrPostponed[0];
 					}
 					else if (cell % 7 == 0) //Sunday
 					{
 						cell +=1
-						tempholiday.desc += ENUM_GeneralText_EarliedOrPostponed[1] + " - ";
+						tempholiday.desc += " - " +ENUM_GeneralText_EarliedOrPostponed[1];
 					}
 				}
 			}
@@ -1631,24 +1632,24 @@ text+="</table>"
 				{
 					toolTipCellText[cell]=ENUM_GeneralText_EarliedOrPostponed[2] + " " +ENUM_Holidays[39]+ " - " + ENUM_GeneralText_EarliedOrPostponed[1];   //"ערב יום העצמאות - נדחה"
 					cell +=1
-					tempholiday.desc += ENUM_GeneralText_EarliedOrPostponed[1] + " - ";
+					tempholiday.desc += " - " +ENUM_GeneralText_EarliedOrPostponed[1];
 				}
 				else
 				{
 					if (cell % 7 == 6) // Saturday
 					{
 						cell -=2
-						tempholiday.desc += ENUM_GeneralText_EarliedOrPostponed[0] + " - ";
+						tempholiday.desc += " - " +ENUM_GeneralText_EarliedOrPostponed[0];
 					}
 					else if (cell % 7 == 5) // Friday
 					{
 						cell -=1
-						tempholiday.desc += ENUM_GeneralText_EarliedOrPostponed[0] + " - ";
+						tempholiday.desc += " - " +ENUM_GeneralText_EarliedOrPostponed[0];
 					}
 					else if (cell % 7 == 1) //Monday
 					{
 						cell +=1
-						tempholiday.desc += ENUM_GeneralText_EarliedOrPostponed[1] + " - ";
+						tempholiday.desc += " - " +ENUM_GeneralText_EarliedOrPostponed[1] ;
 					}
 				}
 			}
