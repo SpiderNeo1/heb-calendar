@@ -188,76 +188,70 @@
 
 	function response(obj)
 	{
-	   
-	   alert(obj);
-	   alert(typeof(obj));
-	   var objectData = obj.data;
-	   alert(objectData);
-	   alert(obj.data);
-	   
-	   if (obj == null || typeof(obj) != "object" || 
-				  objectData == null) {
-		  document.getElementById("content_div").innerHTML = "<i>Invalid data.</i>";
-		  return;
-	   }
-	   
-	   var languagesAvailableList = objectData.getElementsByTagName("Language");
-			
-			 // For each <Language> node, get child nodes.
-			 var nodeList = languagesAvailableList.item(0).childNodes;
+		var objectData = obj.data;
 
-			 // Loop through child nodes. Extract data from the text nodes that are
-			 // the children of the associated name, price, and calories element nodes.
-			for (var j = 0; j < nodeList.length ; j++) 
-			{
-				var node = nodeList.item(j);
-				//alert(node.nodeName);
-				if (chosenLanguage == node.nodeName )
-				{				
-					var chosenLanguageXMLList = node.childNodes;	
-				}
+		if (obj == null || typeof(obj) != "object" || objectData == null) {
+			document.getElementById("content_div").innerHTML = "<i>Invalid data.</i>";
+			return;
+		}
+
+		var languagesAvailableList = objectData.getElementsByTagName("Language");
+		var chosenLanguageXMLList;
+		 // For each <Language> node, get child nodes.
+		 var nodeList = languagesAvailableList.item(0).childNodes;
+
+		 // Loop through child nodes. Extract data from the text nodes that are
+		 // the children of the associated name, price, and calories element nodes.
+		for (var j = 0; j < nodeList.length ; j++) 
+		{
+			var node = nodeList.item(j);
+			//alert(node.nodeName);
+			if (chosenLanguage == node.nodeName )
+			{				
+				chosenLanguageXMLList = node.childNodes;	
 			}
-			// Set hebrew months array.
-			var tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.HebrewMonths * 2) + 1).firstChild.nodeValue;
-			arrHebMonths = tmp.split(",");
-			
-			// Set jewish dates - 1,2 or א,ב
-			tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.HebrewDates * 2) + 1).firstChild.nodeValue;
-			arrHebDate = tmp.split(",");
-			
-			// Set Greogrian Months.
-			tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.GregorianMonths * 2) + 1).firstChild.nodeValue;
-			arrGregMonths = tmp.split(",");
-
-			// Set Holidays			
-			var holidayList = chosenLanguageXMLList.item((ENUM_XML_Nodes.Holidays * 2) + 1).childNodes;								
-			FromListToEnum(holidayList,ENUM_Holidays);
-
-						
-			// Create tabs list enum.
-			var tabsList = chosenLanguageXMLList.item((ENUM_XML_Nodes.TabsName * 2) + 1).childNodes
-			
-			FromListToEnum(tabsList,ENUM_TabsNames);
-
-			// Set Days Of Week.
-			tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.DaysOfWeek * 2) + 1).firstChild.nodeValue;
-			arrDaysOfTheWeek = tmp.split(",");
-
-			// Create shabbathText enum.
-			var shabbathList = chosenLanguageXMLList.item((ENUM_XML_Nodes.ShabbathText * 2) + 1).childNodes
+		}
+		// Set hebrew months array.
+		var tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.HebrewMonths * 2) + 1).firstChild.nodeValue;
+		arrHebMonths = tmp.split(",");
 		
-			FromListToEnum(shabbathList,ENUM_ShabbathText);
-							
-			// Annuall text for annual events.
-			eventTextYearly = chosenLanguageXMLList.item((ENUM_XML_Nodes.EventTextAnnually * 2) + 1).childNodes
+		// Set jewish dates - 1,2 or א,ב
+		tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.HebrewDates * 2) + 1).firstChild.nodeValue;
+		arrHebDate = tmp.split(",");
+		
+		// Set Greogrian Months.
+		tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.GregorianMonths * 2) + 1).firstChild.nodeValue;
+		arrGregMonths = tmp.split(",");
 
-			// Create GeneralText enum.
-			var generalTextList = chosenLanguageXMLList.item((ENUM_XML_Nodes.GeneralText * 2) + 1).childNodes
+		// Set Holidays			
+		var holidayList = chosenLanguageXMLList.item((ENUM_XML_Nodes.Holidays * 2) + 1).childNodes;								
+		FromListToEnum(holidayList,ENUM_Holidays);
 
-			FromListToEnum(generalTextList,ENUM_GeneralText_EarliedOrPostponed);
-			//alert(ENUM_GeneralText_EarliedOrPostponed[0]);
-			//var ENUM_XML_Nodes = { GeneralText: 8, EventTabText: 9, AdarBetCases : 10, FeatureBox : 11 };
-				   
+					
+		// Create tabs list enum.
+		var tabsList = chosenLanguageXMLList.item((ENUM_XML_Nodes.TabsName * 2) + 1).childNodes
+		
+		FromListToEnum(tabsList,ENUM_TabsNames);
+
+		// Set Days Of Week.
+		tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.DaysOfWeek * 2) + 1).firstChild.nodeValue;
+		arrDaysOfTheWeek = tmp.split(",");
+
+		// Create shabbathText enum.
+		var shabbathList = chosenLanguageXMLList.item((ENUM_XML_Nodes.ShabbathText * 2) + 1).childNodes
+	
+		FromListToEnum(shabbathList,ENUM_ShabbathText);
+						
+		// Annuall text for annual events.
+		eventTextYearly = chosenLanguageXMLList.item((ENUM_XML_Nodes.EventTextAnnually * 2) + 1).childNodes
+
+		// Create GeneralText enum.
+		var generalTextList = chosenLanguageXMLList.item((ENUM_XML_Nodes.GeneralText * 2) + 1).childNodes
+
+		FromListToEnum(generalTextList,ENUM_GeneralText_EarliedOrPostponed);
+		//alert(ENUM_GeneralText_EarliedOrPostponed[0]);
+		//var ENUM_XML_Nodes = { GeneralText: 8, EventTabText: 9, AdarBetCases : 10, FeatureBox : 11 };
+			   
 			
 		SetAllHolidays();
 		// Set tab names
