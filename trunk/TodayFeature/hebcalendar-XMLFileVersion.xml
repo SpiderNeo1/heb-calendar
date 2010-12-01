@@ -177,21 +177,18 @@
 	// Trigger open XML - returns before XML is read.
 	function ReadXMLAndSetData()
 	{
-		alert("attempting to Read 1");
 		var url = "http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/NamesXML.xml";
 		
 		var params = {};	  
 		params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.DOM;
-		alert("attempting to Read 2");
+		
 		gadgets.io.makeRequest(url,response,params)
-		alert("attempting to Read 3");
 	}
 
 	// callback function for XML read.
 	// processes all XML nodes and creates all arrays.
 	function response(obj)
 	{
-		alert("attempting to Read 4");
 		var objectData = obj.data;
 
 		if (obj == null || typeof(obj) != "object" || objectData == null) {
@@ -216,7 +213,6 @@
 				chosenLanguageXMLList = node.childNodes;	
 			}
 		}
-		alert("attempting to Read 5");
 		// Set hebrew months array.
 		var tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.HebrewMonths * 2) + 1).firstChild.nodeValue;
 		arrHebMonths = tmp.split(",");
@@ -283,6 +279,7 @@
 					
 		SetAllHolidays();
 		loaded = true;
+		alert("Completed reading");
 		// Set tab names
 		tabs.getTabs()[0].getNameContainer().innerHTML = ENUM_TabsNames[0];	
 		tabs.getTabs()[1].getNameContainer().innerHTML = ENUM_TabsNames[2];
@@ -454,11 +451,14 @@
 	 * This function actually creates the calendar's backbone. 
 	 */
 	function writeCalendar(tabId){	
+	
 	if (loaded == false) 
 	{	
 		ExecuteFunctionAfterReadingXML("writeCalendar",tabId);
+		alert("In Write Calendar");
 		return;
 	}
+	alert("Loaded 3");
 	editMode=false;
 	currentGregOrHeb="";
 
