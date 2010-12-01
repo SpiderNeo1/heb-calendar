@@ -178,11 +178,19 @@
 		currDay = now.getDate()
 		var url = "http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/NamesXML.xml";
 		var url = "http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/Loading.jpg";
-		_IG_FetchXmlContent(url,function(response)
-		{
+		
+		var params = {};	  
+		params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.DOM;
+		
+		gadgets.io.makeRequest(url,response,params)
+		loaded = false;
+	}
+
+	function response(obj)
+	{
            if (response == null || typeof(response) != "object" || 
                       response.firstChild == null) {
-              _gel("content_div").innerHTML = "<i>Invalid data.</i>";
+              document.getElementById("content_div").innerHTML = "<i>Invalid data.</i>";
               return;
            }
 		   
@@ -251,9 +259,9 @@
 			tabs.getTabs()[2].getNameContainer().innerHTML = tabsList[2];
 		
 			
-		});
-		loaded = false;
 	}
+
+
 	
 	function FromListToEnum(list,arrEnum)
 	{
