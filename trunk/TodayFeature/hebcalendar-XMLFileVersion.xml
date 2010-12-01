@@ -215,6 +215,14 @@
 				break;
 			}
 		}
+		// Check if explorer.
+		var IE = document.all?true:false;
+		
+		// If explorer, j should remain as j. If not explorer, j should be - (j-1)/2;
+		if (!IE)
+		{
+			j = (j - 1) / 2;
+		}
 		
 		// Set hebrew months array.
 		var tmp =  objectData.getElementsByTagName("HebrewMonths");
