@@ -20,6 +20,10 @@
 <Require feature="minimessage" />
 <Locale lang="en" country="us" />
 </ModulePrefs>
+  <UserPref name="Language" display_name="Interface Language" default_value="english" datatype="enum">    
+  	<EnumValue value="english"/>    
+  	<EnumValue value="hebrew"/>
+  </UserPref>
   <UserPref name="DocDirection" display_name="Text Direction" default_value="Left to Right" datatype="enum">    
   	<EnumValue value="Right to Left"/>    
   	<EnumValue value="Left to Right"/>
@@ -49,8 +53,8 @@
 //===================================================================================================================
 
 	_IG_RegisterOnloadHandler(init);
+	var loaded = false;
 // Colour consts
-	var chosenLanguage = "hebrew"
 	var BORDER_COLOR='#000000'
 	var LIGHTBLUE_COLOR_CELLBACKGROUND='#c3d9ff'
 	var HEADLINEFONT_COLOR='#ffffff'	
@@ -75,7 +79,7 @@
 
 	
 	//var arrHolidaysFromXML;
-	var ENUM_Holidays = {roshHashana1: "Rosh Hashana 1", roshHashana2: "Rosh Hashana 2", tzomGdalia: "Tzom Gdalia", erevYomKipur: "Evening of Yom Kippur", YomKipur: "Yom Kippur", erevSukot: "Evening of Sukkot", sukot: "Sukkot", sukot_holHamoed1: "Sukkot 1 (ch'm)", sukot_holHamoed2: "Sukkot 2 (ch'm)", sukot_holHamoed3: "Sukkot 3 (ch'm)", sukot_holHamoed4: "Sukkot 4 (ch'm)", sukot_holHamoed5: "Sukkot 5 (ch'm)", sukot_hoshaanaRaba: "Hoshana Raba", sukot_shminiAtzeret: "Shmini Atzert and Simhat Tora.", rabin: "Itzhak Rabin Memorial Day", erevHanuka: "Evening of Chanukah", hanuka1: "Chanukah 1", hanuka2: "Chanukah 2", hanuka3: "Chanukah 3", hanuka4: "Chanukah 4", hanuka5: "Chanukah 5", hanuka6: "Chanukah 6", hanuka7: "Chanukah 7", hanuka8: "Chanukah 8", tzomYudBetevet: "Tzom Asara B'Tevet", tuBeshvat: "Tu B'Shvat", tzomTaanitEster: "Ta'anit Esther", purim: "Purim", shushanPurim: "Shushan Purim", erevPesah: "Evening of Passover", Pesah: "Passover", pesah_holHamoed1: "Passover 1", pesah_holHamoed2: "Passover 2", pesah_holHamoed3: "Passover 3", pesah_holHamoed4: "Passover 4", pesah_holHamoed5: "Passover 5", pesah_hagSheni: "7th of Passover", yomHashoa: "Holocaust Memorial Day", yomHazikaron: "Yom Hazikaron", yomHaatzmaut: "Independence day", lagBaomer: "Lag B'Omer", yomYerushalaim: "Jerusalem Day", erevShavuot: "Evening of Shavuot", Shavuot: "Shavuot", tzomYudZain: "Tzom 17th of Tamuz", tzomTetBeAv: "Tisha B'Av", erevRoshHashana: "Evening of Rosh Hashana"};
+	//var ENUM_Holidays = {roshHashana1: "Rosh Hashana 1", roshHashana2: "Rosh Hashana 2", tzomGdalia: "Tzom Gdalia", erevYomKipur: "Evening of Yom Kippur", YomKipur: "Yom Kippur", erevSukot: "Evening of Sukkot", sukot: "Sukkot", sukot_holHamoed1: "Sukkot 1 (ch'm)", sukot_holHamoed2: "Sukkot 2 (ch'm)", sukot_holHamoed3: "Sukkot 3 (ch'm)", sukot_holHamoed4: "Sukkot 4 (ch'm)", sukot_holHamoed5: "Sukkot 5 (ch'm)", sukot_hoshaanaRaba: "Hoshana Raba", sukot_shminiAtzeret: "Shmini Atzert and Simhat Tora.", rabin: "Itzhak Rabin Memorial Day", erevHanuka: "Evening of Chanukah", hanuka1: "Chanukah 1", hanuka2: "Chanukah 2", hanuka3: "Chanukah 3", hanuka4: "Chanukah 4", hanuka5: "Chanukah 5", hanuka6: "Chanukah 6", hanuka7: "Chanukah 7", hanuka8: "Chanukah 8", tzomYudBetevet: "Tzom Asara B'Tevet", tuBeshvat: "Tu B'Shvat", tzomTaanitEster: "Ta'anit Esther", purim: "Purim", shushanPurim: "Shushan Purim", erevPesah: "Evening of Passover", Pesah: "Passover", pesah_holHamoed1: "Passover 1", pesah_holHamoed2: "Passover 2", pesah_holHamoed3: "Passover 3", pesah_holHamoed4: "Passover 4", pesah_holHamoed5: "Passover 5", pesah_hagSheni: "7th of Passover", yomHashoa: "Holocaust Memorial Day", yomHazikaron: "Yom Hazikaron", yomHaatzmaut: "Independence day", lagBaomer: "Lag B'Omer", yomYerushalaim: "Jerusalem Day", erevShavuot: "Evening of Shavuot", Shavuot: "Shavuot", tzomYudZain: "Tzom 17th of Tamuz", tzomTetBeAv: "Tisha B'Av", erevRoshHashana: "Evening of Rosh Hashana"};
 	
 	var ENUM_TabsNames = {Calendar: "",EditEvent:"",AddEvent:"",EventsList:""};
 	var arrDaysOfTheWeek = new Array( "Su", "Mo", "Tu", "We", "Th", "Fr", "Sa");
@@ -96,6 +100,9 @@
 	var arrD = new Array("א","ב","ג","ד","ה","ו","ש")
 	var currentGregOrHeb;
 	var prefs = new _IG_Prefs();
+	
+	var chosenLanguage = prefs.getString("DocDirection");
+	
 	var msg;
 	var just = "ltr";
 	var alPrev = "right";
@@ -163,14 +170,18 @@
 	/*
 	 * The function is called when the gadget is first executeed and modifies the current month and year.
 	 */
-	function firstRun(){
+	function firstRun()
+	{
 		var now = new Date();
 		currMonth=now.getMonth()
 		currYear=now.getUTCFullYear()
 		currDay = now.getDate()
 		var url = "http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/NamesXML.xml";
-		
-		_IG_FetchXmlContent(url, function (response) 
+		var url = "http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/Loading.jpg";
+		_IG_FetchXmlContent(url, function (response)); 
+		loaded = false;
+	}
+		function response()
 		{
            if (response == null || typeof(response) != "object" || 
                       response.firstChild == null) {
@@ -235,9 +246,13 @@
 				//alert(ENUM_GeneralText_EarliedOrPostponed[0]);
 				//var ENUM_XML_Nodes = { GeneralText: 8, EventTabText: 9, AdarBetCases : 10, FeatureBox : 11 };
 					   
-		});
-		
+				
 		SetAllHolidays();
+		// Set tab names
+		tabs.getTabs()[0].getNameContainer().innerHTML = tabsList[0];	
+		tabs.getTabs()[1].getNameContainer().innerHTML = tabsList[1];
+		tabs.getTabs()[2].getNameContainer().innerHTML = tabsList[2];
+		
 	}
 	
 	function FromListToEnum(list,arrEnum)
