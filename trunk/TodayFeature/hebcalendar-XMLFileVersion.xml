@@ -605,9 +605,9 @@ text+="</table>"
 	// Feature box will be displayed for 30 days.
 	var dateFeatureAdded = new Date();
 	var dateFromFeatureXML = ENUM_FeatureBox[0].split("/");
-	dateFeatureAdded.setDate(dateFromOfFeature[0]);
-	dateFeatureAdded.setMonth(dateFromOfFeature[1]);
-	dateFeatureAdded.setUTCFullYear(dateFromOfFeature[2]);
+	dateFeatureAdded.setDate(dateFromFeatureXML[0]);
+	dateFeatureAdded.setMonth(dateFromFeatureXML[1]);
+	dateFeatureAdded.setUTCFullYear(dateFromFeatureXML[2]);
 	
 	var todaysDate = new Date()
 	
