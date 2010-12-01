@@ -418,7 +418,7 @@
 	// XML has yet to be loaded.
 	if (loaded == false)
 	{
-		setTimeout("writeCalendar('tabId')")", 1000);
+		setTimeout("writeCalendar('tabId')", 1000);
 		return;
 	}
 	editMode=false;
