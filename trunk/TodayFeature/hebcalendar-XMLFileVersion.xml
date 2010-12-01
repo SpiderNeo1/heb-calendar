@@ -233,70 +233,72 @@
 
 		// Set Holidays			
 		var tmp =  objectData.getElementsByTagName("Holidays");
-		alert(tmp);
 		var holidayList = tmp.item(j).childNodes;				
-		alert(holidayList);
 			
 		FromListToEnum(holidayList,ENUM_Holidays);
-		alert(ENUM_Holidays[0]);
-		
+	
 		
 		// Create tabs list enum.
-		var tabsList = chosenLanguageXMLList.item((ENUM_XML_Nodes.TabsName * 2) + 1).childNodes
-		
-		FromListToEnum(tabsList,ENUM_TabsNames);
-		alert(ENUM_TabsNames[0]);
-		
+		var tmp =  objectData.getElementsByTagName("TabsName");
+		var tabsList = tmp.item(j).childNodes;				
+			
+		FromListToEnum(tabsList,ENUM_TabsNames);	
+
 		
 		// Set Days Of Week.
-		tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.DaysOfWeek * 2) + 1).firstChild.nodeValue;
+		var tmp =  objectData.getElementsByTagName("DaysOfTheWeek");
+		tmp = tmp.item(j).firstChild.nodeValue;
 		arrDaysOfTheWeek = tmp.split(",");
-
-		alert("UP IN HERE22");
+		
 		
 		// Create shabbathText enum.
-		var shabbathList = chosenLanguageXMLList.item((ENUM_XML_Nodes.ShabbathText * 2) + 1).childNodes
+		var tmp =  objectData.getElementsByTagName("ShabbathText");
+		var shabbathList = tmp.item(j).childNodes;			
 	
-	alert("UP IN HERE222");
 		FromListToEnum(shabbathList,ENUM_ShabbathText);
-						
-		alert("UP IN HERE3");
-						
+											
 		// Annuall text for annual events.
-		eventTextYearly = chosenLanguageXMLList.item((ENUM_XML_Nodes.EventTextAnnually * 2) + 1).firstChild.nodeValue
-
+		var tmp =  objectData.getElementsByTagName("DaysOfTheWeek");
+		eventTextYearly = tmp.item(j).firstChild.nodeValue;
+		
+		
+		
 		// Create GeneralText enum.
-		var generalTextList = chosenLanguageXMLList.item((ENUM_XML_Nodes.GeneralText * 2) + 1).childNodes
-
+		var tmp =  objectData.getElementsByTagName("GeneralText");
+		var generalTextList = tmp.item(j).childNodes;			
+		
 		FromListToEnum(generalTextList,ENUM_GeneralText_EarliedOrPostponed);
 		
-		
-		
 		// Create eventTab enum.
-		var eventTabText = chosenLanguageXMLList.item((ENUM_XML_Nodes.EventTabText * 2) + 1).childNodes
+		var tmp =  objectData.getElementsByTagName("EventTabText");
+		var eventTabText = tmp.item(j).childNodes;			
 
+		
 		FromListToEnum(eventTabText,ENUM_EventTabText);		
 
 		// Create MessagesToUserInEventTab enum.
-		var messagesToUserInEventTabText = chosenLanguageXMLList.item((ENUM_XML_Nodes.MessagesToUserInEventTab * 2) + 1).childNodes
-
+		var tmp =  objectData.getElementsByTagName("MessagesToUserInEventTab");
+		var messagesToUserInEventTabText = tmp.item(j).childNodes;			
+		
 		FromListToEnum(messagesToUserInEventTabText,ENUM_EventTabMessagesToUser);		
 		
 		// Create ListEventsTab enum.
-		var listEventsTabTexts = chosenLanguageXMLList.item((ENUM_XML_Nodes.ListEventsTabText * 2) + 1).childNodes
-
-		
+		var tmp =  objectData.getElementsByTagName("ListEventsText");
+		var listEventsTabTexts = tmp.item(j).childNodes;			
 		
 		FromListToEnum(listEventsTabTexts,ENUM_ListEventsTabText);		
 				
 		// Create Adarbetcases enum.
-		var messagesAdarBetCasesText = chosenLanguageXMLList.item((ENUM_XML_Nodes.AdarBetCases * 2) + 1).childNodes
-
+		var tmp =  objectData.getElementsByTagName("AdarBetCases");
+		var messagesAdarBetCasesText = tmp.item(j).childNodes;			
+		
 		FromListToEnum(messagesAdarBetCasesText,ENUM_AdarBetCases);		
 	
 		// Create featurebox enum.
-		var messagesFeatureBoxText = chosenLanguageXMLList.item((ENUM_XML_Nodes.FeatureBox * 2) + 1).childNodes
+		var tmp =  objectData.getElementsByTagName("FeatureBox");
+		var messagesFeatureBoxText = tmp.item(j).childNodes;			
 
+		
 		FromListToEnum(messagesFeatureBoxText,ENUM_FeatureBox);		
 		
 		SetAllHolidays();
