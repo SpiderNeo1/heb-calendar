@@ -1913,7 +1913,7 @@ text+="</table>"
 	currentGregOrHeb=""
 	// If there are no events present - display no events added.
 	if (events[0]=="") {
-		writeText="<html dir='"+directionOfForm+"'><br><font face='Arial' style='font-size: 10pt'><p dir='"+directionOfForm+"'>"+ENUM_ListEventsTabText[0]"+</p></font></html>"
+		writeText="<html dir='"+directionOfForm+"'><br><font face='Arial' style='font-size: 10pt'><p dir='"+directionOfForm+"'>"+ENUM_ListEventsTabText[0]+"+</p></font></html>"
 	}
 	else
 	{
