@@ -217,22 +217,26 @@
 		
 		// Set hebrew months array.
 		var tmp =  objectData.getElementsByTagName("HebrewMonths");
-		alert(tmp);
 		tmp = tmp.item(j).firstChild.nodeValue;
-		alert(tmp);
-		//var tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.HebrewMonths * 2) + 1).firstChild.nodeValue;
 		arrHebMonths = tmp.split(",");
-		alert(arrHebMonths);
+
 		// Set jewish dates - 1,2 or א,ב
-		tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.HebrewDates * 2) + 1).firstChild.nodeValue;
+		var tmp =  objectData.getElementsByTagName("HebrewDates");
+		tmp = tmp.item(j).firstChild.nodeValue;		
 		arrHebDate = tmp.split(",");
-		alert(arrHebDate);
+		
 		// Set Greogrian Months.
-		tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.GregorianMonths * 2) + 1).firstChild.nodeValue;
+		var tmp =  objectData.getElementsByTagName("GregorianMonths");
+		tmp = tmp.item(j).firstChild.nodeValue;				
+
 		arrGregMonths = tmp.split(",");
-		alert(arrGregMonths);
+
 		// Set Holidays			
-		var holidayList = chosenLanguageXMLList.item((ENUM_XML_Nodes.Holidays * 2) + 1).childNodes;								
+		var tmp =  objectData.getElementsByTagName("Holidays");
+		alert(tmp);
+		tmp = tmp.item(j).childNodes;				
+		alert(tmp);
+			
 		FromListToEnum(holidayList,ENUM_Holidays);
 		alert(ENUM_Holidays[0]);
 		
