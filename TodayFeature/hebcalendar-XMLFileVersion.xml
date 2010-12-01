@@ -177,7 +177,7 @@
 		currYear=now.getUTCFullYear()
 		currDay = now.getDate()
 		var url = "http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/NamesXML.xml";
-		var url = "http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/Loading.jpg";
+		//var url = "http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/Loading.jpg";
 		
 		var params = {};	  
 		params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.DOM;
