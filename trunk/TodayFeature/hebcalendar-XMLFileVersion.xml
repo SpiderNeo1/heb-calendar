@@ -68,7 +68,7 @@
 	var OTHERMONTH_FORECOLOR_WITHEVENT_FIREFOX='rgb(172, 172, 172)'	
 
 	// XML Tree ENUM structure.
-	var ENUM_XML_Nodes = {HebrewMonths : 0, HebrewDates : 1, GregorianMonths : 2, Holidays : 3, TabsName : 4, DaysOfWeek : 5, ShabbathText : 6, EventTextAnnually: 7, GeneralText: 8, EventTabText: 9, AdarBetCases : 10, FeatureBox : 11 };
+	var ENUM_XML_Nodes = {HebrewMonths : 0, HebrewDates : 1, GregorianMonths : 2, Holidays : 3, TabsName : 4, DaysOfWeek : 5, ShabbathText : 6, EventTextAnnually: 7, GeneralText: 8, EventTabText: 9, MessagesToUserInEventTab: 10, AdarBetCases : 11, FeatureBox : 12 };
 	
 	// Start enums from XML
 	var arrHebMonths = new Array("תשרי","חשוון","כסלו","טבת","שבט","אדר א","אדר","ניסן","אייר","סיוון","תמוז","אב","אלול");
@@ -253,10 +253,27 @@
 		var generalTextList = chosenLanguageXMLList.item((ENUM_XML_Nodes.GeneralText * 2) + 1).childNodes
 
 		FromListToEnum(generalTextList,ENUM_GeneralText_EarliedOrPostponed);
-		//alert(ENUM_GeneralText_EarliedOrPostponed[0]);
-		//var ENUM_XML_Nodes = { GeneralText: 8, EventTabText: 9, AdarBetCases : 10, FeatureBox : 11 };
-			   
-			
+		
+		// Create eventTab enum.
+		var eventTabText = chosenLanguageXMLList.item((ENUM_XML_Nodes.EventTabText * 2) + 1).childNodes
+
+		FromListToEnum(eventTabText,ENUM_EventTabText);		
+
+		// Create MessagesToUserInEventTab enum.
+		var messagesToUserInEventTabText = chosenLanguageXMLList.item((ENUM_XML_Nodes.MessagesToUserInEventTab * 2) + 1).childNodes
+
+		FromListToEnum(messagesToUserInEventTabText,ENUM_EventTabMessagesToUser);		
+		
+		// Create Adarbetcases enum.
+		var messagesAdarBetCasesText = chosenLanguageXMLList.item((ENUM_XML_Nodes.AdarBetCases * 2) + 1).childNodes
+
+		FromListToEnum(messagesAdarBetCasesText,ENUM_AdarBetCases);		
+		
+		// Create featurebox enum.
+		var messagesFeatureBoxText = chosenLanguageXMLList.item((ENUM_XML_Nodes.FeatureBox * 2) + 1).childNodes
+
+		FromListToEnum(messagesFeatureBoxText,ENUM_FeatureBox);		
+					
 		SetAllHolidays();
 		loaded = true;
 		// Set tab names
@@ -421,7 +438,7 @@
 	{
 		if (FirstRunReadFromXML == true)
 		{
-			var loadingImageHTML = "<img src='"+loadingImageUrl+"' border='0' />";
+			var loadingImageHTML = "<center><img src='"+loadingImageUrl+"' border='0' /></center>";
 			_gel(tabId).innerHTML=loadingImageHTML;
 			ReadXMLAndSetData();
 			FirstRunReadFromXML = false;
