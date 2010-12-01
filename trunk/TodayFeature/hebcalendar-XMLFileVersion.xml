@@ -606,7 +606,7 @@ text+="</table>"
 	var dateFeatureAdded = new Date();
 	var dateFromFeatureXML = ENUM_FeatureBox[0].split("/");
 	dateFeatureAdded.setDate(dateFromFeatureXML[0]);
-	dateFeatureAdded.setMonth(dateFromFeatureXML[1]);
+	dateFeatureAdded.setMonth(dateFromFeatureXML[1] - 1);
 	dateFeatureAdded.setUTCFullYear(dateFromFeatureXML[2]);
 	
 	var todaysDate = new Date()
@@ -615,8 +615,7 @@ text+="</table>"
     var one_day=1000*60*60*24
 
 	//alert( Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) );
-	alert(dateFeatureAdded);
-	
+
     //Calculate difference btw the two dates, and convert to days
     if(Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) < 31)
     {
