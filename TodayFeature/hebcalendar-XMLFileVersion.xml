@@ -213,10 +213,9 @@
 				chosenLanguageXMLList = node.childNodes;	
 			}
 		}
-		var IE = document.all?true:false;
 		
 		// Set hebrew months array.
-		var tmp = chosenLanguageXMLList.getElementsByTagName("HebrewMonths").firstChild.nodeValue;
+		var tmp = chosenLanguageXMLList.getAttribute("HebrewMonths").firstChild.nodeValue;
 		//var tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.HebrewMonths * 2) + 1).firstChild.nodeValue;
 		arrHebMonths = tmp.split(",");
 		alert(arrHebMonths);
