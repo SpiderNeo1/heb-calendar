@@ -273,7 +273,6 @@
 		var tmp =  objectData.getElementsByTagName("EventTabText");
 		var eventTabText = tmp.item(j).childNodes;			
 
-		
 		FromListToEnum(eventTabText,ENUM_EventTabText);		
 
 		// Create MessagesToUserInEventTab enum.
