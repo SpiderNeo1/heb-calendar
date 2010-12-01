@@ -211,11 +211,15 @@
 			if (chosenLanguage == node.nodeName )
 			{				
 				chosenLanguageXMLList = node.childNodes;	
+				break;
 			}
 		}
 		
 		// Set hebrew months array.
-		var tmp = chosenLanguageXMLList.getAttribute("HebrewMonths").firstChild.nodeValue;
+		var tmp = chosenLanguageXMLList.getElementsByTagName("Language").item(j).getgetElementsByTagName("HebrewMonths");
+		alert(tmp);
+		tmp = tmp.firstChild.nodeValue;
+		alert(tmp);
 		//var tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.HebrewMonths * 2) + 1).firstChild.nodeValue;
 		arrHebMonths = tmp.split(",");
 		alert(arrHebMonths);
