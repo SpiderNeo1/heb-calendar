@@ -246,7 +246,7 @@
 		FromListToEnum(shabbathList,ENUM_ShabbathText);
 						
 		// Annuall text for annual events.
-		eventTextYearly = chosenLanguageXMLList.item((ENUM_XML_Nodes.EventTextAnnually * 2) + 1).nodeValue
+		eventTextYearly = chosenLanguageXMLList.item((ENUM_XML_Nodes.EventTextAnnually * 2) + 1).firstChild.nodeValue
 
 		// Create GeneralText enum.
 		var generalTextList = chosenLanguageXMLList.item((ENUM_XML_Nodes.GeneralText * 2) + 1).childNodes
