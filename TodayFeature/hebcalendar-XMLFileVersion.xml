@@ -206,10 +206,11 @@
 		for (var j = 0; j < nodeList.length ; j++) 
 		{
 			var node = nodeList.item(j);
-			alert(node.nodeName);
 			
+			alert(chosenLanguage);
 			if (chosenLanguage == node.nodeName )
 			{				
+				alert("! "+ node.nodeName);
 				chosenLanguageXMLList = node.childNodes;	
 			}
 		}
