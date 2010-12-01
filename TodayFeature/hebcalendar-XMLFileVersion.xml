@@ -218,6 +218,7 @@
 		
 		// Set hebrew months array.
 		var tmp =  objectData.getElementsByTagName("HebrewMonths");
+		alert(j);
 		tmp = tmp.item(j).firstChild.nodeValue;
 		arrHebMonths = tmp.split(",");
 
