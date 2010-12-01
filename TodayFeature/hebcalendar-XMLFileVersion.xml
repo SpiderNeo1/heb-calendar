@@ -1486,7 +1486,13 @@ text+="</table>"
 		{
 			str += "" + userEvent.Hday
 			str += " "
-			str += ENUM_ListEventsTabText[1];
+			// Can't leave an XML node empty but want that possiblity to not add anything between day and month.
+			// SO.. if this node is equal empty,
+			// do not connect the day and month with anything.
+			if (ENUM_ListEventsTabText[1] != "Empty")
+			{
+				str += ENUM_ListEventsTabText[1];
+			}
 			str += arrGregMonths[userEvent.Hmonth]
 			str += ", "
 			str += (userEvent.year == -1 ? eventTextYearly : ("" + userEvent.year))
@@ -1495,7 +1501,13 @@ text+="</table>"
 		{
 			str += arrHebDate[userEvent.Hday - 1]
 			str += " "
-			str += ENUM_ListEventsTabText[1];
+			// Can't leave an XML node empty but want that possiblity to not add anything between day and month.
+			// SO.. if this node is equal empty,
+			// do not connect the day and month with anything.
+			if (ENUM_ListEventsTabText[1] != "Empty")
+			{
+				str += ENUM_ListEventsTabText[1];
+			}
 			str += arrHebMonths[userEvent.Hmonth - 1]
 			str += ", "
 			str += (userEvent.year == -1 ? eventTextYearly : ("" + Nyear2Hyear(userEvent.year)))
