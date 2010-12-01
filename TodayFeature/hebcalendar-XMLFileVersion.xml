@@ -455,7 +455,7 @@
 	if (loaded == false) 
 	{	
 		ExecuteFunctionAfterReadingXML("writeCalendar",tabId);
-		alert("In Write Calendar");
+		//alert("In Write Calendar");
 		return;
 	}
 	alert("Loaded 3");
