@@ -162,7 +162,7 @@
 	butB08.src = DESIGN_LOCATION+"butB_08"+just+".jpg";
 
 	// Will hold all holidays in an array of array of holidays in each month.
-	var holidays;
+	var holidays = null;
 
 //===================================================================================================================	
 //======================================E N D  O F  G L O B A L  V A R I A B L E S===================================
@@ -1300,6 +1300,9 @@ text+="</table>"
 		var YEAR=2 
 		var DAY=1 
 		var MONTH=0
+		// NIV ==> REMOVE - Holidays is empty return (TEMP).
+		if (holidays == null) return;
+		
 		for (j = 0 ; j < (indexFirsts+1) ; j++) //scan all relevant hebMonths
 		{
 			var tempHebDate = arrFirsts[j].Date.split("/") //Spliting to [MM,DD,YYYY]
