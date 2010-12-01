@@ -102,7 +102,7 @@
     </MessagesToUserInEventTab>
     <ListEventsText>
       <NoEvents>No personal events were added</NoEvents>
-      <Of>on </Of>
+      <Of>""</Of>
       <Events>Events</Events>
       <OneEvent>1 Event</OneEvent>
     </ListEventsText>
