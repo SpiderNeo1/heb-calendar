@@ -1526,7 +1526,7 @@ text+="</table>"
 		{
 			str += arrHebDate[userEvent.Hday - 1]
 			str += " "
-			str += ENUM_ListEventsTabText[1]; // ADD HERE ENUM FOR LIST EVENTS
+			str += ENUM_ListEventsTabText[1];
 			str += arrHebMonths[userEvent.Hmonth - 1]
 			str += ", "
 			str += (userEvent.year == -1 ? eventTextYearly : ("" + Nyear2Hyear(userEvent.year)))
@@ -2098,7 +2098,15 @@ text+="</table>"
 		document.getElementById('alert').style.visibility = "visible"
 			// Place the tooltip underneath the addevent button.
 		document.getElementById('alert').style.top = (document.getElementById('add').offsetTop + 30)+ "px"
-		document.getElementById('alert').style.left = (document.getElementById('add').offsetLeft+document.getElementById('add').offsetWidth - document.getElementById('alert').offsetWidth) +"px"
+		// if direction is right to left
+		if (chosenLanguage == "hebrew")
+		{
+			document.getElementById('alert').style.left = (document.getElementById('add').offsetLeft+document.getElementById('add').offsetWidth - document.getElementById('alert').offsetWidth) +"px"
+		}
+		else
+		{
+			document.getElementById('alert').style.left = (document.getElementById('add').offsetRight+document.getElementById('add').offsetWidth - document.getElementById('alert').offsetWidth) +"px"		
+		}
 		opacity('alert',0,100,500);
 		setTimeout("opacity('alert',100,0,500)",2000);
 	}
