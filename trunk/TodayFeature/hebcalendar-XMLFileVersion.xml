@@ -256,6 +256,7 @@
 			
 		SetAllHolidays();
 		// Set tab names
+		alert(ENUM_TabsNames.Calendar);
 		tabs.getTabs()[0].getNameContainer().innerHTML = ENUM_TabsNames.Calendar;	
 		tabs.getTabs()[1].getNameContainer().innerHTML = ENUM_TabsNames.AddEvent;
 		tabs.getTabs()[2].getNameContainer().innerHTML = ENUM_TabsNames.EventsList;
