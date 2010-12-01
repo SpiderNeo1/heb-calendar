@@ -68,7 +68,7 @@
 	var OTHERMONTH_FORECOLOR_WITHEVENT_FIREFOX='rgb(172, 172, 172)'	
 
 	// XML Tree ENUM structure.
-	var ENUM_XML_Nodes = {HebrewMonths : 0, HebrewDates : 1, GregorianMonths : 2, Holidays : 3, TabsName : 4, DaysOfWeek : 5, ShabbathText : 6, EventTextAnnually: 7, GeneralText: 8, EventTabText: 9, MessagesToUserInEventTab: 10, ListEventsTabText:11 AdarBetCases : 12, FeatureBox : 13 };
+	var ENUM_XML_Nodes = {HebrewMonths : 0, HebrewDates : 1, GregorianMonths : 2, Holidays : 3, TabsName : 4, DaysOfWeek : 5, ShabbathText : 6, EventTextAnnually: 7, GeneralText: 8, EventTabText: 9, MessagesToUserInEventTab: 10, ListEventsTabText:11, AdarBetCases : 12, FeatureBox : 13 };
 	
 	// Start enums from XML
 	var arrHebMonths = new Array("תשרי","חשוון","כסלו","טבת","שבט","אדר א","אדר","ניסן","אייר","סיוון","תמוז","אב","אלול");
