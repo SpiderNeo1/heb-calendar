@@ -259,6 +259,7 @@
 			
 		SetAllHolidays();
 		loaded = true;
+		alert("changed to true");
 		// Set tab names
 		/*tabs.getTabs()[0].getNameContainer().innerHTML = "Test";	
 		tabs.getTabs()[1].getNameContainer().innerHTML = ENUM_TabsNames.AddEvent;
