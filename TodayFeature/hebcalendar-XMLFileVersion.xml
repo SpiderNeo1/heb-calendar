@@ -71,20 +71,14 @@
 	// XML Tree ENUM structure.
 	var ENUM_XML_Nodes = {HebrewMonths : 0, HebrewDates : 1, GregorianMonths : 2, Holidays : 3, TabsName : 4, DaysOfWeek : 5, ShabbathText : 6, EventTextAnnually: 7, GeneralText: 8, EventTabText: 9, MessagesToUserInEventTab: 10, ListEventsTabText:11, AdarBetCases : 12, FeatureBox : 13 };
 	
-	// Start enums from XML
-	var arrHebMonths = new Array("תשרי","חשוון","כסלו","טבת","שבט","אדר א","אדר","ניסן","אייר","סיוון","תמוז","אב","אלול");
-	var arrHebDate = new Array("א","ב","ג","ד","ה","ו","ז","ח","ט","י","יא","יב","יג","יד","טו","טז","יז","יח","יט","כ","כא","כב","כג","כד","כה","כו","כז","כח","כט","ל");
-	var arrGregMonths = new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
-	
 	var MAX_HOLIDAYS_COUNT = 100;
 	var ENUM_Holidays = new Array(MAX_HOLIDAYS_COUNT);
-	//var ENUM_Holidays = {roshHashana1: "Rosh Hashana 1", roshHashana2: "Rosh Hashana 2", tzomGdalia: "Tzom Gdalia", erevYomKipur: "Evening of Yom Kippur", YomKipur: "Yom Kippur", erevSukot: "Evening of Sukkot", sukot: "Sukkot", sukot_holHamoed1: "Sukkot 1 (ch'm)", sukot_holHamoed2: "Sukkot 2 (ch'm)", sukot_holHamoed3: "Sukkot 3 (ch'm)", sukot_holHamoed4: "Sukkot 4 (ch'm)", sukot_holHamoed5: "Sukkot 5 (ch'm)", sukot_hoshaanaRaba: "Hoshana Raba", sukot_shminiAtzeret: "Shmini Atzert and Simhat Tora.", rabin: "Itzhak Rabin Memorial Day", erevHanuka: "Evening of Chanukah", hanuka1: "Chanukah 1", hanuka2: "Chanukah 2", hanuka3: "Chanukah 3", hanuka4: "Chanukah 4", hanuka5: "Chanukah 5", hanuka6: "Chanukah 6", hanuka7: "Chanukah 7", hanuka8: "Chanukah 8", tzomYudBetevet: "Tzom Asara B'Tevet", tuBeshvat: "Tu B'Shvat", tzomTaanitEster: "Ta'anit Esther", purim: "Purim", shushanPurim: "Shushan Purim", erevPesah: "Evening of Passover", Pesah: "Passover", pesah_holHamoed1: "Passover 1", pesah_holHamoed2: "Passover 2", pesah_holHamoed3: "Passover 3", pesah_holHamoed4: "Passover 4", pesah_holHamoed5: "Passover 5", pesah_hagSheni: "7th of Passover", yomHashoa: "Holocaust Memorial Day", yomHazikaron: "Yom Hazikaron", yomHaatzmaut: "Independence day", lagBaomer: "Lag B'Omer", yomYerushalaim: "Jerusalem Day", erevShavuot: "Evening of Shavuot", Shavuot: "Shavuot", tzomYudZain: "Tzom 17th of Tamuz", tzomTetBeAv: "Tisha B'Av", erevRoshHashana: "Evening of Rosh Hashana"};
-	
+
 	var ENUM_TabsNames = new Array (5);
-	var arrDaysOfTheWeek = new Array( "Su", "Mo", "Tu", "We", "Th", "Fr", "Sa");
+	var arrDaysOfTheWeek = new Array(7);
 	var ENUM_ShabbathText = new Array(2);
 	var eventTextYearly = "Annually";
-	var ENUM_GeneralText_EarliedOrPostponed = new Array(2); //
+	var ENUM_GeneralText_EarliedOrPostponed = new Array(2);
 	var ENUM_EventTabText = new Array(20);
 	var ENUM_EventTabMessagesToUser = new Array(7);
 	var ENUM_ListEventsTabText = new Array(5);
@@ -179,6 +173,8 @@
 		currDay = now.getDate()
 	}
 	
+	
+	// Trigger open XML - returns before XML is read.
 	function ReadXMLAndSetData()
 	{
 		var url = "http://heb-calendar.googlecode.com/svn/trunk/TodayFeature/NamesXML.xml";
@@ -190,6 +186,8 @@
 		gadgets.io.makeRequest(url,response,params)
 	}
 
+	// callback function for XML read.
+	// processes all XML nodes and creates all arrays.
 	function response(obj)
 	{
 		var objectData = obj.data;
@@ -292,7 +290,7 @@
 	}
 
 
-	
+	// helper function, converts an XML node with children to an array.
 	function FromListToEnum(list,arrEnum)
 	{
 		var count = 0;
@@ -312,15 +310,13 @@
 		}				
 	}
 		
+	// creates holidays array.
 	function SetAllHolidays()
 	{
 	//--------------------------------------J E W I S H  H O L I D A Y S------------------------------------------------- 	
-		//alert("SHHABBATH TEXT" + ENUM_ShabbathText[0])
-		
-		
+	
 		//---TISHREY-1-//
 		
-		//var roshHashana1 = new holiday("א' ראש השנה", 1, 1,FULL_DAY);
 		var roshHashana1 = new holiday(ENUM_Holidays[0], 1, 1,FULL_DAY);
 		var roshHashana2 = new holiday(ENUM_Holidays[1], 1, 2,FULL_DAY);
 		var tzomGdalia = new holiday(ENUM_Holidays[2], 1, 3,NONE);
@@ -466,9 +462,7 @@
 	var text = ""
 	// Create the table for the calendar.
 	text="<br><center>"
-
 	text += "<table id='headl' borderColor="+BORDER_COLOR+" cellSpacing='0' cellPadding='0' style='border-collapse: collapse' border='0'>"
-
 
 	text +="<tbody><tr><td><table cellSpacing='0' cellPadding='0' border='0' bgcolor="+LIGHTBLUE_COLOR_CELLBACKGROUND+" width='290'><tbody><tr>"
 	// The << cell.
@@ -542,7 +536,7 @@
 	text += "</table>"
 	text += "</td></tr>"
 	text += "</table>"
-	//text+="<div align=center>"
+
 
 text+="<table id='featureBoxOuter' margin-left:'auto' margin-right:'auto'  bordercolor="+BORDER_COLOR+" cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:hidden;' border='1'>"
 text+="<tr>"
@@ -570,13 +564,6 @@ text+="</table>"
 
 // End clock code.
 
-		/* Today Image Code */
-
-		
-	/* Today Image Code End */
-
-
-//text+="</div>"
 	text+="<div id='messageBox' dir='rtl'></div>"
 	text+="<div id='googleAdsense' dir='rtl' style='position: absolute; font-size:0.1em;visibility:hidden;'>סוכות, poker, calendar, holidays</div>"
 	/* ADDED TOOLTIP CODE */
@@ -881,35 +868,9 @@ text+="</table>"
 	{
 		showZmaniKinsatVeyetziatShabbath();
 	}
-	// Updates the google text.
-	var googleText = " ";
-//	googleText = "<!-- google_ad_section_start -->";
-	googleText = getMainWords();
-//	googleText += "<!-- google_ad_section_end -->"
-	//document.getElementById('googleAdsense').style.visibility = "hidden";	
-	document.getElementById('googleAdsense').innerHTML += googleText;
-	
+
 
 	}
-
-	
-	/*
-	 * This function Generates the google ad words. 
-	 */
-	 function getMainWords()
-	 {
-	 		var adWords = "";
-		 	for (var CellNumber=0; CellNumber<41; CellNumber++)
-		 	{
-	 			adWords += toolTipCellText[CellNumber];
-	 			if (toolTipCellText[CellNumber] != "")
-	 			{
-	 				adWords += ", ";
-	 			}
-		  }
-		  
-		  return adWords;
-	 }
 
 	function updateClock ( )
     {
