@@ -270,7 +270,7 @@
 		FromListToEnum(messagesAdarBetCasesText,ENUM_AdarBetCases);		
 		
 		// Create featurebox enum.
-		var messagesFeatureBoxText = chosenLanguageXMLList.item((ENUM_XML_Nodes.FeatureBox * 2)).childNodes
+		var messagesFeatureBoxText = chosenLanguageXMLList.item((ENUM_XML_Nodes.FeatureBox * 2) + 1).childNodes
 
 		FromListToEnum(messagesFeatureBoxText,ENUM_FeatureBox);		
 					
@@ -1877,6 +1877,12 @@ text+="</table>"
    * (the list event tab). It is executed upon selection of tab 3 - list events.
    */
 	function listEvents(tabId){
+	// First run call writecalendar.
+	if (loaded = false)
+	{
+		writeCalendar('tl_0_0');
+		return;
+	}	
 	editMode=false;
 	tabs.getTabs()[1].getNameContainer().innerHTML = "הוספת אירוע"
 	var events = (prefs.getString("mylist")).split("|")
@@ -1936,6 +1942,12 @@ text+="</table>"
 	 * event description.
 	 */
 	function addEventForm(tabId){
+	// First time loaded - call the write calendar.
+	if (loaded = false)
+	{
+		writeCalendar('tl_0_0');
+		return;
+	}
  	
  	var text="<form id='NewEvent' action='javascript:submitEvent()' Method='GET'"
 	text+="<p dir='rtl'>&nbsp;&nbsp;&nbsp;<input type='radio' value='AddHebDate' id = 'rr1' name='R1' onclick='updateDropDownBoxes()'><font face='Arial' size='2.5'><span lang='he'> "+ENUM_EventTabText[0];

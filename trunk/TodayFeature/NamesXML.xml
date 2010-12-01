@@ -92,14 +92,14 @@
       <AnnualEvent>Annual Event</AnnualEvent>
       <SubmitForm>Add Event</SubmitForm>
       <ResetForm>Reset</ResetForm>
-      <MessagesToUser>
-        <MissingDescription>Please Enter an Event Description</MissingDescription>
-        <ModifiedEventSuccess>Event Modified Successfully</ModifiedEventSuccess>
-        <AddedEventSuccess>Event Added Successfully</AddedEventSuccess>
-        <UnallowedChars>The characters / ( ) _ | ~ aren't allowed</UnallowedChars>
-        <TooManyEvents>Only 45 Events Can Be Added</TooManyEvents>
-      </MessagesToUser>
     </EventTabText>
+    <MessagesToUserInEventTab>
+      <MissingDescription>Please Enter an Event Description</MissingDescription>
+      <ModifiedEventSuccess>Event Modified Successfully</ModifiedEventSuccess>
+      <AddedEventSuccess>Event Added Successfully</AddedEventSuccess>
+      <UnallowedChars>The characters / ( ) _ | ~ aren't allowed</UnallowedChars>
+      <TooManyEvents>Only 45 Events Can Be Added</TooManyEvents>
+    </MessagesToUserInEventTab>
     <AdarBetCases>
       <AdarBet>Adar B</AdarBet>
       <Adar>Adar</Adar>
@@ -201,14 +201,14 @@
       <AnnualEvent>אירוע שנתי</AnnualEvent>
       <SubmitForm>הוסף אירוע</SubmitForm>
       <ResetForm>איפוס</ResetForm>
-      <MessagesToUser>
-        <MissingDescription>נא הזן תיאור לאירוע</MissingDescription>
-        <ModifiedEventSuccess>אירוע שונה בהצלחה</ModifiedEventSuccess>
-        <AddedEventSuccess>אירוע התווסף בהצלחה</AddedEventSuccess>
-        <UnallowedChars>הסימנים / ( ) _ | ~ אינם מותרים</UnallowedChars>
-        <TooManyEvents>ניתן לשמור 45 אירועים לכל היותר</TooManyEvents>
-      </MessagesToUser>
     </EventTabText>
+    <MessagesToUserInEventTab>
+      <MissingDescription>נא הזן תיאור לאירוע</MissingDescription>
+      <ModifiedEventSuccess>אירוע שונה בהצלחה</ModifiedEventSuccess>
+      <AddedEventSuccess>אירוע התווסף בהצלחה</AddedEventSuccess>
+      <UnallowedChars>הסימנים / ( ) _ | ~ אינם מותרים</UnallowedChars>
+      <TooManyEvents>ניתן לשמור 45 אירועים לכל היותר</TooManyEvents>
+    </MessagesToUserInEventTab>
     <AdarBetCases>
       <AdarBet>אדר ב</AdarBet>
       <Adar>אדר</Adar>
