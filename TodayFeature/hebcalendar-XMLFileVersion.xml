@@ -236,7 +236,7 @@
 		var tabsList = chosenLanguageXMLList.item((ENUM_XML_Nodes.TabsName * 2) + 1).childNodes
 		
 		FromListToEnum(tabsList,ENUM_TabsNames);
-		alert(ENUM_TabsNames[0]);
+		alert(document.all? "true":"false");
 		
 		
 		// Set Days Of Week.
