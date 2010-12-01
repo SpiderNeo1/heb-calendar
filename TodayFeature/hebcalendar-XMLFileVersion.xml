@@ -101,7 +101,7 @@
 	var currentGregOrHeb;
 	var prefs = new _IG_Prefs();
 	
-	var chosenLanguage = prefs.getString("DocDirection");
+	var chosenLanguage = prefs.getString("Language");
 	
 	var msg;
 	var just = "ltr";
