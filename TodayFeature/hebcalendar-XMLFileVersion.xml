@@ -200,7 +200,7 @@
 		var chosenLanguageXMLList;
 		 // For each <Language> node, get child nodes.
 		 var nodeList = languagesAvailableList.item(0).childNodes;
-		 alert(nodeList.item(2).nodeValue);
+		 alert(nodeList.item(1).nodeValue);
 
 		 // Loop through child nodes. Extract data from the text nodes that are
 		 // the children of the associated name, price, and calories element nodes.
