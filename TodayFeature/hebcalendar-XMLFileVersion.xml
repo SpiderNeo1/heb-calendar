@@ -270,7 +270,7 @@
 		FromListToEnum(messagesAdarBetCasesText,ENUM_AdarBetCases);		
 		
 		// Create featurebox enum.
-		var messagesFeatureBoxText = chosenLanguageXMLList.item((ENUM_XML_Nodes.FeatureBox * 2) + 1).childNodes
+		var messagesFeatureBoxText = chosenLanguageXMLList.item((ENUM_XML_Nodes.FeatureBox * 2)).childNodes
 
 		FromListToEnum(messagesFeatureBoxText,ENUM_FeatureBox);		
 					
