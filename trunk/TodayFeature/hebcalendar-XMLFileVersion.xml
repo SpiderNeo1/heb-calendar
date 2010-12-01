@@ -1956,7 +1956,7 @@ text+="</table>"
 	if (eventCount>1)
 		writeText +="<div align='center' dir='"+directionOfForm+"'><font face='Arial' style='font-size: 9pt; font-weight: 700'><BR>"+eventCount+" "+ENUM_ListEventsTabText[2]+ " </font></div>";
 	else
-		writeText +="<div align='center' dir='"+directionOfForm+"'><font face='Arial' style='font-size: 9pt; font-weight: 700'><BR>"+ENUM_ListEventsTabText[3]+" </font></div>";
+		writeText +="<div align='center'><font face='Arial' style='font-size: 9pt; font-weight: 700'><BR>"+ENUM_ListEventsTabText[3]+" </font></div>";
 	}
 	document.getElementById(tabId).innerHTML=writeText;
 	autoAdjustHeight();
