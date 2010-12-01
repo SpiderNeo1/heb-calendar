@@ -201,8 +201,7 @@
 		var chosenLanguageXMLList;
 		 // For each <Language> node, get child nodes.
 		 var nodeList = languagesAvailableList.item(0).childNodes;
-		var tmppppp = 0;
-		alert("trying "+tmppppp);tmppppp++;
+
 		 // Loop through child nodes. Extract data from the text nodes that are
 		 // the children of the associated name, price, and calories element nodes.
 		for (var j = 0; j < nodeList.length ; j++) 
@@ -214,7 +213,7 @@
 				chosenLanguageXMLList = node.childNodes;	
 			}
 		}
-		alert("trying "+tmppppp);tmppppp++;
+
 		// Set hebrew months array.
 		var tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.HebrewMonths * 2) + 1).firstChild.nodeValue;
 		arrHebMonths = tmp.split(",");
@@ -227,23 +226,23 @@
 		tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.GregorianMonths * 2) + 1).firstChild.nodeValue;
 		arrGregMonths = tmp.split(",");
 
-		alert("trying "+tmppppp);tmppppp++;
-		
-		// Set Holidays			
+				// Set Holidays			
 		var holidayList = chosenLanguageXMLList.item((ENUM_XML_Nodes.Holidays * 2) + 1).childNodes;								
 		FromListToEnum(holidayList,ENUM_Holidays);
 
+		alert("UP IN HERE");
+		
 		// Create tabs list enum.
 		var tabsList = chosenLanguageXMLList.item((ENUM_XML_Nodes.TabsName * 2) + 1).childNodes
 		
 		FromListToEnum(tabsList,ENUM_TabsNames);
-		
+		alert("UP IN HERE2");
 		
 		// Set Days Of Week.
 		tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.DaysOfWeek * 2) + 1).firstChild.nodeValue;
 		arrDaysOfTheWeek = tmp.split(",");
 
-		alert("trying "+tmppppp);tmppppp++;
+		
 		
 		// Create shabbathText enum.
 		var shabbathList = chosenLanguageXMLList.item((ENUM_XML_Nodes.ShabbathText * 2) + 1).childNodes
@@ -258,7 +257,7 @@
 
 		FromListToEnum(generalTextList,ENUM_GeneralText_EarliedOrPostponed);
 		
-		alert("trying "+tmppppp);tmppppp++;
+		
 		
 		// Create eventTab enum.
 		var eventTabText = chosenLanguageXMLList.item((ENUM_XML_Nodes.EventTabText * 2) + 1).childNodes
@@ -273,7 +272,7 @@
 		// Create ListEventsTab enum.
 		var listEventsTabTexts = chosenLanguageXMLList.item((ENUM_XML_Nodes.ListEventsTabText * 2) + 1).childNodes
 
-		alert("trying 1000");
+		
 		
 		FromListToEnum(listEventsTabTexts,ENUM_ListEventsTabText);		
 				
@@ -281,15 +280,12 @@
 		var messagesAdarBetCasesText = chosenLanguageXMLList.item((ENUM_XML_Nodes.AdarBetCases * 2) + 1).childNodes
 
 		FromListToEnum(messagesAdarBetCasesText,ENUM_AdarBetCases);		
-
-		alert("trying 10012");
-		
+	
 		// Create featurebox enum.
 		var messagesFeatureBoxText = chosenLanguageXMLList.item((ENUM_XML_Nodes.FeatureBox * 2) + 1).childNodes
 
 		FromListToEnum(messagesFeatureBoxText,ENUM_FeatureBox);		
 		
-		alert("trying 2000");
 		SetAllHolidays();
 		loaded = true;
 		alert("Completed reading");
