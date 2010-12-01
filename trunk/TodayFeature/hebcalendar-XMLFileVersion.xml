@@ -52,7 +52,8 @@
 //======================================G L O B A L  V A R I A B L E S===============================================
 //===================================================================================================================
 	var tabs;
-	_IG_RegisterOnloadHandler(init);
+	gadgets.util.registerOnLoadHandler(init);
+	//_IG_RegisterOnloadHandler(init);
 	var loaded = false;
 // Colour consts
 	var BORDER_COLOR='#000000'
@@ -96,7 +97,7 @@
 	var arrComulativeDays = new Array(1, 32, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366);
 	
 	var currentGregOrHeb;
-	var prefs = new _IG_Prefs();
+	var prefs = new gadgets.Prefs();
 	
 	var chosenLanguage = prefs.getString("Language");
 	
@@ -425,7 +426,7 @@
 	 */ 
 	 function init() {      
 	 	
-		tabs = new _IG_Tabs(__MODULE_ID__);
+		tabs = new gadgets.TabSet(__MODULE_ID__);
 	 // Initialize tabs.         
 	 	tabs.addDynamicTab("לוח שנה", writeCalendar);
 	 	tabs.addDynamicTab("הוספת אירוע", addEventForm);
@@ -444,7 +445,7 @@
 		if (FirstRunReadFromXML == true)
 		{
 			var loadingImageHTML = "<br><center><img src='"+loadingImageUrl+"' border='0' /></center>";
-			_gel(tabId).innerHTML=loadingImageHTML;
+			document.getElementById(tabId).innerHTML=loadingImageHTML;
 			ReadXMLAndSetData();
 			FirstRunReadFromXML = false;
 		}
@@ -584,8 +585,8 @@ text+="</table>"
 	
 	
 
-	_gel(tabId).innerHTML=text;
-	msg = new _IG_MiniMessage(__MODULE_ID__, _gel("messageBox"));
+	document.getElementById(tabId).innerHTML=text;
+	msg = new gadgets.MiniMessage(__MODULE_ID__, document.getElementById("messageBox"));
 
 	// Change the cells calendar according to the current month and year.
 	changeCal();
@@ -1935,7 +1936,7 @@ text+="</table>"
 	else
 		writeText +="<div align='center' dir='rtl'><font face='Arial' style='font-size: 9pt; font-weight: 700'><BR>"+ENUM_ListEventsTabText[3]+" </font></div>";
 	}
-	_gel(tabId).innerHTML=writeText;
+	document.getElementById(tabId).innerHTML=writeText;
 	autoAdjustHeight();
 	}
 	
@@ -2010,7 +2011,7 @@ text+="</table>"
 
 	/* ALERT TOOLTIP CODE END. */
 	text+="<br>"
-	_gel(tabId).innerHTML=text;
+	document.getElementById(tabId).innerHTML=text;
 	var elemYear = document.getElementById("EventYear")
 	var elemMonth = document.getElementById("EventMonth")
 	var elemDay = document.getElementById("EventDay")
