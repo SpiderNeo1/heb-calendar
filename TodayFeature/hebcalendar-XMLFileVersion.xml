@@ -213,30 +213,31 @@
 				chosenLanguageXMLList = node.childNodes;	
 			}
 		}
-
+		var IE = document.all?true:false;
+		
 		// Set hebrew months array.
 		var tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.HebrewMonths * 2) + 1).firstChild.nodeValue;
 		arrHebMonths = tmp.split(",");
-		
+		alert(arrHebMonths);
 		// Set jewish dates - 1,2 or א,ב
 		tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.HebrewDates * 2) + 1).firstChild.nodeValue;
 		arrHebDate = tmp.split(",");
-		
+		alert(arrHebDate);
 		// Set Greogrian Months.
 		tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.GregorianMonths * 2) + 1).firstChild.nodeValue;
 		arrGregMonths = tmp.split(",");
-
+		alert(arrGregMonths);
 		// Set Holidays			
 		var holidayList = chosenLanguageXMLList.item((ENUM_XML_Nodes.Holidays * 2) + 1).childNodes;								
 		FromListToEnum(holidayList,ENUM_Holidays);
-
+		alert(ENUM_Holidays[0]);
 		
 		
 		// Create tabs list enum.
 		var tabsList = chosenLanguageXMLList.item((ENUM_XML_Nodes.TabsName * 2) + 1).childNodes
 		
 		FromListToEnum(tabsList,ENUM_TabsNames);
-		alert(document.all? "true":"false");
+		alert(ENUM_TabsNames[0]);
 		
 		
 		// Set Days Of Week.
