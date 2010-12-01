@@ -1948,10 +1948,10 @@ text+="</table>"
 		for (i=0;i<eventCount;i++){
 			// parse event to with hold its description and other properties.
 			var currEvent=parseEventString(decodeStr(events[i]));
-			writeText +="<tr align='"+directionToAlign+"' bgcolor='" + ((i % 2) == 0 ? "#ECF5FF" : "#FFFFFF") + "' onmousemove='boldLine("+i+");' onmouseout='unBoldLine("+i+");' onclick='editEvent("+i+")' style= 'cursor: pointer;' >"
-			writeText +="<td width='25' align='center'><font face='Arial' style='font-size: 9pt'><span id='serial"+i+"'>"+(i+1)+"</span></font></td>"
-			writeText +="<td width='270' align='"+directionToAlign+"'><font face='Arial' style='font-size: 9pt'><span id='description"+i+"'>"+currEvent.desc+"</span></font></td>"
-			writeText +="<td width='295' align='"+directionToAlign+"'><font face='Arial' style='font-size: 9pt'><span lang='he'><span id='strDate"+i+"'>"+eventToString(currEvent)+"</span></span></font></td>"
+			writeText +="<tr align='"+directionToAlign+"' bgcolor='" + ((i % 2) == 0 ? "#ECF5FF" : "#FFFFFF") + "' onmousemove='boldLine("+i+");' onmouseout='unBoldLine("+i+");' >"
+			writeText +="<td width='25' align='center' onclick='editEvent("+i+")' style= 'cursor: pointer;'><font face='Arial' style='font-size: 9pt'><span id='serial"+i+"'>"+(i+1)+"</span></font></td>"
+			writeText +="<td width='270' align='"+directionToAlign+"' onclick='editEvent("+i+")' style= 'cursor: pointer;'><font face='Arial' style='font-size: 9pt'><span id='description"+i+"'>"+currEvent.desc+"</span></font></td>"
+			writeText +="<td width='295' align='"+directionToAlign+"' onclick='editEvent("+i+")' style= 'cursor: pointer;'><font face='Arial' style='font-size: 9pt'><span lang='he'><span id='strDate"+i+"'>"+eventToString(currEvent)+"</span></span></font></td>"
 			writeText +="<td align='"+alignmentOfRemove+"' width='110'> <img border='0' src='"+DESIGN_LOCATION+"x2.gif' style='cursor: pointer' onclick='deleteEvent("+i+")'> </td>"
 			writeText +="</tr>"
 		}	
