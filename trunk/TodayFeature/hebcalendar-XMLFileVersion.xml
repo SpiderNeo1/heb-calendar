@@ -190,7 +190,7 @@
 	{
 	   var objectData = obj.data;
 	   if (obj == null || typeof(obj) != "object" || 
-				  objectData.firstChild == null) {
+				  objectData == null) {
 		  document.getElementById("content_div").innerHTML = "<i>Invalid data.</i>";
 		  return;
 	   }
