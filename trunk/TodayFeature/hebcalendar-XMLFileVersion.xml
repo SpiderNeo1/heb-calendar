@@ -74,7 +74,7 @@
 	var MAX_HOLIDAYS_COUNT = 100;
 	var ENUM_Holidays = new Array(MAX_HOLIDAYS_COUNT);
 
-	var ENUM_TabsNames = new Array (5);
+	var ENUM_TabsNames = new Array(5);
 	var arrDaysOfTheWeek = new Array{"A","B","C","D","E","F","G"};
 	var ENUM_ShabbathText = new Array(3);
 	var eventTextYearly = "Annually";
