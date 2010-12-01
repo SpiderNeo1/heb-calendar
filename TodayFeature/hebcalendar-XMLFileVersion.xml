@@ -188,11 +188,13 @@
 
 	function response(obj)
 	{
-	   var objectData = obj.data;
+	   
 	   alert(obj);
 	   alert(typeof(obj));
+	   var objectData = obj.data;
 	   alert(objectData);
 	   alert(obj.data);
+	   
 	   if (obj == null || typeof(obj) != "object" || 
 				  objectData == null) {
 		  document.getElementById("content_div").innerHTML = "<i>Invalid data.</i>";
