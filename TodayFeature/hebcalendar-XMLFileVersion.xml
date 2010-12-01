@@ -1445,7 +1445,12 @@ text+="</table>"
 			if (cell >= 0 && cell <= 41)
 			{
 				if (prefs.getString("minimessages")=="Show")
-					messages[messages.length] = msg.createStaticMessage(eventToString(tempEvent) + " - " +  tempEvent.desc, _IG_AdjustIFrameHeight);	//Creating user mini messages
+					//messages[messages.length] = msg.createStaticMessage(eventToString(tempEvent) + " - " +  tempEvent.desc, _IG_AdjustIFrameHeight);	//Creating user mini messages
+					{
+					// direction of MiniMessage depends on the input language - if hebrew should be right to left.
+						var directionOfMiniMessage = (chosenLanguage == "hebrew" ? "rtl" : "ltr");
+						messages[messages.length] = msg.createStaticMessage("<p dir='ltr'>"+eventToString(tempEvent) + " - " +  tempEvent.desc +"</p>", _IG_AdjustIFrameHeight);	//Creating user mini messages
+					}
 				if (toolTipCellText[cell] != "")		//event description will be displayed in a new line
 					toolTipCellText[cell] += "<BR>"
 				toolTipCellText[cell] +=tempEvent.desc 
@@ -1519,7 +1524,7 @@ text+="</table>"
 		}
 		else
 		{
-			str += arrHebDates[userEvent.Hday - 1]
+			str += arrHebDate[userEvent.Hday - 1]
 			str += " "
 			str += ENUM_ListEventsTabText[1]; // ADD HERE ENUM FOR LIST EVENTS
 			str += arrHebMonths[userEvent.Hmonth - 1]
