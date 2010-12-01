@@ -81,7 +81,7 @@
 	//var arrHolidaysFromXML;
 	var ENUM_Holidays = {roshHashana1: "Rosh Hashana 1", roshHashana2: "Rosh Hashana 2", tzomGdalia: "Tzom Gdalia", erevYomKipur: "Evening of Yom Kippur", YomKipur: "Yom Kippur", erevSukot: "Evening of Sukkot", sukot: "Sukkot", sukot_holHamoed1: "Sukkot 1 (ch'm)", sukot_holHamoed2: "Sukkot 2 (ch'm)", sukot_holHamoed3: "Sukkot 3 (ch'm)", sukot_holHamoed4: "Sukkot 4 (ch'm)", sukot_holHamoed5: "Sukkot 5 (ch'm)", sukot_hoshaanaRaba: "Hoshana Raba", sukot_shminiAtzeret: "Shmini Atzert and Simhat Tora.", rabin: "Itzhak Rabin Memorial Day", erevHanuka: "Evening of Chanukah", hanuka1: "Chanukah 1", hanuka2: "Chanukah 2", hanuka3: "Chanukah 3", hanuka4: "Chanukah 4", hanuka5: "Chanukah 5", hanuka6: "Chanukah 6", hanuka7: "Chanukah 7", hanuka8: "Chanukah 8", tzomYudBetevet: "Tzom Asara B'Tevet", tuBeshvat: "Tu B'Shvat", tzomTaanitEster: "Ta'anit Esther", purim: "Purim", shushanPurim: "Shushan Purim", erevPesah: "Evening of Passover", Pesah: "Passover", pesah_holHamoed1: "Passover 1", pesah_holHamoed2: "Passover 2", pesah_holHamoed3: "Passover 3", pesah_holHamoed4: "Passover 4", pesah_holHamoed5: "Passover 5", pesah_hagSheni: "7th of Passover", yomHashoa: "Holocaust Memorial Day", yomHazikaron: "Yom Hazikaron", yomHaatzmaut: "Independence day", lagBaomer: "Lag B'Omer", yomYerushalaim: "Jerusalem Day", erevShavuot: "Evening of Shavuot", Shavuot: "Shavuot", tzomYudZain: "Tzom 17th of Tamuz", tzomTetBeAv: "Tisha B'Av", erevRoshHashana: "Evening of Rosh Hashana"};
 	
-	var ENUM_TabsNames = {Calendar: "",EditEvent:"",AddEvent:"",EventsList:""};
+	var ENUM_TabsNames = {Calendar: "לוח שנה",EditEvent:"עריכת אירוע",AddEvent:"הוספת אירוע",EventsList:"רשימת אירועים"};
 	var arrDaysOfTheWeek = new Array( "Su", "Mo", "Tu", "We", "Th", "Fr", "Sa");
 	var ENUM_ShabbathText = {ShabathStart: "Shabbath Start",ShabathEnd: "Shabbath End"};
 	var eventTextYearly = "Annually";
@@ -256,10 +256,10 @@
 			
 		SetAllHolidays();
 		// Set tab names
-		alert(ENUM_TabsNames.Calendar);
-		tabs.getTabs()[0].getNameContainer().innerHTML = ENUM_TabsNames.Calendar;	
+		tabs.getTabs()[0].getNameContainer().innerHTML = "Test";	
 		tabs.getTabs()[1].getNameContainer().innerHTML = ENUM_TabsNames.AddEvent;
 		tabs.getTabs()[2].getNameContainer().innerHTML = ENUM_TabsNames.EventsList;
+		alert("set Tab Names");
 	
 			
 	}
@@ -404,6 +404,7 @@
 	 	tabs.addDynamicTab("לוח שנה", writeCalendar);
 	 	tabs.addDynamicTab("הוספת אירוע", addEventForm);
 	 	tabs.addDynamicTab("רשימת אירועים", listEvents);
+		alert("INIT DONE!");
 	 }
 
 	//======================================= WRITE CALENDAR ==========================================================
