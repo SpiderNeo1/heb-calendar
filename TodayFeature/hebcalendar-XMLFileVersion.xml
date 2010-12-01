@@ -415,6 +415,7 @@
 	 * This function actually creates the calendar's backbone. 
 	 */
 	function writeCalendar(tabId){	
+	alert(tabId);
 	// XML has yet to be loaded.
 	if (loaded == false)
 	{
