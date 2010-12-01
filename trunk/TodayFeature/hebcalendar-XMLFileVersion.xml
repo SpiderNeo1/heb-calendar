@@ -226,28 +226,30 @@
 		tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.GregorianMonths * 2) + 1).firstChild.nodeValue;
 		arrGregMonths = tmp.split(",");
 
-				// Set Holidays			
+		// Set Holidays			
 		var holidayList = chosenLanguageXMLList.item((ENUM_XML_Nodes.Holidays * 2) + 1).childNodes;								
 		FromListToEnum(holidayList,ENUM_Holidays);
 
-		alert("UP IN HERE");
+		
 		
 		// Create tabs list enum.
 		var tabsList = chosenLanguageXMLList.item((ENUM_XML_Nodes.TabsName * 2) + 1).childNodes
 		
 		FromListToEnum(tabsList,ENUM_TabsNames);
-		alert("UP IN HERE2");
+		alert("UP IN HERE");
 		
 		// Set Days Of Week.
 		tmp = chosenLanguageXMLList.item((ENUM_XML_Nodes.DaysOfWeek * 2) + 1).firstChild.nodeValue;
 		arrDaysOfTheWeek = tmp.split(",");
 
-		
+		alert("UP IN HERE2");
 		
 		// Create shabbathText enum.
 		var shabbathList = chosenLanguageXMLList.item((ENUM_XML_Nodes.ShabbathText * 2) + 1).childNodes
 	
 		FromListToEnum(shabbathList,ENUM_ShabbathText);
+						
+		alert("UP IN HERE3");
 						
 		// Annuall text for annual events.
 		eventTextYearly = chosenLanguageXMLList.item((ENUM_XML_Nodes.EventTextAnnually * 2) + 1).firstChild.nodeValue
