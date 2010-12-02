@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?> 
 <Module> 
 <ModulePrefs 
-	title="לוח השנה הישראלי"
+	title="Hebrew Gregorian Calendar"
 	title_url="http://hebcalendar.blogspot.com/"
-	directory_title="לוח שנה"
-	description="לוח שנה עברי"
+	directory_title="Calendar"
+	description="Jewish-Gregorian Calendar"
 	author="Idan Porat, Niv Goldman"
 	author_email="hebCalendar@gmail.com"
 	author_affiliation="Tel Aviv University"
 	author_location="Tel Aviv, Israel"
-	screenshot="http://heb-calendar.googlecode.com/files/SmlThumb.jpg"
-	thumbnail="http://heb-calendar.googlecode.com/files/SmlThumb.jpg"
+	screenshot="http://heb-calendar.googlecode.com/svn/trunk/images/design/newthumb.jpg"
+	thumbnail="http://heb-calendar.googlecode.com/svn/trunk/images/design/newthumb.jpg"
 	category="communication"
 	category2="tools"
 >
@@ -1958,7 +1958,7 @@ text+="</table>"
 	else
 		writeText +="<div align='center' dir='"+directionOfForm+"'><font face='Arial' style='font-size: 9pt; font-weight: 700'><BR>"+ENUM_ListEventsTabText[3]+ " </font></div>";
 	}
-	document.getElementById(tabId).innerHTML=writeText;
+	document.getElementById(tabId).innerHTML=writeText; 
 	autoAdjustHeight();
 	}
 	
@@ -3275,8 +3275,15 @@ text+="</table>"
 
 	</SCRIPT>
 <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-11013280-3']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
 </script>
 
 
