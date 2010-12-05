@@ -3296,8 +3296,9 @@ text+="</table>"
 
 </script>
 
-/*
+
 <script type="text/javascript">
+/*
     var random_number = Math.random();
     if (random_number < 0.4){
 		google_ad_client = "pub-0906149740519198";
@@ -3312,10 +3313,10 @@ text+="</table>"
 		google_ad_slot = "0729457625";
 		google_ad_width = 250;
 		google_ad_height = 250;
-	}
+	}*/
 </script>
 <script type="text/javascript"     src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-*/
+
 <script type="text/javascript">
 try {
 var pageTracker = _gat._getTracker("UA-11013280-1");
