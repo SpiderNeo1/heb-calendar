@@ -568,7 +568,7 @@
 	text += "</td></tr>"
 	text += "</table>"
 
-	text+="<iframe src='http://www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/pages/Hebrew-Gregorian-Calendar/148828745164363;width=292&amp;colorscheme=light&amp;connections=0&amp;stream=false&amp;header=true&amp;height=62' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:292px; height:62px;' allowTransparency='true'></iframe>"
+	text+="<iframe src='http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FHebrew-Gregorian-Calendar%2F148828745164363&amp;width=292&amp;colorscheme=light&amp;connections=0&amp;stream=false&amp;header=false&amp;height=62' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:292px; height:62px;' allowTransparency='true'></iframe>"
 
 // Leave an empty line.
 text+="<table id='emptyline' margin-left:'auto' margin-right:'auto'  bordercolor='white' cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:visible;'  border='1'>"
