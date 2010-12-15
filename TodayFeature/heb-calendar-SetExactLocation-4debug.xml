@@ -24,8 +24,8 @@
   	<EnumValue value="english"/>    
   	<EnumValue value="hebrew"/>
   </UserPref>
-  <UserPref name="choosenLocation" display_name="Choose City:" default_value="41,20,N,19,49,E,1" datatype="enum">    
-<EnumValue value="41,20,N,19,49,E,1" display_value="Tirana,  Albania"/>
+  <UserPref name="currentLocation" display_name="Choose City:" default_value="41,20,N,19,49,E,1" datatype="enum">    
+<EnumValue value="41,20,N,19,49,E,1" display_value="Tirana, Albania"/>
 <EnumValue value="8,50,S,13,14,E,1" display_value="Luanda, Angola"/>
   </UserPref>
   <UserPref name="DocDirection" display_name="Text Direction" default_value="Left to Right" datatype="enum">    
