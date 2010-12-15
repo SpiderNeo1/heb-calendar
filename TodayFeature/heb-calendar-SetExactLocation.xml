@@ -24,8 +24,8 @@
   	<EnumValue value="english"/>    
   	<EnumValue value="hebrew"/>
   </UserPref>
-	<UserPref name="currentLocation" display_name="Current City:"  default_value="31,46,N,35,14,E,2" datatype="enum">
-	<EnumValue value="41,20,N,19,49,E,1" display_value="Tirana, Albania"/>
+  <UserPref name="currentLocation" display_name="Choose City:" default_value="31,46,N,35,14,E,2" datatype="enum">    
+<EnumValue value="41,20,N,19,49,E,1" display_value="Tirana, Albania"/>
 <EnumValue value="8,50,S,13,14,E,1" display_value="Luanda, Angola"/>
 <EnumValue value="34,40,S,58,24,W,-3" display_value=" Buenos Aires, Argentina"/>
 <EnumValue value="32,57,S,60,40,W,-3" display_value="Rosario, Argentina"/>
@@ -222,8 +222,9 @@
 <EnumValue value="27,58,N,82,27,W,-5" display_value="Tampa, Florida, United States"/>
 <EnumValue value="38,54,N,77,02,W,-5" display_value="Washington, D.C., United States"/>
 <EnumValue value="34,53,S,56,10,W,-3" display_value="Montevideo, Uruguay"/>
-<EnumValue value="10,30,N,66,56,W,-4.5" display_value="Caracas, Venezuela"/>
-</UserPref>	  
+<EnumValue value="10º30’N,66º56’W,-4.5" display_value="Caracas, Venezuela"/>
+
+  </UserPref> 
   <UserPref name="DocDirection" display_name="Text Direction" default_value="Left to Right" datatype="enum">    
   	<EnumValue value="Right to Left"/>    
   	<EnumValue value="Left to Right"/>
@@ -770,8 +771,7 @@
 	text += "</td></tr>"
 	text += "</table>"
 
-	text+="<iframe src='http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FHebrew-Gregorian-Calendar%2F148828745164363&amp;width=292&amp;colorscheme=light&amp;connections=0&amp;stream=false&amp;header=false&amp;height=62' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:292px; height:62px;' allowTransparency='true'></iframe>"
-
+	//text+="<iframe src='http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FHebrew-Gregorian-Calendar%2F148828745164363&amp;layout=standard&amp;show_faces=false&amp;width=300&amp;action=recommend&amp;font=lucida+grande&amp;colorscheme=light&amp;height=35' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:300px; height:35px;' allowTransparency='true'></iframe>"
 // Leave an empty line.
 text+="<table id='emptyline' margin-left:'auto' margin-right:'auto'  bordercolor='white' cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:visible;'  border='1'>"
 text+="<tr>"
@@ -1402,15 +1402,15 @@ text+="</table>"
 	 */
   function calculateZmaniKinsatVeyetziatShabbath(dayG,monthG,yearG)
   {
-		/* Jerusalem */
 		var locationCoords = chosenLocation.split(",");
 		NorthOrSouth = locationCoords[2];//"N";
-		latd = locationCoords[0];//31;
-		latm = locationCoords[1];//46;
+		latd = parseInt(locationCoords[0]);//31;
+		latm = parseInt(locationCoords[1]);//46;
 		EastOrWest = locationCoords[5];//"E";
-		lngd = locationCoords[3];//35;
-		lngm = locationCoords[4];//14;
-		tz = locationCoords[6];
+		lngd = parseInt(locationCoords[3]);//35;
+		lngm = parseInt(locationCoords[4]);//14;
+		tz = parseInt(locationCoords[6]);
+		
 		var arrZmanimRet = Array(2);
 	
 		var yom = new Date (yearG, monthG, dayG);
@@ -1475,16 +1475,9 @@ text+="</table>"
 
 	function showZmaniKinsatVeyetziatShabbath()
 	{
-	var i=0;
-	
+
 	var ii;
 	var ZmaniShabbath = Array(2);
-	
-	var now = new Date();
-	
-	var mm = now.getMonth()
-	var yyyy = now.getUTCFullYear()
-	var mmyyyy = new Date()
 	
 	var firstDayDisplayed=getFirstDayGregorian();
 	var day1=getFirstDayOfTheMonth();
@@ -1492,8 +1485,8 @@ text+="</table>"
 	var prevM = getPreviousMonth();
   var nextM = getNextMonth();
   
-  var prevY = mm == 0 ? (currYear - 1) : currYear;
-  var nextY = mm == 11 ? (currYear + 1) : currYear;
+  var prevY = (currMonth == 0) ? (currYear - 1) : currYear;
+  var nextY = (currMonth == 11) ? (currYear + 1) : currYear;
 	  
   var maxDaysPreviousMonth = maxDays((prevM),currYear);
 	var maxDaysCurrMonth=maxDays(currMonth,currYear);
@@ -1535,8 +1528,9 @@ text+="</table>"
 	{
 		if (ii % 7 == 5) // If Friday
 		{
+			// the day is the current cell - days of current month - days of previous month (day1)
 			ZmaniShabbath = 
-								calculateZmaniKinsatVeyetziatShabbath(eval(ii - maxDaysCurrMonth + 1),nextM,nextY);
+								calculateZmaniKinsatVeyetziatShabbath(eval(ii - maxDaysCurrMonth - day1 + 1),nextM,nextY);
 			if (toolTipCellText[ii] != "")		//event description will be displayed in a new line
 					toolTipCellText[ii] += "<BR>"
 			toolTipCellText[ii] += ENUM_ShabbathText[0] + ZmaniShabbath[0];
@@ -3493,17 +3487,31 @@ text+="</table>"
 	firstRun()
 
 	</SCRIPT>
+	
 <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-11013280-3']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
+
+
+<script type="text/javascript">
+    var random_number = Math.random();
+    if (random_number < 0.35){
+		google_ad_client = "pub-0906149740519198";
+		/* Image Ads Smaller Test */
+		google_ad_slot = "9674727056";
+		google_ad_width = 200;
+		google_ad_height = 200;       
+    } else
+	{
+		google_ad_client = "pub-0906149740519198";		
+		/* Image Ads */
+		google_ad_slot = "0729457625";
+		google_ad_width = 250;
+		google_ad_height = 250;
+	}
+</script>
+<script type="text/javascript"     src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
 
 <script type="text/javascript">
 try {
@@ -3514,3 +3522,4 @@ pageTracker._trackPageview();
 </BODY></HTML>
 ]]>
 </Content> </Module>
+	
