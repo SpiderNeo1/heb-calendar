@@ -1403,7 +1403,7 @@ text+="</table>"
 	 */
   function calculateZmaniKinsatVeyetziatShabbath(dayG,monthG,yearG)
   {
-		/* Jerusalem */
+		alert("Received date: " +dayG + "/"+monthG+"/"+yearG);
 		var locationCoords = chosenLocation.split(",");
 		NorthOrSouth = locationCoords[2];//"N";
 		latd = parseInt(locationCoords[0]);//31;
