@@ -1537,6 +1537,8 @@ text+="</table>"
 	{
 		if (ii % 7 == 5) // If Friday
 		{
+			alert(ii);
+			alert(maxDaysCurrMonth);
 			ZmaniShabbath = 
 								calculateZmaniKinsatVeyetziatShabbath(eval(ii - maxDaysCurrMonth + 1),nextM,nextY);
 			if (toolTipCellText[ii] != "")		//event description will be displayed in a new line
