@@ -1406,19 +1406,12 @@ text+="</table>"
 		/* Jerusalem */
 		var locationCoords = chosenLocation.split(",");
 		NorthOrSouth = locationCoords[2];//"N";
-		alert("North Or South?" + NorthOrSouth);
-		latd = locationCoords[0];//31;
-		alert("latd " + latd);
-		latm = locationCoords[1];//46;
-		alert("latm " + latm);
+		latd = parseInt(locationCoords[0]);//31;
+		latm = parseInt(locationCoords[1]);//46;
 		EastOrWest = locationCoords[5];//"E";
-		alert("EastOrWest " + EastOrWest);
-		lngd = locationCoords[3];//35;
-		alert("lngd " + lngd);
-		lngm = locationCoords[4];//14;
-		alert("lngm " + lngm);
-		tz = locationCoords[6];
-		alert("tz  " + tz);
+		lngd = parseInt(locationCoords[3]);//35;
+		lngm = parseInt(locationCoords[4]);//14;
+		tz = parseInt(locationCoords[6]);
 		
 		var arrZmanimRet = Array(2);
 	
