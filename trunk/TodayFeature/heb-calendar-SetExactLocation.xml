@@ -131,7 +131,7 @@
 <EnumValue value="53,13,N,6,34,E,1" display_value="Groningen, Netherlands"/>
 <EnumValue value="51,56,N,4,28,E,1" display_value="Rotterdam, Netherlands"/>
 <EnumValue value="36,51,S,174,47,E,12" display_value="Auckland, New Zealand"/>
-<EnumValue value="43,32,,172,37,E,12" display_value="Christchurch, New Zealand"/>
+<EnumValue value="43,32,S,172,37,E,12" display_value="Christchurch, New Zealand"/>
 <EnumValue value="41,17,S,174,47,E,12" display_value="Wellington, New Zealand"/>
 <EnumValue value="12,08,N,86,16,W,-6" display_value="Managua, Nicaragua"/>
 <EnumValue value="9,04,N,7,29,E,1" display_value="Abuja, Nigeria"/>
@@ -222,7 +222,7 @@
 <EnumValue value="27,58,N,82,27,W,-5" display_value="Tampa, Florida, United States"/>
 <EnumValue value="38,54,N,77,02,W,-5" display_value="Washington, D.C., United States"/>
 <EnumValue value="34,53,S,56,10,W,-3" display_value="Montevideo, Uruguay"/>
-<EnumValue value="10º30’N,66º56’W,-4.5" display_value="Caracas, Venezuela"/>
+<EnumValue value="10,30,N,66,56,W,-4.5" display_value="Caracas, Venezuela"/>
 </UserPref>	  
   <UserPref name="DocDirection" display_name="Text Direction" default_value="Left to Right" datatype="enum">    
   	<EnumValue value="Right to Left"/>    
