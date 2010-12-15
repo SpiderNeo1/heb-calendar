@@ -1537,10 +1537,9 @@ text+="</table>"
 	{
 		if (ii % 7 == 5) // If Friday
 		{
-			alert(ii);
-			alert(maxDaysCurrMonth);
+			// the day is the current cell - days of current month - days of previous month (day1)
 			ZmaniShabbath = 
-								calculateZmaniKinsatVeyetziatShabbath(eval(ii - maxDaysCurrMonth + 1),nextM,nextY);
+								calculateZmaniKinsatVeyetziatShabbath(eval(ii - maxDaysCurrMonth - day1 + 1),nextM,nextY);
 			if (toolTipCellText[ii] != "")		//event description will be displayed in a new line
 					toolTipCellText[ii] += "<BR>"
 			toolTipCellText[ii] += ENUM_ShabbathText[0] + ZmaniShabbath[0];
