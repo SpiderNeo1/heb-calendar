@@ -24,6 +24,207 @@
   	<EnumValue value="english"/>    
   	<EnumValue value="hebrew"/>
   </UserPref>
+  <UserPref name="currentLocation" display_name="Choose City:" default_value="31,46,N,35,14,E,2" datatype="enum">    
+<EnumValue value="41,20,N,19,49,E,1" display_value="Tirana, Albania"/>
+<EnumValue value="8,50,S,13,14,E,1" display_value="Luanda, Angola"/>
+<EnumValue value="34,40,S,58,24,W,-3" display_value=" Buenos Aires, Argentina"/>
+<EnumValue value="32,57,S,60,40,W,-3" display_value="Rosario, Argentina"/>
+<EnumValue value="41,09,S,71,18,W,-3" display_value="San Carlos de Bariloche, Argentina"/>
+<EnumValue value="27,28,S,153,02,E,10" display_value="Brisbane, Australia"/>
+<EnumValue value="37,49,S,144,58,E,10" display_value="Melbourne, Victoria, Australia"/>
+<EnumValue value="33,52,S,151,13,E,10" display_value="Sydney, Australia"/>
+<EnumValue value="48,13,N,16,22,E,1" display_value="Vienna, Austria"/>
+<EnumValue value="41,02,N,49,53,E,4" display_value="Baku, Azerbaijan"/>
+<EnumValue value="53,55,N,27,33,E,2" display_value="Minsk, Belarus"/>
+<EnumValue value="51,13,N,04,24,E,1" display_value="Antwerp, Belgium"/>
+<EnumValue value="50,51,N,4,21,E,1" display_value="Brussels, Belgium"/>
+<EnumValue value="32,18,N,64,47,W,-4" display_value="Hamilton, Bermuda"/>
+<EnumValue value="16,30,S,68,08,W,-4" display_value="La Paz, Bolivia"/>
+<EnumValue value="31,46,S,52,21,W,-3" display_value="Pelotas, Brazil"/>
+<EnumValue value="22,54,S,43,14,W,-3" display_value="Rio de Janeiro, Brazil"/>
+<EnumValue value="12,58,S,38,30,W,-3" display_value="Salvador, Brazil"/>
+<EnumValue value="42,42,N,23,20,E,2" display_value="Sofia, Bulgaria"/>
+<EnumValue value="51,03,N,114,03,W,-7" display_value="Calgary, Canada"/>
+<EnumValue value="45,26,N,75,41,W,-5" display_value="Ottawa, Canada"/>
+<EnumValue value="43,39,N,79,23,W,-5" display_value="Toronto, Canada"/>
+<EnumValue value="49,16,N,123,07,W,-8" display_value="Vancouver, Canada"/>
+<EnumValue value="49,54,N,97,08,W,-6" display_value="Winnipeg,  Manitoba, Canada"/>
+<EnumValue value="33,27,S,70,39,W,-4" display_value="Santiago, Chile"/>
+<EnumValue value="9,56,N,84,05,W,-6" display_value="San José, Costa Rica"/>
+<EnumValue value="45,49,N,15,59,E,1" display_value="Zagreb, Croatia"/>
+<EnumValue value="35,10,N,33,21,E,2" display_value="Nicosia, Cyprus"/>
+<EnumValue value="50,05,N,14,26,E,1" display_value="Prague, Czech Republic"/>
+<EnumValue value="55,43,N,12,34,E,1" display_value="Copenhagen, Denmark"/>
+<EnumValue value="0,15,S,78,35,W,-5" display_value="Quito, Ecuador"/>
+<EnumValue value="44,50,N,00,35,W,1" display_value="Bordeaux, France"/>
+<EnumValue value="45,46,N,4,50,E,1" display_value="Lyon, France"/>
+<EnumValue value="43,18,N,5,22,E,1" display_value="Marseille, France"/>
+<EnumValue value="48,52,N,2,20,E,1" display_value="Paris, France"/>
+<EnumValue value="52,31,N,13,25,E,1" display_value="Berlin, Germany"/>
+<EnumValue value="53,04,N,8,49,E,1" display_value="Bremen, Germany"/>
+<EnumValue value="50,07,N,8,41,E,1" display_value="Frankfurt am Main, Germany"/>
+<EnumValue value="48,08,N,11,34,E,1" display_value="Munich,  Bavaria, Germany"/>
+<EnumValue value="5,30,N,0,10,W,0" display_value="Accra, Ghana"/>
+<EnumValue value="38,00,N,23,43,E,1" display_value="Athens, Greece"/>
+<EnumValue value="40,38,N,22,57,E,1" display_value="Thessaloniki, Greece"/>
+<EnumValue value="22,17,N,114,08,E,8" display_value="Hong Kong, Hong Kong, China"/>
+<EnumValue value="47,28,N,19,03,E,1" display_value="Budapest, Hungary"/>
+<EnumValue value="12,58,N,77,35,E,5.5" display_value="Bangalore, India"/>
+<EnumValue value="17,22,N,78,29,E,5.5" display_value="Hyderabad, India"/>
+<EnumValue value="18,58,N,72,49,E,5.5" display_value="Mumbai (Bombay), Maharashtra, India"/>
+<EnumValue value="28,38,N,77,13,E,5.5" display_value="New Delhi, India"/>
+<EnumValue value="6,11,S,106,50,E,7" display_value="Jakarta, Indonesia"/>
+<EnumValue value="53,21,N,6,16,W,0" display_value="Dublin, Ireland"/>
+<EnumValue value="32,37,N,35,17,E,2" display_value="Afula, Israel"/>
+<EnumValue value="32,55,N,35,04,E,2" display_value="Akko, Israel"/>
+<EnumValue value="31,49,N,34,35,E,2" display_value="Ashdod, Israel"/>
+<EnumValue value="31,42,N,34,35,E,2" display_value="Asheqelon, Israel"/>
+<EnumValue value="31,15,N,34,48,E,2" display_value="Beersheba, Israel"/>
+<EnumValue value="32,06,N,34,51,E,2" display_value="Bene Beraq, Israel"/>
+<EnumValue value="31,44,N,35,00,E,2" display_value="Bet Shemesh, Israel"/>
+<EnumValue value="29,33,N,34,57,E,2" display_value="Eilat, Israel"/>
+<EnumValue value="32,04,N,34,48,E,2" display_value="Givatayim, Israel"/>
+<EnumValue value="32,27,N,34,55,E,2" display_value="Hadera, Israel"/>
+<EnumValue value="32,46,N,35,00,E,2" display_value="Haifa, Israel"/>
+<EnumValue value="32,10,N,34,50,E,2" display_value="Herzliyya, Israel"/>
+<EnumValue value="32,09,N,34,53,E,2" display_value="Hod Hasharon, Israel"/>
+<EnumValue value="32,01,N,34,46,E,2" display_value="Holon, Israel"/>
+<EnumValue value="31,46,N,35,14,E,2" display_value="Jerusalem, Israel"/>
+<EnumValue value="32,55,N,35,18,E,2" display_value="Karmi,El, Israel"/>
+<EnumValue value="31,57,N,34,54,E,2" display_value="Lod, Israel"/>
+<EnumValue value="33,01,N,35,05,E,2" display_value="Nahariyya, Israel"/>
+<EnumValue value="32,42,N,35,17,E,2" display_value="Nazareth, Israel"/>
+<EnumValue value="32,20,N,34,51,E,2" display_value="Netanya, Israel"/>
+<EnumValue value="32,02,N,34,51,E,2" display_value="Or Yehuda, Israel"/>
+<EnumValue value="32,06,N,34,53,E,2" display_value="Petah Tiqwa, Israel"/>
+<EnumValue value="32,03,N,34,51,E,2" display_value="Qiryat Ono, Israel"/>
+<EnumValue value="33,13,N,35,35,E,2" display_value="Qiryat Shemona, Israel"/>
+<EnumValue value="32,11,N,34,52,E,2" display_value="Raananna, Israel"/>
+<EnumValue value="32,04,N,34,48,E,2" display_value="Ramat Gan, Israel"/>
+<EnumValue value="32,09,N,34,50,E,2" display_value="Ramat Hasharon, Israel"/>
+<EnumValue value="31,55,N,34,52,E,2" display_value="Ramla, Israel"/>
+<EnumValue value="31,54,N,34,48,E,2" display_value="Rehovot, Israel"/>
+<EnumValue value="31,58,N,34,48,E,2" display_value="Rishon le Ziyyon, Israel"/>
+<EnumValue value="32,05,N,34,48,E,2" display_value="Tel Aviv, Israel"/>
+<EnumValue value="32,47,N,35,31,E,2" display_value="Tiberias, Israel"/>
+<EnumValue value="32,46,N,34,58,E,2" display_value="Tirat Karmel, Israel"/>
+<EnumValue value="32,31,N,35,09,E,2" display_value="Umm El Fahm, Israel"/>
+<EnumValue value="43,46,N,11,15,E,1" display_value="Florence, Italy"/>
+<EnumValue value="45,28,N,9,10,E,1" display_value="Milan, Italy"/>
+<EnumValue value="40,50,N,14,15,E,1" display_value="Naples, Italy"/>
+<EnumValue value="41,54,N,12,29,E,1" display_value="Rome, Italy"/>
+<EnumValue value="45,26,N,12,19,E,1" display_value="Venice, Italy"/>
+<EnumValue value="43,04,N,141,21,E,9" display_value="Sapporo, Japan"/>
+<EnumValue value="35,41,N,139,46,E,9" display_value="Tokyo, Japan"/>
+<EnumValue value="31,57,N,35,56,E,2" display_value="Amman, Jordan"/>
+<EnumValue value="43,17,N,76,54,E,6" display_value="Almaty, Kazakhstan"/>
+<EnumValue value="51,10,N,71,26,E,6" display_value="Astana, Kazakhstan"/>
+<EnumValue value="56,58,N,24,8,E,2" display_value="Riga, Latvia"/>
+<EnumValue value="42,0,N,21,26,E,1" display_value="Skopje, Macedonia"/>
+<EnumValue value="3,08,N,101,42,E,8" display_value="Kuala Lumpur, Malaysia"/>
+<EnumValue value="20,40,N,103,21,W,-6" display_value="Guadalajara, Mexico"/>
+<EnumValue value="19,41,N,99,13,W,-6" display_value="Mexico City, Mexico"/>
+<EnumValue value="33,32,N,7,35,W,0" display_value="Casablanca, Morocco"/>
+<EnumValue value="31,08,N,8,0,W,0" display_value="Marrakech, Morocco"/>
+<EnumValue value="27,43,N,85,22,E,5.75" display_value="Kathmandu, Nepal"/>
+<EnumValue value="52,22,N,4,54,E,1" display_value="Amsterdam, Netherlands"/>
+<EnumValue value="53,13,N,6,34,E,1" display_value="Groningen, Netherlands"/>
+<EnumValue value="51,56,N,4,28,E,1" display_value="Rotterdam, Netherlands"/>
+<EnumValue value="36,51,S,174,47,E,12" display_value="Auckland, New Zealand"/>
+<EnumValue value="43,32,S,172,37,E,12" display_value="Christchurch, New Zealand"/>
+<EnumValue value="41,17,S,174,47,E,12" display_value="Wellington, New Zealand"/>
+<EnumValue value="12,08,N,86,16,W,-6" display_value="Managua, Nicaragua"/>
+<EnumValue value="9,04,N,7,29,E,1" display_value="Abuja, Nigeria"/>
+<EnumValue value="6,35,N,3,20,E,1" display_value="Lagos, Nigeria"/>
+<EnumValue value="59,56,N,10,45,E,1" display_value="Oslo, Norway"/>
+<EnumValue value="8,58,N,79,32,W,-5" display_value="Panama City, Panama"/>
+<EnumValue value="39,54,N,116,23,E,8" display_value="Beijing, People,s Republic of China"/>
+<EnumValue value="30,39,N,104,04,E,8" display_value="Chengdu, People,s Republic of China"/>
+<EnumValue value="23,20,N,113,30,E,8" display_value="Guangzhou, People,s Republic of China"/>
+<EnumValue value="45,45,N,126,41,E,8" display_value="Harbin, People,s Republic of China"/>
+<EnumValue value="31,10,N,121,28,E,8" display_value="Shanghai, People,s Republic of China"/>
+<EnumValue value="22,33,N,114,06,E,8" display_value="Shenzhen, People,s Republic of China"/>
+<EnumValue value="39,08,N,117,11,E,8" display_value="Tianjin, People,s Republic of China"/>
+<EnumValue value="14,36,N,120,59,E,8" display_value="Manila, Philippines"/>
+<EnumValue value="52,14,N,21,01,E,1" display_value="Warsaw, Poland"/>
+<EnumValue value="38º42,N,9º11,W,1" display_value="Lisbon, Portugal"/>
+<EnumValue value="41,09,N,8,38,W,1" display_value="Porto, Portugal"/>
+<EnumValue value="44,25,N,26,06,E,1" display_value="Bucharest, Romania"/>
+<EnumValue value="52,17,N,104,16,E,8" display_value="Irkutsk, Russia"/>
+<EnumValue value="55,45,N,37,37,E,3" display_value="Moscow, Russia"/>
+<EnumValue value="14,01,N,60,59,W,-4" display_value="Castries, Saint Lucia"/>
+<EnumValue value="24,43,N,46,43,E,3" display_value="Riyadh, Saudi Arabia"/>
+<EnumValue value="4,37,S,55,27,E,4" display_value="Victoria, Seychelles"/>
+<EnumValue value="1,17,N,103,51,E,8" display_value="Singapore, Singapore"/>
+<EnumValue value="48,09,N,17,07,E,1" display_value="Bratislava, Slovakia"/>
+<EnumValue value="46,03,N,14,30,E,1" display_value="Ljubljana, Slovenia"/>
+<EnumValue value="33,55,S,18,25,E,2" display_value="Cape Town, South Africa"/>
+<EnumValue value="26,08,S,27,54,E,2" display_value="Johannesburg, South Africa"/>
+<EnumValue value="37,33,N,126,59,E,9" display_value="Seoul, South Korea"/>
+<EnumValue value="41,23,N,2º11,E,1" display_value="Barcelona, Spain"/>
+<EnumValue value="40,23’N,3,43,W,1" display_value="Madrid, Spain"/>
+<EnumValue value="39,29,N,0,22,W,1" display_value="Valencia, Spain"/>
+<EnumValue value="6,54,N,79,50,E,5.5" display_value="Colombo, Sri Lanka"/>
+<EnumValue value="5,52,N,55,10,W,-3" display_value="Paramaribo, Suriname"/>
+<EnumValue value="59,21,N,18,04,E,1" display_value="Stockholm, Sweden"/>
+<EnumValue value="47,34,N,7,36,E,1" display_value="Basel, Switzerland"/>
+<EnumValue value="46,57,N,7,27,E,1" display_value="Bern, Switzerland"/>
+<EnumValue value="46,12,N,6,09,E,1" display_value="Geneva, Switzerland"/>
+<EnumValue value="46,31,N,6,38,E,1" display_value="Lausanne, Switzerland"/>
+<EnumValue value="25,02,N,121,38,E,8" display_value="Taipei, Taiwan"/>
+<EnumValue value="13,45,N,100,31,E,7" display_value="Bangkok, Thailand"/>
+<EnumValue value="18,47,N,98,59,E,7" display_value="Chiang Mai, Thailand"/>
+<EnumValue value="41,00,N,29,00,E,2" display_value="Istanbul, Turkey"/>
+<EnumValue value="0,19,N,32,35,E,3" display_value="Kampala, Uganda"/>
+<EnumValue value="50,27,N,30,30,E,2" display_value="Kiev, Ukraine"/>
+<EnumValue value="46,28,N,30,44,E,2" display_value="Odessa, Ukraine"/>
+<EnumValue value="51,27,N,2,36,W,0" display_value="Bristol,  England, United Kingdom"/>
+<EnumValue value="52,12,N,0,07,E,0" display_value="Cambridge, United Kingdom"/>
+<EnumValue value="55,57,N,03,12,W,0" display_value="Edinburgh, United Kingdom"/>
+<EnumValue value="55,52,N,04,15,W,0" display_value="Glasgow, United Kingdom"/>
+<EnumValue value="53,25,N,2,59,W,0" display_value="Liverpool, United Kingdom"/>
+<EnumValue value="51,30,N,0,08,W,0" display_value="London, United Kingdom"/>
+<EnumValue value="53,29,N,2,15,W,0" display_value="Manchester, United Kingdom"/>
+<EnumValue value="53,29,N,2,15,W,0" display_value="Manchester, United Kingdom"/>
+<EnumValue value="51,45,N,1,15,W,0" display_value="Oxford, United Kingdom"/>
+<EnumValue value="50,22,N,4,08,W,0" display_value="Plymouth, United Kingdom"/>
+<EnumValue value="53,23,N,1,28,W,0" display_value="Sheffield, United Kingdom"/>
+<EnumValue value="51,00,N,1,04,W,0" display_value="Southampton, United Kingdom"/>
+<EnumValue value="33,45,N,84,23,W,-5" display_value="Atlanta, Georgia, United States"/>
+<EnumValue value="30,18,N,97,45,W,-6" display_value="Austin, Texas, United States"/>
+<EnumValue value="42,21,N,71,04,W,-5" display_value="Boston, Massachusetts, United States"/>
+<EnumValue value="42,54,N,78,51,W,-5" display_value="Buffalo, New York, United States"/>
+<EnumValue value="35,14,N,80,50,W,-5" display_value="Charlotte, North Carolina, United States"/>
+<EnumValue value="41,50,N,87,39,W,-6" display_value="Chicago,  Illinois, United States"/>
+<EnumValue value="39,08,N,84,30,W,-5" display_value="Cincinnati, Ohio, United States"/>
+<EnumValue value="41,29,N,81,40,W,-5" display_value="Cleveland, Ohio, United States"/>
+<EnumValue value="39,59,N,82,59,W,-5" display_value="Columbus, Ohio, United States"/>
+<EnumValue value="32,46,N,96,48,W,-6" display_value="Dallas, Texas, United States"/>
+<EnumValue value="39,45,N,104,59,W,-7" display_value="Denver, Colorado, United States"/>
+<EnumValue value="21,18,N,157,50,W,-10" display_value="Honolulu, Hawaii, United States"/>
+<EnumValue value="29,45,N,95,22,W,-6" display_value="Houston,  Texas, United States"/>
+<EnumValue value="39,06,N,94,35,W,-6" display_value="Kansas City, Missouri, United States"/>
+<EnumValue value="36,11,N,115,13,W,-8" display_value="Las Vegas,  Nevada, United States"/>
+<EnumValue value="34,03,N,118,15,W,-8" display_value="Los Angeles,  California, United States"/>
+<EnumValue value="25,47,N,80,13,W,-5" display_value="Miami, United States"/>
+<EnumValue value="40,43,N,74,00,W,-5" display_value="New York,  New York, United States"/>
+<EnumValue value="28,25,N,81,19,W,-5" display_value="Orlando, Florida, United States"/>
+<EnumValue value="39,57,N,75,10,W,-5" display_value="Philadelphia, United States"/>
+<EnumValue value="33,32,N,112,05,W,-7" display_value="Phoenix, Arizona, United States"/>
+<EnumValue value="40,27,N,80,00,W,-5" display_value="Pittsburgh,  Pennsylvania, United States"/>
+<EnumValue value="45,31,N,122,41,W,-8" display_value="Portland, Oregon, United States"/>
+<EnumValue value="41,49,N,71,25,W,-5" display_value="Providence,  Rhode Island, United States"/>
+<EnumValue value="39,31,N,119,49,W,-8" display_value="Reno, Nevada, United States"/>
+<EnumValue value="33,56,N,117,23,W,-8" display_value="Riverside, California, United States"/>
+<EnumValue value="32,43,N,117,10,W,-8" display_value="San Diego,  California, United States"/>
+<EnumValue value="37,46,N,122,26,W,-8" display_value="San Francisco, United States"/>
+<EnumValue value="47,36,N,122,19,W,-8" display_value="Seattle,  Washington, United States"/>
+<EnumValue value="27,58,N,82,27,W,-5" display_value="Tampa, Florida, United States"/>
+<EnumValue value="38,54,N,77,02,W,-5" display_value="Washington, D.C., United States"/>
+<EnumValue value="34,53,S,56,10,W,-3" display_value="Montevideo, Uruguay"/>
+<EnumValue value="10º30’N,66º56’W,-4.5" display_value="Caracas, Venezuela"/>
+
+  </UserPref> 
   <UserPref name="DocDirection" display_name="Text Direction" default_value="Left to Right" datatype="enum">    
   	<EnumValue value="Right to Left"/>    
   	<EnumValue value="Left to Right"/>
@@ -94,6 +295,8 @@
 	var prefs = new gadgets.Prefs();
 	
 	var chosenLanguage = prefs.getString("Language");
+	
+	var chosenLocation = prefs.getString("currentLocation");
 	
 	var msg;
 	var just = "ltr";
@@ -568,8 +771,7 @@
 	text += "</td></tr>"
 	text += "</table>"
 
-	text+="<iframe src='http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FHebrew-Gregorian-Calendar%2F148828745164363&amp;width=292&amp;colorscheme=light&amp;connections=0&amp;stream=false&amp;header=false&amp;height=62' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:292px; height:62px;' allowTransparency='true'></iframe>"
-
+	text+="<iframe src='http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FHebrew-Gregorian-Calendar%2F148828745164363&amp;layout=standard&amp;show_faces=false&amp;width=300&amp;action=recommend&amp;font=lucida+grande&amp;colorscheme=light&amp;height=35' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:300px; height:35px;' allowTransparency='true'></iframe>"
 // Leave an empty line.
 text+="<table id='emptyline' margin-left:'auto' margin-right:'auto'  bordercolor='white' cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:visible;'  border='1'>"
 text+="<tr>"
@@ -1200,14 +1402,15 @@ text+="</table>"
 	 */
   function calculateZmaniKinsatVeyetziatShabbath(dayG,monthG,yearG)
   {
-		/* Jerusalem */
-		NorthOrSouth = "N";
-		latd = 31;
-		latm = 46;
-		EastOrWest = "E";
-		lngd = 35;
-		lngm = 14;
-		tz = 2;
+		var locationCoords = chosenLocation.split(",");
+		NorthOrSouth = locationCoords[2];//"N";
+		latd = parseInt(locationCoords[0]);//31;
+		latm = parseInt(locationCoords[1]);//46;
+		EastOrWest = locationCoords[5];//"E";
+		lngd = parseInt(locationCoords[3]);//35;
+		lngm = parseInt(locationCoords[4]);//14;
+		tz = parseInt(locationCoords[6]);
+		
 		var arrZmanimRet = Array(2);
 	
 		var yom = new Date (yearG, monthG, dayG);
@@ -1219,24 +1422,30 @@ text+="</table>"
 		var mdyDate = hebDate.split("/")
 		var mdyDateApril2 = hebDateApril2.split("/")
 		
-		// If after the 2nd of April
-		if ((monthG > 2) && (dayG > 1))
+		// Only if we are in Israel.
+		// NOTE: THIS IS A KNOWN BUG - ALL +2 GMT WILL
+		// ACT AS DAYLIGHT SAVING TIME IS IN ISRAEL.
+		if (tz == 2)
 		{
-			// If we are in the same hebrew year as the 2nd of april it means we are before the
-			// 10th of Tishrei - hence Daylight saving time applies.
-			if (mdyDate[2] == mdyDateApril2[2]) 
+			// If after the 2nd of April
+			if ((monthG > 2) && (dayG > 1))
 			{
-				tz++;
+				// If we are in the same hebrew year as the 2nd of april it means we are before the
+				// 10th of Tishrei - hence Daylight saving time applies.
+				if (mdyDate[2] == mdyDateApril2[2]) 
+				{
+					tz++;
+				}
+				// If we are a year after the 2nd of April, check to see if we are before the 10th
+				// of Tishrei - DST still applies.
+				else if ((mdyDate[2] > mdyDateApril2[2])
+								&& (mdyDate[0] == 1)
+								&& (mdyDate[1] < 10))
+				{
+					tz++;
+				}
+				
 			}
-			// If we are a year after the 2nd of April, check to see if we are before the 10th
-			// of Tishrei - DST still applies.
-			else if ((mdyDate[2] > mdyDateApril2[2])
-							&& (mdyDate[0] == 1)
-							&& (mdyDate[1] < 10))
-			{
-				tz++;
-			}
-			
 		}
 		// motzei shabbat (3 small stars)
 		time = suntime(dayG, monthG+1, yearG, 98, 30, lngd, lngm, EastOrWest, latd, latm, NorthOrSouth, tz);
@@ -1266,16 +1475,9 @@ text+="</table>"
 
 	function showZmaniKinsatVeyetziatShabbath()
 	{
-	var i=0;
-	
+
 	var ii;
 	var ZmaniShabbath = Array(2);
-	
-	var now = new Date();
-	
-	var mm = now.getMonth()
-	var yyyy = now.getUTCFullYear()
-	var mmyyyy = new Date()
 	
 	var firstDayDisplayed=getFirstDayGregorian();
 	var day1=getFirstDayOfTheMonth();
@@ -1283,8 +1485,8 @@ text+="</table>"
 	var prevM = getPreviousMonth();
   var nextM = getNextMonth();
   
-  var prevY = mm == 0 ? (currYear - 1) : currYear;
-  var nextY = mm == 11 ? (currYear + 1) : currYear;
+  var prevY = (currMonth == 0) ? (currYear - 1) : currYear;
+  var nextY = (currMonth == 11) ? (currYear + 1) : currYear;
 	  
   var maxDaysPreviousMonth = maxDays((prevM),currYear);
 	var maxDaysCurrMonth=maxDays(currMonth,currYear);
@@ -1326,8 +1528,9 @@ text+="</table>"
 	{
 		if (ii % 7 == 5) // If Friday
 		{
+			// the day is the current cell - days of current month - days of previous month (day1)
 			ZmaniShabbath = 
-								calculateZmaniKinsatVeyetziatShabbath(eval(ii - maxDaysCurrMonth + 1),nextM,nextY);
+								calculateZmaniKinsatVeyetziatShabbath(eval(ii - maxDaysCurrMonth - day1 + 1),nextM,nextY);
 			if (toolTipCellText[ii] != "")		//event description will be displayed in a new line
 					toolTipCellText[ii] += "<BR>"
 			toolTipCellText[ii] += ENUM_ShabbathText[0] + ZmaniShabbath[0];
@@ -3284,6 +3487,7 @@ text+="</table>"
 	firstRun()
 
 	</SCRIPT>
+	
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-11013280-3']);
@@ -3305,3 +3509,4 @@ pageTracker._trackPageview();
 </BODY></HTML>
 ]]>
 </Content> </Module>
+	
