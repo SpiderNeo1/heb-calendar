@@ -1406,12 +1406,20 @@ text+="</table>"
 		/* Jerusalem */
 		var locationCoords = chosenLocation.split(",");
 		NorthOrSouth = locationCoords[2];//"N";
+		alert("North Or South?" + NorthOrSouth);
 		latd = locationCoords[0];//31;
+		alert("latd " + latd);
 		latm = locationCoords[1];//46;
+		alert("latm " + latm);
 		EastOrWest = locationCoords[5];//"E";
+		alert("EastOrWest " + EastOrWest);
 		lngd = locationCoords[3];//35;
+		alert("lngd " + lngd);
 		lngm = locationCoords[4];//14;
+		alert("lngm " + lngm);
 		tz = locationCoords[6];
+		alert("tz  " + tz);
+		
 		var arrZmanimRet = Array(2);
 	
 		var yom = new Date (yearG, monthG, dayG);
