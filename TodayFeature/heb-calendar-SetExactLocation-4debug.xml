@@ -1477,28 +1477,18 @@ text+="</table>"
 
 	function showZmaniKinsatVeyetziatShabbath()
 	{
-	var i=0;
-	
+
 	var ii;
 	var ZmaniShabbath = Array(2);
-	
-	var now = new Date();
-	
-	var mm = now.getMonth()
-	var yyyy = now.getUTCFullYear()
-	var mmyyyy = new Date()
 	
 	var firstDayDisplayed=getFirstDayGregorian();
 	var day1=getFirstDayOfTheMonth();
 	
-	alert(mm);
-	alert(currMonth);
-	
 	var prevM = getPreviousMonth();
   var nextM = getNextMonth();
   
-  var prevY = (mm == 0) ? (currYear - 1) : currYear;
-  var nextY = (mm == 11) ? (currYear + 1) : currYear;
+  var prevY = (currMonth == 0) ? (currYear - 1) : currYear;
+  var nextY = (currMonth == 11) ? (currYear + 1) : currYear;
 	  
   var maxDaysPreviousMonth = maxDays((prevM),currYear);
 	var maxDaysCurrMonth=maxDays(currMonth,currYear);
