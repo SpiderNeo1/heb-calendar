@@ -771,7 +771,7 @@
 	text += "</td></tr>"
 	text += "</table>"
 
-	text+="<iframe src='http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FHebrew-Gregorian-Calendar%2F148828745164363&amp;layout=standard&amp;show_faces=false&amp;width=250&amp;action=recommend&amp;font=lucida+grande&amp;colorscheme=light&amp;height=35' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:450px; height:35px;' allowTransparency='true'></iframe>"
+	text+="<iframe src='http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FHebrew-Gregorian-Calendar%2F148828745164363&amp;layout=standard&amp;show_faces=false&amp;width=250&amp;action=recommend&amp;font=lucida+grande&amp;colorscheme=light&amp;height=35' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:250px; height:35px;' allowTransparency='true'></iframe>"
 // Leave an empty line.
 text+="<table id='emptyline' margin-left:'auto' margin-right:'auto'  bordercolor='white' cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:visible;'  border='1'>"
 text+="<tr>"
