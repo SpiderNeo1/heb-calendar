@@ -771,8 +771,7 @@
 	text += "</td></tr>"
 	text += "</table>"
 
-	text+="<iframe src='http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FHebrew-Gregorian-Calendar%2F148828745164363&amp;width=292&amp;colorscheme=light&amp;connections=0&amp;stream=false&amp;header=false&amp;height=62' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:292px; height:62px;' allowTransparency='true'></iframe>"
-
+	text+="<iframe src='http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FHebrew-Gregorian-Calendar%2F148828745164363&amp;layout=standard&amp;show_faces=false&amp;width=250&amp;action=recommend&amp;font=lucida+grande&amp;colorscheme=light&amp;height=35' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:450px; height:35px;' allowTransparency='true'></iframe>"
 // Leave an empty line.
 text+="<table id='emptyline' margin-left:'auto' margin-right:'auto'  bordercolor='white' cellspacing='0' cellpadding='2' style=' border-collapse: collapse; visibility:visible;'  border='1'>"
 text+="<tr>"
@@ -1403,7 +1402,6 @@ text+="</table>"
 	 */
   function calculateZmaniKinsatVeyetziatShabbath(dayG,monthG,yearG)
   {
-		alert("Received date: " +dayG + "/"+monthG+"/"+yearG);
 		var locationCoords = chosenLocation.split(",");
 		NorthOrSouth = locationCoords[2];//"N";
 		latd = parseInt(locationCoords[0]);//31;
@@ -3489,17 +3487,31 @@ text+="</table>"
 	firstRun()
 
 	</SCRIPT>
+	
 <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-11013280-3']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
+
+
+<script type="text/javascript">
+    var random_number = Math.random();
+    if (random_number < 0.35){
+		google_ad_client = "pub-0906149740519198";
+		/* Image Ads Smaller Test */
+		google_ad_slot = "9674727056";
+		google_ad_width = 200;
+		google_ad_height = 200;       
+    } else
+	{
+		google_ad_client = "pub-0906149740519198";		
+		/* Image Ads */
+		google_ad_slot = "0729457625";
+		google_ad_width = 250;
+		google_ad_height = 250;
+	}
+</script>
+<script type="text/javascript"     src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
 
 <script type="text/javascript">
 try {
@@ -3510,3 +3522,4 @@ pageTracker._trackPageview();
 </BODY></HTML>
 ]]>
 </Content> </Module>
+	
