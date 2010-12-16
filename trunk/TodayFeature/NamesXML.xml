@@ -111,8 +111,8 @@
       <Adar>Adar</Adar>
     </AdarBetCases>
     <FeatureBox>
-      <Date>15/10/2010</Date>
-      <Text>Added button for returning to current date</Text>
+      <Date>15/12/2010</Date>
+      <Text>Two Features Added!</Text>
     </FeatureBox>
   </english>
   <hebrew>
@@ -226,8 +226,8 @@
       <Adar>אדר</Adar>
     </AdarBetCases>
     <FeatureBox>
-      <Date>15/10/2010</Date>
-      <Text>Added a button for returning to current date</Text>
+      <Date>15/12/2010</Date>
+      <Text>קביעת זמני שבת בהתאם למיקום מדוייק ותירגום הגאדג'ט</Text>
     </FeatureBox>
   </hebrew>
 </Language>
