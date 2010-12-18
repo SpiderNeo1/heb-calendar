@@ -1411,7 +1411,16 @@ text+="</table>"
 		lngm = parseInt(locationCoords[4]);//14;
 		tz = parseInt(locationCoords[6]);
 	
-		alert(chosenLocation);
+		NorthOrSouth = "N"
+		latd = 34
+		latm = 3
+		EastOrWest = "W"
+		lngd = 118
+		lngm = 15
+		tz = -8
+	
+
+	//alert(chosenLocation);
 	
 		var arrZmanimRet = Array(2);
 	
