@@ -1402,7 +1402,6 @@ text+="</table>"
 	 */
   function calculateZmaniKinsatVeyetziatShabbath(dayG,monthG,yearG)
   {
-		alert(locationCoords);
 		var locationCoords = chosenLocation.split(",");
 		NorthOrSouth = locationCoords[2];//"N";
 		latd = parseInt(locationCoords[0]);//31;
@@ -1411,7 +1410,9 @@ text+="</table>"
 		lngd = parseInt(locationCoords[3]);//35;
 		lngm = parseInt(locationCoords[4]);//14;
 		tz = parseInt(locationCoords[6]);
-		
+	
+		alert(chosenLocation);
+	
 		var arrZmanimRet = Array(2);
 	
 		var yom = new Date (yearG, monthG, dayG);
