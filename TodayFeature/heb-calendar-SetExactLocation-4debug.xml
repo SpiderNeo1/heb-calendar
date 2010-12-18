@@ -1416,7 +1416,7 @@ text+="</table>"
 		latm = 3
 		EastOrWest = "W"
 		lngd = 118
-		lngm = 15
+		lngm = 14
 		tz = -8
 	
 
