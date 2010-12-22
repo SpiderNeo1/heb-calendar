@@ -20,7 +20,7 @@
 <Require feature="minimessage" />
 <Locale lang="en" country="us" />
 </ModulePrefs>
-  <UserPref name="Language" display_name="Interface Language" default_value="english" datatype="enum">    
+  <UserPref name="Language" display_name="Interface Language" default_value="hebrew" datatype="enum">    
   	<EnumValue value="english"/>    
   	<EnumValue value="hebrew"/>
   </UserPref>
