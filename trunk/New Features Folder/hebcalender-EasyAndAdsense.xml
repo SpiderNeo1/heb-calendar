@@ -3526,7 +3526,7 @@ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.
 		google_ad_width = 200;
 		google_ad_height = 200;       
 		
-    } else if ( random_number < 0.36)
+    } else if ( random_number < 0.9)
 	{
 		google_ad_client = "pub-0906149740519198";		
 		/* Image Ads */
