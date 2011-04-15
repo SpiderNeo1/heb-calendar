@@ -3537,14 +3537,15 @@ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.
 	else
 	{
 		
-		document.getElementById("forex").innerHTML = "
-							<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="300" height="250" id="Easy-Forex.com" align="middle">
-							<param name="movie" value="http://www.forex-affiliate.net/files/novice_300x250.swf?link=http://www.easy-forex.com/gtw/188748.aspx?bid=1078" />
-							<param name=FlashVars value="link=http://www.easy-forex.com/gtw/188748.aspx?bid=1078" />
-							<param name="quality" value="high" />
-							<embed flashvars="link=http://www.easy-forex.com/gtw/188748.aspx?bid=1078" src="http://www.forex-affiliate.net/files/novice_300x250.swf?link=http://www.easy-forex.com/gtw/188748.aspx?bid=1078" quality="high" width="300" height="250" name="Easy-Forex.com" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-							</object>"
-		document.getElementById("forex").style = "visibility:visible;"
+		var strInnerHTML;
+		strInnerHTML = "<object classid='clsid:d27cdb6e-ae6d-11cf-96b8-444553540000' codebase='http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0' width='300' height='250' id='Easy-Forex.com' align='middle'>"
+		strInnerHTML += "<param name='movie' value='http://www.forex-affiliate.net/files/novice_300x250.swf?link=http://www.easy-forex.com/gtw/188748.aspx?bid=1078' />"
+		strInnerHTML += "<param name=FlashVars value='link=http://www.easy-forex.com/gtw/188748.aspx?bid=1078' />"
+		strInnerHTML += "<param name='quality' value='high' />"
+		strInnerHTML += "<embed flashvars='link=http://www.easy-forex.com/gtw/188748.aspx?bid=1078' src='http://www.forex-affiliate.net/files/novice_300x250.swf?link=http://www.easy-forex.com/gtw/188748.aspx?bid=1078' quality='high' width='300' height='250' name='Easy-Forex.com' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer' />"
+		strInnerHTML += "</object>"
+		document.getElementById("forex").innerHTML = strInnerHTML
+		document.getElementById("forex").style.visibility = "visible";
 		
 	}
 </script>
