@@ -1,0 +1,6 @@
+@import "reset.css";
+@import "layout.css";
+
+#page article, #article-wrapper article:first-child { border-top: 0; border-bottom: solid 5px #78C729; margin-top: 10px; }
+#article-wrapper article:first-child { margin-top: 10px; }
+
