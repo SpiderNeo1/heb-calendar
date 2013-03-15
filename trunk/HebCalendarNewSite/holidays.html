@@ -1,0 +1,78 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+	<Title>Jewish Calendar Online - Holiday List</title>
+	<meta name="description=" content="The Jewish Calendar Online offers an interactive
+									   online calendar with all Jewish dates and holidays in conjunction with the gregorian calendar.">
+									   
+
+	<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+	<link rel="stylesheet" href="jquery-ui/css/redmond/jquery-ui-1.10.1.custom.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="hebcal.js"></script>
+	<script type="text/javascript" src="calendarHelper.js"></script>	
+
+</head>
+
+<body class="home blog home">
+  
+  <header id="header">
+    
+        <h1 id="logo">
+      <a href="http://jquerymobile.com/" rel="home" title="jQuery Mobile">jQuery Mobile</a>
+    </h1>
+    
+<style>
+#logo a { background: url(http://jquerymobile.com/wp-content/uploads/2012/09/jquery-mobile-logo-03.png) no-repeat !important;}
+</style>
+
+     <nav id="site-nav">
+       <ul>
+         <li id="nav-calendar" class="alpha"><a href="calendar.html">Calendar</a></li>
+         <li id="nav-convert"><a href="convert dates.html">Convert Dates</a></li>
+         <li id="nav-holidays"><a href="holidays.html">Holidays</a></li>
+		 <li id="nav-about"><a href="about us.html">About Us</a></li>
+         <li id="nav-contact" class="omega"><a href="contact us.html">Contact Us</a></li>
+       </ul>
+     </nav>
+   </header>
+
+   <section id="page">
+	<article id="calendar-main">
+	<h2>Upcoming Holidays in 2013 - 2014</h2>
+	<p id="HolidaysHebrew" dir="rtl" class="seriously-cross-platform" style="float:right; width:50%; padding-right:10% ">	
+	</p>
+	<p id="HolidaysEnglish" class="seriously-cross-platform" style="width: 50%; padding-left:5%">	
+	</p>
+	<script>
+
+	function waitForXML()
+	{
+		if (loaded == false)
+		{
+			setTimeout(waitForXML,500);
+			return;
+		}
+		var now = new Date();
+		// Fix - requires day -1. NOT SURE WHY.
+		now.setDate(now.getDate() - 1);
+		var hebDateToday = GregToHeb(now);
+		now.setDate(now.getDate() + 365);
+		var hebDateAYearAhead = GregToHeb(now);
+		SwitchLanguage("english");
+		$("#HolidaysEnglish").html(getHolidaysBetweenTwoDates(hebDateToday,hebDateAYearAhead));
+		SwitchLanguage("hebrew");
+		$("#HolidaysHebrew").html(getHolidaysBetweenTwoDates(hebDateToday,hebDateAYearAhead));
+	}
+	ReadXMLAndSetData();
+	waitForXML();	
+	</script>
+	</article>
+
+    <footer id="footer">
+      <p id="jq-copyright">Copyright 2013 <a href="http://jewishcal.com/">Jewish Calendar</a>.</p> 
+    </footer>
+  </section>
+</body>
+</html>

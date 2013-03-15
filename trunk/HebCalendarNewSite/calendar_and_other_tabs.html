@@ -1,0 +1,52 @@
+<html>
+<body>
+<div id="tabs">
+  <ul>
+    <li><a href="#basiccalendar"></a></li>
+    <li><a href="#addevent"></a></li>
+    <li><a href="#showevents"></a></li>
+  </ul>
+  <div id="basiccalendar"></div>
+  <div id="addevent"></div>
+  <div id="showevents"></div>
+</div>
+
+	<script type="text/javascript" src="jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="hebcal_with_other_tabs.js"></script>
+	<link rel="stylesheet" href="jquery-ui/css/redmond/jquery-ui-1.10.1.custom - calendar.css"> 
+	<!--<script src="http://code.jquery.com/jquery-1.9.1.js"></script>-->
+	<script src="jquery/jquery-ui.js"></script>
+	<script src="jquery/jquery.easytabs.js"></script>
+	<script type="text/javascript">
+	SwitchLanguage("english");
+	$(document).ready(function() {
+		firstRun();
+		addEventForm("addevent");
+		listEvents("showevents");
+	})
+	$(function() {
+		$( "#radio" ).buttonset();
+		$('#tabs').easytabs({
+			uiTabs: true,
+			beforeActivate: 
+			function( event, ui ) {
+				// Lost focus of edit event - restore add event text
+				if(ui.oldTab.context.childNodes[0].data == ENUM_TabsNames[1]) // Edit Event Tab
+				{
+					$('#tabs ul:first li:eq(1) a').text(ENUM_TabsNames[2]);
+					addEventForm("addevent");	
+				}
+				if(ui.newTab.context.childNodes[0].data == ENUM_TabsNames[0]) // Calendar tab
+				{
+					firstRun();
+				}
+			}
+		});
+	});
+	</script>
+	<div id="radio">
+		<input type="radio" id="radio1" name="radio" onclick="ReloadCalendarInNewLanguage('hebrew')"/><label for="radio1">Hebrew</label>
+		<input type="radio" id="radio2" name="radio" onclick="ReloadCalendarInNewLanguage('english')" checked="checked" /><label for="radio2">English</label>
+	</div>
+
+	</html>
