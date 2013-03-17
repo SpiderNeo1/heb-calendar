@@ -3393,6 +3393,7 @@ text+="</table>"
 		return unescape(y);
 		}
 	  }
+	  return "";
 	}
 	
 	function SetCookie(c_name,value)
