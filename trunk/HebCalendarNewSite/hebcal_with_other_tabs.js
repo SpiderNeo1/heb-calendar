@@ -324,6 +324,7 @@
 		FromListToEnum(messagesFeatureBoxText,ENUM_FeatureBox);		
 		
 		SetAllHolidays();
+		
 		loaded = true;
 		// Set tab names
         $('#tabs ul:first li:eq(0) a').text(ENUM_TabsNames[0]);
@@ -507,7 +508,7 @@
 	 * This function actually creates the calendar's backbone. 
 	 */
 	function writeCalendar(){	
-	
+
 	if (loaded == false) 
 	{	
 		if (FirstRunReadFromXML == true)
@@ -528,7 +529,7 @@
 
 	var text = ""
 	// Create the table for the calendar.
-	text="<br><left>"
+	text="<div id='fb-root'></div><br><left>"
 	text += "<table id='headl' borderColor="+BORDER_COLOR+" cellSpacing='0' cellPadding='0' style='border-collapse: collapse' border='0'>"
 
 	text +="<tbody><tr><td><table cellSpacing='0' cellPadding='0' border='0' bgcolor="+LIGHTBLUE_COLOR_CELLBACKGROUND+" width='290'><tbody><tr>"
@@ -934,7 +935,12 @@ text+="</table>"
 	//alert(arrFirsts[0].Date+" "+arrFirsts[1].Date+" "+indexFirsts);
 	showCalendarEvents(arrFirsts,indexFirsts);
 	// Displayes the events - holidays etc.
+	
+	// Commented out due to FB AJAX waiting.
+	
+	
 	showUserEvents();
+	
 	// Displays Knissat & Yetziaat shabbath.
 	//if (prefs.getString("shabbathTimes")=="Show")
 	{
@@ -1415,6 +1421,7 @@ text+="</table>"
 	 */
 	function showUserEvents(){
 		//var events = (prefs.getString("mylist")).split("|")
+		console.log("showuserevents");
 		var events = GetEventsAsList();
 		if (events[0]=="")
 			return
@@ -1963,7 +1970,9 @@ text+="</table>"
 	
 	// GET EVENTS.
 	//var events = (prefs.getString("mylist")).split("|")
+	console.log("#listEvents, requesting events")
 	var events = GetEventsAsList();
+	console.log("#listEvents, "+events)
 	
 	var i,eventCount = events.length;
 	var writeText ="";
@@ -2264,7 +2273,7 @@ text+="</table>"
 			events = encodeStr(eventStr);
 		 // Add the event to the user prefs.
 		 //prefs.set("mylist",events);
-		 SetCookie("events",events);
+		 SetEvents(events);
 		 listEvents("showevents");
 		 return 1;
 	}
@@ -2391,7 +2400,7 @@ text+="</table>"
 		finalEvents+= separator + events[ii];
 		separator = "|";
 	}
-	SetCookie("events",finalEvents);
+	SetEvents(finalEvents);
 	listEvents("showevents");
  
  	}
@@ -3367,18 +3376,27 @@ text+="</table>"
 	// ===================== Cookies Code
 	function GetEvents()
 	{
-		return GetCookie("events");
+		return GetEventsFromMySql();
 	}
 	
 	function GetEventsAsList()
 	{
-		return GetCookie("events").split("|");
+		var events = GetEventsFromMySql();
+		if (events == "")
+			return events;
+		return events.split("|");
 	}
 	
-	function SetEvents(EventsStr)
+	function SetEvents(eventsStr)
 	{
-		SetCookie("events",EventsStr);
+		SetEventsToMySql(eventsStr)
+		//SetCookie("events",EventsStr);
 	}
+	
+	
+	// -------------------------------------------------------------------------------------------------------------
+	// COOKIE CODE
+	// -------------------------------------------------------------------------------------------------------------	
 	
 	function GetCookie(c_name)
 	{
@@ -3404,4 +3422,74 @@ text+="</table>"
 		var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
 		document.cookie=c_name + "=" + c_value;
 	}
+
 	
+	
+	// -------------------------------------------------------------------------------------------------------------	
+	// -------------------------------------------------------------------------------------------------------------
+	// ------------- FACEBOOOK CODE ----------------
+	// -------------------------------------------------------------------------------------------------------------	
+	// -------------------------------------------------------------------------------------------------------------	
+	
+	//var facebookUserId;
+
+	// Sets User Events.
+	function SetEventsToMySql(eventsStr)
+	{
+		
+		if (parent.facebookUserId == "")
+		{
+			// Not logged in...
+			return false;
+		}
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		  {// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp=new XMLHttpRequest();
+		  }
+		else
+		  {// code for IE6, IE5
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+		xmlhttp.onreadystatechange=function()
+		 {
+		 if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+				//alert(xmlhttp.responseText);
+			}
+		  }
+		xmlhttp.open("GET","db/dbset.asp?user="+parent.facebookUserId+"&events="+eventsStr,true);
+		xmlhttp.send();	
+		return true;
+	}
+	/*
+	 * Gets user events from database using Ajax.
+	 */
+	function GetEventsFromMySql() {
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		  {// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp=new XMLHttpRequest();
+		  }
+		else
+		  {// code for IE6, IE5
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+		xmlhttp.onreadystatechange=function()
+		 {
+		 if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+				if (xmlhttp.responseText != "")
+				{
+					return(xmlhttp.responseText);
+				}
+			}
+		  }
+		xmlhttp.open("GET","db/dbget.asp?user="+parent.facebookUserId,false);
+		xmlhttp.send();
+		console.log("GetUserEvents from mysql " + parent.facebookUserId);
+		console.log("GetUserEvents from mysql " + xmlhttp.responseText);
+		if (xmlhttp.responseText === "undefined")
+			return "";
+		return xmlhttp.responseText;
+	}
