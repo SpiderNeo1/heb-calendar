@@ -21,13 +21,21 @@
 	oConn.Open connectstr
 		
 	DIM mySQL, objRS
+	
+	' complicated sql command:
+	' Inserts if empty
+	' updates if exists
+	' concatenates with "|" if exists and isn't empty.
+	strSql = "insert into "&tablename&" ("&fieldname&", "&fieldNameToSelectBy&") values(?, ?) on duplicate key update "&fieldname&"=CONCAT_WS('|',NULLIF("&fieldname&", ''),?);"
 
-	strSql = "Update "&tablename&" set "&fieldname&"=? WHERE "&fieldNameToSelectBy&"=?" 
 	set objCommand = Server.CreateObject("ADODB.Command") 
 	objCommand.ActiveConnection = oConn
 	objCommand.CommandText = strSql 
 	objCommand.Parameters(0).value = request.querystring("events")
 	objCommand.Parameters(1).value = request.querystring("user")
+	objCommand.Parameters(2).value = request.querystring("events")
+
+	
 	Set oRS = objCommand.Execute()	
 
 	Set oConn = nothing
@@ -35,7 +43,9 @@
 %>
 
 <%	' Error Handler
- 		If Err.Number <> 0 Then
+ 		If Err.Number = 0  Then
+			response.write "1"
+		Else
  
  			' Clear response buffer
  			Response.Clear

@@ -8,7 +8,7 @@
 	{
 		FB.api('/me', function(response) {
 			facebookUserObject = response;
-			GetEventsFromMySql();
+			//GetEventsFromMySql();
 			document.getElementById("FacebookDetails").innerHTML = "<p class='seriously-cross-platform'>Hi <b>"+response.first_name+"</b>, welcome back!</p>"
 			document.getElementById("profilePicture").src = "https://graph.facebook.com/"+response.username +"/picture"
 			document.getElementById("profilePicture").style.display = "block"
@@ -32,7 +32,7 @@
 	// Sets User Events.
 	function SetEventsToMySql(eventsStr)
 	{
-		if (facebookUserObject = "")
+		if (facebookUserObject == "")
 		{
 			// Not logged in...
 			return false;
