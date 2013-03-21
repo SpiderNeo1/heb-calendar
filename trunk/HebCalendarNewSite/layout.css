@@ -30,7 +30,7 @@ body {
 /** Header */
 
 #header {
-  height: 130px;
+  height: 120px;
 }
 
 
@@ -46,7 +46,7 @@ body {
 
 #logo {
   position: absolute;
-  top: 50px;
+  top: 30px;
   left: 20px;
 }
 
@@ -103,7 +103,7 @@ body {
 
 
 #site-nav {
-  padding: 60px 0 0 0 ;
+  padding: 40px 0 0 0 ;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 1.4em;

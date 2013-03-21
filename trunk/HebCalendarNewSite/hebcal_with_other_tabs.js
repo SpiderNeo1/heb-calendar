@@ -682,10 +682,12 @@ text+="</table>"
 	//alert( Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) );
 
     //Calculate difference btw the two dates, and convert to days
+	
+	
     if(Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) < 31)
     {
 		document.getElementById('featureBoxOuter').style.visibility = "visible";
-		document.getElementById('featureBox').innerHTML="<a href='http://hebcalendar.blogspot.com/'  target='_blank'>"+ENUM_FeatureBox[1]+"</a>";
+		document.getElementById('featureBox').innerHTML="<a href='http://hebcalendar.blogspot.com/'  target='_blank'>"+ENUM_FeatureBox[1]+"</a>";													
     }
 	//setTimeout("autoAdjustHeight()",500);
 	RunningForTheFirstTime=false;
@@ -2249,10 +2251,10 @@ text+="</table>"
 		 day++;
 		 //var events = (prefs.getString("mylist")).split("|");
 		 
-		 var events = GetEventsAsList();
+		 //var events = GetEventsAsList();
 		 
-		 eventCount=events.length;
-		 if ((eventCount==45) && (editMode==false)) return -2
+		 //eventCount=events.length;
+		 //if ((eventCount==45) && (editMode==false)) return -2
 		 
 		 //var events = prefs.getString("mylist");
 		 var events = GetEvents();
