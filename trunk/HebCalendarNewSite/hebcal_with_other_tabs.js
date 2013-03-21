@@ -3461,7 +3461,7 @@ text+="</table>"
 				//alert(xmlhttp.responseText);
 			}
 		  }
-		xmlhttp.open("GET","db/dbset.asp?user="+parent.facebookUserId+"&events="+eventsStr,false);
+		xmlhttp.open("GET","db/dbset.asp?user="+parent.facebookUserId+"&events="+eventsStr+"&append=0",false);
 		xmlhttp.send();	
 		return true;
 	}
