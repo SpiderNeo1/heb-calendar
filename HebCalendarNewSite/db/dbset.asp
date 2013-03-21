@@ -70,42 +70,10 @@
 
 	Set oConn = nothing
 
+If Err.number <> 0 then     'if there is an error
+response.write Err.number     'write out the error number
+response.write Err.source     'write out the error source
+response.write Err.description     'write out the error description
+End If
 %>
 
-<%	' Error Handler
- 		If Err.Number = 0  Then
-			response.write "1"
-		Else
- 
- 			' Clear response buffer
- 			Response.Clear
- 			
- 			' Display Error Message to user	%>
-
- 
- 		<HTML>
- 
- 		<HEAD>
- 		<TITLE></TITLE>
- 		</HEAD>
- 
- 		<BODY BGCOLOR="#C0C0C0">
- 
- 		<FONT FACE="ARIAL">An error occurred in the execution of this ASP page<BR>
-
- 		Please report the following information to the support desk<P>
- <B>Page Error Object</B><BR>
- Error Number <%= Err.Number %><BR>
- Error Description <%= Err.Description %><BR>		
- 			Source <%= Err.Source %><BR>
-
- 			LineNumber <%= Err.Line %><BR>
- 
- 	</FONT>
- 
- 	</BODY>
- 	</HTML>
- 
- <%	End If
- 
- 	%>
