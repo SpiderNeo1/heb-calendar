@@ -5,10 +5,21 @@
 	Dim qry, connectstr
 	Dim db_name, db_username, db_userpassword
 	Dim db_server
-	db_server = "localhost"
+	dim fieldNameToSelectBy
+	dim fieldname
+	dim tablename
+	
+	'db_server = "jewishcalendardb.db.10779042.hostedresource.com"
+	' db_server="localhost"
+	' db_name = "jewishcalendardb"
+	' db_username = "jewishcalendardb"
+	' db_userpassword = "Afdz!2f89A1"
+	
+	db_server  = "jewishcalendar.db.10779042.hostedresource.com"
 	db_name = "jewishcalendar"
-	db_username = "root"
-	db_userpassword = "a"
+	db_username = "jewishcalendar"
+	db_userpassword = "Afdz!2f89A"
+	
 	fieldNameToSelectBy = "facebookId"
 	fieldname= "events"
 	tablename = "tblusersandevents"
@@ -22,18 +33,37 @@
 		
 	DIM mySQL, objRS
 	
-	' complicated sql command:
-	' Inserts if empty
-	' updates if exists
-	' concatenates with "|" if exists and isn't empty.
-	strSql = "insert into "&tablename&" ("&fieldname&", "&fieldNameToSelectBy&") values(?, ?) on duplicate key update "&fieldname&"=CONCAT_WS('|',NULLIF("&fieldname&", ''),?);"
-
 	set objCommand = Server.CreateObject("ADODB.Command") 
 	objCommand.ActiveConnection = oConn
-	objCommand.CommandText = strSql 
-	objCommand.Parameters(0).value = request.querystring("events")
-	objCommand.Parameters(1).value = request.querystring("user")
-	objCommand.Parameters(2).value = request.querystring("events")
+
+	' If empty clear string.
+	if (request.querystring("events")="") then
+		strSql = "update "&tablename&" set "&fieldname&"='' where "&fieldNameToSelectBy&"=?;"
+		objCommand.CommandText = strSql 
+		objCommand.Parameters(0).value = request.querystring("user")
+	else
+		' Used in loading events for the first time.
+		if (request.querystring("append")="1") then
+			' complicated sql command:
+			' Inserts if empty
+			' updates if exists
+			' concatenates with "|" if exists and isn't empty.			
+			strSql = "insert into "&tablename&" ("&fieldname&", "&fieldNameToSelectBy&") values(?, ?) on duplicate key update "&fieldname&"=CONCAT_WS('|',NULLIF("&fieldname&", ''),?);"
+			objCommand.CommandText = strSql 
+			objCommand.Parameters(0).value = request.querystring("events")
+			objCommand.Parameters(1).value = request.querystring("user")
+			objCommand.Parameters(2).value = request.querystring("events")			
+		' Used in calendar most of the time.
+		else
+			' regular update.
+			strSql = "update "&tablename&" set "&fieldname&"=? where "&fieldNameToSelectBy&"=?;"
+			objCommand.CommandText = strSql 
+			objCommand.Parameters(0).value = request.querystring("events")
+			objCommand.Parameters(1).value = request.querystring("user")			
+		end if
+	end if
+	
+	
 
 	
 	Set oRS = objCommand.Execute()	
