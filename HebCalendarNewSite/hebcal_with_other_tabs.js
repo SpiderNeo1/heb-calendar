@@ -1996,7 +1996,7 @@ text+="</table>"
 	// Clear current greg or heb status, so that the data boxes will be updated.
 	currentGregOrHeb=""
 	// If there are no events present - display no events added.
-	if ((events[0]=="") || (events="")) {
+	if ((events[0]=="") || (events=="")) {
 		writeText +="<div align='center'><font face='Arial' style='font-size: 9pt; font-weight: 700'><BR>"+ENUM_ListEventsTabText[0]+ " </font></div>";	
 	}
 	else
