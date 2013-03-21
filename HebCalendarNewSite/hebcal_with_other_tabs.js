@@ -193,6 +193,7 @@
 	// processes all XML nodes and creates all arrays.
 	function response()
 	{
+		console.log("in response");
 		// not ready yet.
 		if (xmlhttp.readyState != 4)
 		{
@@ -1995,7 +1996,7 @@ text+="</table>"
 	// Clear current greg or heb status, so that the data boxes will be updated.
 	currentGregOrHeb=""
 	// If there are no events present - display no events added.
-	if (events[0]=="") {
+	if ((events[0]=="") || (events="")) {
 		writeText +="<div align='center'><font face='Arial' style='font-size: 9pt; font-weight: 700'><BR>"+ENUM_ListEventsTabText[0]+ " </font></div>";	
 	}
 	else
@@ -3460,7 +3461,7 @@ text+="</table>"
 				//alert(xmlhttp.responseText);
 			}
 		  }
-		xmlhttp.open("GET","db/dbset.asp?user="+parent.facebookUserId+"&events="+eventsStr,true);
+		xmlhttp.open("GET","db/dbset.asp?user="+parent.facebookUserId+"&events="+eventsStr,false);
 		xmlhttp.send();	
 		return true;
 	}
