@@ -20,7 +20,7 @@
 	db_username = "jewishcalendar"
 	db_userpassword = "Afdz!2f89A"
 	
-	fieldNameToSelectBy = "facebookId"
+	fieldNameToSelectBy = "facebookid"
 	fieldname= "events"
 	tablename = "tblusersandevents"
 	
@@ -35,45 +35,36 @@
 	
 	set objCommand = Server.CreateObject("ADODB.Command") 
 	objCommand.ActiveConnection = oConn
-
-	' If empty clear string.
+	
+	'If empty clear string.
 	if (request.querystring("events")="") then
-		strSql = "update "&tablename&" set "&fieldname&"='' where "&fieldNameToSelectBy&"=?;"
+		strSql = "update "&tablename&" set "&fieldname&"='' where "&fieldNameToSelectBy&"="&request.querystring("user")&";"
 		objCommand.CommandText = strSql 
-		objCommand.Parameters(0).value = request.querystring("user")
+		'objCommand.Parameters(0).value = request.querystring("user")
 	else
-		' Used in loading events for the first time.
+		'Used in loading events for the first time.
+		strSql = "insert into "&tablename&" ("&fieldname&", "&fieldNameToSelectBy&") values('"&request.querystring("events")&"', '"&request.querystring("user")&"') on duplicate key "
 		if (request.querystring("append")="1") then
-			' complicated sql command:
-			' Inserts if empty
-			' updates if exists
-			' concatenates with "|" if exists and isn't empty.			
-			strSql = "insert into "&tablename&" ("&fieldname&", "&fieldNameToSelectBy&") values(?, ?) on duplicate key update "&fieldname&"=CONCAT_WS('|',NULLIF("&fieldname&", ''),?);"
-			objCommand.CommandText = strSql 
-			objCommand.Parameters(0).value = request.querystring("events")
-			objCommand.Parameters(1).value = request.querystring("user")
-			objCommand.Parameters(2).value = request.querystring("events")			
-		' Used in calendar most of the time.
+			' if append, concat previous
+			strSqlUpdate = "update "&fieldname&"=CONCAT_WS('|',NULLIF("&fieldname&", ''),'"&request.querystring("events")&"');"
 		else
-			' regular update.
-			strSql = "update "&tablename&" set "&fieldname&"=? where "&fieldNameToSelectBy&"=?;"
-			objCommand.CommandText = strSql 
-			objCommand.Parameters(0).value = request.querystring("events")
-			objCommand.Parameters(1).value = request.querystring("user")			
+			' if not append, update to new.
+			strSqlUpdate = "update "&fieldname&"='"&request.querystring("events")&"';"
 		end if
+		response.write strSql & strSqlUpdate
+		objCommand.CommandText = strSql & strSqlUpdate
 	end if
-	
-	
-
-	
+		
 	Set oRS = objCommand.Execute()	
 
 	Set oConn = nothing
+
 
 If Err.number <> 0 then     'if there is an error
 response.write Err.number     'write out the error number
 response.write Err.source     'write out the error source
 response.write Err.description     'write out the error description
+response.write Err.line ' line
 End If
 %>
 
