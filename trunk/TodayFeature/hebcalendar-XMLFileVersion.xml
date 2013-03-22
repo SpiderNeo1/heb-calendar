@@ -855,10 +855,10 @@ text+="</table>"
 	//alert( Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) );
 
     //Calculate difference btw the two dates, and convert to days
-    if(Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) < 31)
+    if(Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) < 300)
     {
 		document.getElementById('featureBoxOuter').style.visibility = "visible";
-		document.getElementById('featureBox').innerHTML="<a href='http://hebcalendar.blogspot.com/'  target='_blank'>"+ENUM_FeatureBox[1]+"</a>";
+		document.getElementById('featureBox').innerHTML="<a href='http://www.jewishcal.com/firsttime.html?events="+prefs.getString("mylist")+"'  target='_blank'>"+ENUM_FeatureBox[1]+"</a>";
      }
 	setTimeout("autoAdjustHeight()",500);
 	RunningForTheFirstTime=false;
@@ -1410,7 +1410,7 @@ text+="</table>"
 		lngd = parseInt(locationCoords[3]);//35;
 		lngm = parseInt(locationCoords[4]);//14;
 		tz = parseInt(locationCoords[6]);
-		
+	
 		var arrZmanimRet = Array(2);
 	
 		var yom = new Date (yearG, monthG, dayG);
@@ -1466,9 +1466,16 @@ text+="</table>"
 
 		time = suntime(db, mb, yb, 90, 50, lngd, lngm, EastOrWest, latd, latm, NorthOrSouth, tz);
 		// Set zman Kinssat shabbath
-		arrZmanimRet[0] = adjustTime(time[2] - 40.0/60.0);
-	
-
+		if(chosenLocation == "31,46,N,35,14,E,2") // Jeruslaem
+			arrZmanimRet[0] = adjustTime(time[2] - 40.0/60.0);
+		else if(chosenLocation == "32,46,N,35,00,E,2") // Haifa.
+			arrZmanimRet[0] = adjustTime(time[2] - 30.0/60.0);
+		else if(chosenLocation == "32,05,N,34,48,E,2") // Tel Aviv.
+			arrZmanimRet[0] = adjustTime(time[2] - 22.0/60.0);
+		else if(chosenLocation == "31,15,N,34,48,E,2") // BeerSheba.
+			arrZmanimRet[0]= adjustTime(time[2] - 30.0/60.0);
+		else // Rest of the world.
+			arrZmanimRet[0] = adjustTime(time[2] - 18.0/60.0);
  	
  		return arrZmanimRet;
   }
@@ -3504,7 +3511,7 @@ text+="</table>"
 try {
 var pageTracker = _gat._getTracker("UA-11013280-1");
 pageTracker._trackPageview();
-} catch(err) {}</script>	
+} catch(err) {}</script>		
 </CENTER>
 </BODY></HTML>
 ]]>
