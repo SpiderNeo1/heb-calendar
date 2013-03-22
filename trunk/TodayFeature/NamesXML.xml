@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+ <?xml version="1.0" encoding="utf-8"?>
 <Language>
   <english>
     <HebrewMonths>Tshrei,Cheshvan,Kislev,Tevet,Shvat,Adar A,Adar,Nissan,Iyar,Sivan, Tamuz,Av, Elul</HebrewMonths>
@@ -111,8 +111,8 @@
       <Adar>Adar</Adar>
     </AdarBetCases>
     <FeatureBox>
-      <Date>22/12/2010</Date>
-      <Text>Help us develop by testing the gadget</Text>
+      <Date>26/03/2010</Date>
+      <Text>Transition from iGoogle!</Text>
     </FeatureBox>
   </english>
   <hebrew>
@@ -226,8 +226,8 @@
       <Adar>אדר</Adar>
     </AdarBetCases>
     <FeatureBox>
-      <Date>22/12/2010</Date>
-      <Text>עזרו לנו בפיתוח כנסו לפרטים</Text>
+      <Date>26/03/2010</Date>
+      <Text>מעבר מאייגוגל!</Text>
     </FeatureBox>
   </hebrew>
 </Language>
