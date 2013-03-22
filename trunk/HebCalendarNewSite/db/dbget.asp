@@ -30,11 +30,11 @@
 	Set oConn = Server.CreateObject("ADODB.Connection")
 	oConn.Open connectstr
 	
-	strSql = "SELECT "&fieldname&" FROM "&tablename&" WHERE "&fieldNameToSelectBy&" = ?;" 
+	strSql = "SELECT "&fieldname&" FROM "&tablename&" WHERE "&fieldNameToSelectBy&" = '"&request.querystring("user")&"';" 
 	set objCommand = Server.CreateObject("ADODB.Command") 
 	objCommand.ActiveConnection = oConn
 	objCommand.CommandText = strSql 
-	objCommand.Parameters(0).value = request.querystring("user")
+	'objCommand.Parameters(0).value = request.querystring("user")
 	
 	Set oRS = objCommand.Execute()	
 

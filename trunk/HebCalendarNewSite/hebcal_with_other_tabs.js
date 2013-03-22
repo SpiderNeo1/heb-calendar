@@ -55,7 +55,7 @@
 	
 	var arrComulativeDays = new Array(1, 32, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366);
 	
-	var currentGregOrHeb;
+	var currentGregOrHeb="AddGregDate";
 	
 	var chosenLanguage = "english"
 	var divToInsertCalendar = "basiccalendar";
@@ -680,11 +680,7 @@ text+="</table>"
     // Value of one day in seconds - for calculation of difference between dates.
     var one_day=1000*60*60*24
 
-	//alert( Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) );
-
-    //Calculate difference btw the two dates, and convert to days
-	
-	
+    //Calculate difference btw the two dates, and convert to days	
     if(Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) < 31)
     {
 		document.getElementById('featureBoxOuter').style.visibility = "visible";
@@ -1993,7 +1989,10 @@ text+="</table>"
 		directionToAlign = "right";
 		alignmentOfRemove = "left";
 	}
+	
+	var oldCurrentGregOrHeb = currentGregOrHeb;
 	// Clear current greg or heb status, so that the data boxes will be updated.
+	// TODO: Not sure why this is necessary..
 	currentGregOrHeb=""
 	// If there are no events present - display no events added.
 	if ((events[0]=="") || (events=="")) {
@@ -2020,7 +2019,7 @@ text+="</table>"
 		writeText +="<div align='center' dir='"+directionOfForm+"'><font face='Arial' style='font-size: 9pt; font-weight: 700'><BR>"+ENUM_ListEventsTabText[3]+ " </font></div>";
 	}
 	document.getElementById(tabId).innerHTML=writeText; 
-
+	currentGregOrHeb = oldCurrentGregOrHeb
 	}
 	
 	/*
