@@ -1,4 +1,4 @@
- <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Language>
   <english>
     <HebrewMonths>Tshrei,Cheshvan,Kislev,Tevet,Shvat,Adar A,Adar,Nissan,Iyar,Sivan, Tamuz,Av, Elul</HebrewMonths>
@@ -111,7 +111,7 @@
       <Adar>Adar</Adar>
     </AdarBetCases>
     <FeatureBox>
-      <Date>26/03/2010</Date>
+      <Date>22/03/2013</Date>
       <Text>Transition from iGoogle!</Text>
     </FeatureBox>
   </english>
@@ -226,7 +226,7 @@
       <Adar>אדר</Adar>
     </AdarBetCases>
     <FeatureBox>
-      <Date>26/03/2010</Date>
+      <Date>22/03/2013</Date>
       <Text>מעבר מאייגוגל!</Text>
     </FeatureBox>
   </hebrew>
