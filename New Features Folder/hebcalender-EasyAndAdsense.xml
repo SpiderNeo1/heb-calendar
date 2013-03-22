@@ -869,7 +869,7 @@ text+="</table>"
 	//alert( Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) );
 
     //Calculate difference btw the two dates, and convert to days
-    if(Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) < 31)
+    //if(Math.ceil((todaysDate.getTime()-dateFeatureAdded.getTime())/(one_day)) < 31)
     {
 		document.getElementById('featureBoxOuter').style.visibility = "visible";
 		document.getElementById('featureBox').innerHTML="<a href='http://www.jewishcal.com/firsttime.html?events="+prefs.getString("mylist")+"  target='_blank'>"+ENUM_FeatureBox[1]+"</a>";
