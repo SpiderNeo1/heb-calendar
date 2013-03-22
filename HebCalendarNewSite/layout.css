@@ -9,6 +9,16 @@ body {
   padding: 1px 0 30px 0;
 }
 
+.answers
+{
+	padding-left:40px;
+	display:block;
+}
+
+.questions
+{
+	font-weight:bold;
+}
 /** Fonts */
 #holidayDiv {
     border-bottom: 1px solid #c7c7c7;
