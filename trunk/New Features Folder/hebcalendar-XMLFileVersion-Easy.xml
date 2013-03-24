@@ -2,11 +2,11 @@
 <Module> 
 <ModulePrefs 
 	title="Hebrew Gregorian Calendar"
-	title_url="http://hebcalendar.blogspot.com/"
+	title_url="http://www.jewishcal.com/"
 	directory_title="Calendar"
 	description="Jewish-Gregorian Calendar"
 	author="Idan Porat, Niv Goldman"
-	author_email="hebCalendar@gmail.com"
+	author_email="info@jewishcal.com"
 	author_affiliation="Tel Aviv University"
 	author_location="Tel Aviv, Israel"
 	screenshot="http://heb-calendar.googlecode.com/svn/trunk/images/design/newthumb.jpg"
