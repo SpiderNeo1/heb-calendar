@@ -30,14 +30,24 @@
 	Set oConn = Server.CreateObject("ADODB.Connection")
 	oConn.Open connectstr
 	
-	strSql = "SELECT "&fieldname&" FROM "&tablename&" WHERE "&fieldNameToSelectBy&" = '"&request.querystring("user")&"';" 
-	set objCommand = Server.CreateObject("ADODB.Command") 
-	objCommand.ActiveConnection = oConn
-	objCommand.CommandText = strSql 
-	'objCommand.Parameters(0).value = request.querystring("user")
-	
+	' Check if login in using FB or username and password
+	if (request.querystring("password") = "") Then
+	' facebook
+		strSql = "SELECT "&fieldname&" FROM "&tablename&" WHERE "&fieldNameToSelectBy&" = '"&request.querystring("user")&"';" 
+		set objCommand = Server.CreateObject("ADODB.Command") 
+		objCommand.ActiveConnection = oConn
+		objCommand.CommandText = strSql 
+	else
+	' username and password
+		fieldNameToSelectBy = "username"
+		fieldNameToVerifyBy = "password"
+		strSql = "SELECT "&fieldname&" FROM "&tablename&" WHERE "&fieldNameToSelectBy&" = '"&request.querystring("user")&"' and "& fieldNameToVerifyBy &"='"& request.querystring("password")&"';" 
+		set objCommand = Server.CreateObject("ADODB.Command") 
+		objCommand.ActiveConnection = oConn
+		objCommand.CommandText = strSql 
+	end if
 	Set oRS = objCommand.Execute()	
-
+	
 
 	if not oRS.EOF then
 	while not oRS.EOF
