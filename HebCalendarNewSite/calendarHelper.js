@@ -120,6 +120,7 @@
 	 */
 	function createForm()
 	{
+		directionOfForm = (chosenLanguage=="hebrew") ? "rtl" : "ltr";
 		var text="<form id='ConvertDate' action='javascript:submitEvent()' Method='GET'>"
 		text+="<p dir='"+directionOfForm+"'><span lang='he'>"+ENUM_EventTabText[3]+": <select size='1' id='EventDay' onchange='updateGregDateConvertedFromHebDate();'></select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
 		text+=ENUM_EventTabText[4]+":&nbsp;<select size='1' id='EventMonth' onchange='updateDaysAccordingToLanguage();updateGregDateConvertedFromHebDate();'></select> &nbsp;&nbsp;&nbsp; </span></p>"
@@ -287,19 +288,19 @@
 		mdyDate1 = date1.split("/");
 		mdyDate2 = date2.split("/");
 		// check if year is equal
-		if (mdyDate1[YEAR] > mdyDate2[YEAR])
+		if (parseInt(mdyDate1[YEAR]) > parseInt(mdyDate2[YEAR]))
 			return 1;
-		else if (mdyDate1[YEAR] < mdyDate2[YEAR])
+		else if (parseInt(mdyDate1[YEAR]) < parseInt(mdyDate2[YEAR]))
 			return -1;
 		// year is equal - check month
-		if (mdyDate1[MONTH] > mdyDate2[MONTH])
+		if (parseInt(mdyDate1[MONTH]) > parseInt(mdyDate2[MONTH]))
 			return 1;
-		else if (mdyDate1[MONTH] > mdyDate2[MONTH])
+		else if (parseInt(mdyDate1[MONTH]) > parseInt(mdyDate2[MONTH]))
 			return -1
 		// month is equal check day
-		if (mdyDate1[DAY] > mdyDate2[DAY])
+		if (parseInt(mdyDate1[DAY]) > parseInt(mdyDate2[DAY]))
 			return 1
-		else if (mdyDate1[DAY] < mdyDate2[DAY])
+		else if (parseInt(mdyDate1[DAY]) < parseInt(mdyDate2[DAY]))
 			return -1;
 		return 0;
 		

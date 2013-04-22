@@ -1,5 +1,32 @@
 @import "reset.css";
 @import "layout.css";
+#SwitchLanguage {
+	float:right;
+	width:290px;
+	color:white;
+	padding:12 0 0 70%;
+	position:absolute;
+	font-size:14px;
+	z-index:1
+}
+#SwitchLanguage img {
+	height:15px;
+}
+#SwitchLanguage a {
+	color:white;
+	text-decoration:none
+}
+#FacebookiFrame {
+	height:100px;
+	width:300px; 
+	padding:5 0 0 15;
+	color:white;
+	font-size:14px
+}
+#copyrightHeb{
+padding: 0 38 0 100;
+text-align:right;
+}
 
 #page article, #article-wrapper article:first-child { border-top: 0; border-bottom: solid 5px #78C729; margin-top: 10px; }
 #article-wrapper article:first-child { margin-top: 10px; }

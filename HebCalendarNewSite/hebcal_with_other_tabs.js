@@ -3378,12 +3378,24 @@ text+="</table>"
 	// ===================== Cookies Code
 	function GetEvents()
 	{
+		if (parent.useCookies == true)
+		{
+			return GetCookie("events");
+		}
 		return GetEventsFromMySql();
 	}
 	
 	function GetEventsAsList()
 	{
-		var events = GetEventsFromMySql();
+		var events = "";
+		if (parent.useCookies == true)
+		{
+			events = GetCookie("events");
+		}
+		else
+		{
+			events = GetEventsFromMySql();
+		}
 		if (events == "")
 			return events;
 		return events.split("|");
@@ -3391,8 +3403,14 @@ text+="</table>"
 	
 	function SetEvents(eventsStr)
 	{
+		// Using cookies.
+		if (parent.useCookies == true)
+		{
+			SetCookie("events",eventsStr);
+			return;
+		}
+		// Using SQL.
 		SetEventsToMySql(eventsStr)
-		//SetCookie("events",EventsStr);
 	}
 	
 	
