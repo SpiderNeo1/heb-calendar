@@ -1,0 +1,127 @@
+﻿<html>
+<head>
+<meta charset="UTF-8" />
+	<Title>לוח שנה עברי - המרת תאריכים</title>
+	<meta name="description" content="המרת תאריכים מתאריך עברי לתאריך לועזי ומתאריך לועזי לעברי">
+	<link rel="stylesheet" type="text/css" media="all" href="../style.css" />
+	<link rel="stylesheet" href="../jquery-ui/css/redmond/jquery-ui-1.10.1.custom.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="../hebcal_with_other_tabs.js"></script>
+	<script type="text/javascript" src="../calendarHelper.js"></script>	
+<script>
+
+$(function() {
+	ReadXMLAndSetData();
+	chosenLanguage="hebrew";
+	loadForm();
+	$( "#datepicker" ).datepicker({
+		showButtonPanel: true,
+		altField: "#GregorianDate",
+		onSelect: function(dateText, inst) { 
+				var gregDate = new Date(dateText);
+				var hebDate = GregToHeb(gregDate).split('/');
+				$("#JewishDateHeb").val(arrHebMonthsHeb[hebDate[0]-1] + " " + arrHebDateHeb[hebDate[1]-1] + ", " + Nyear2Hyear(hebDate[2],true));
+			},		
+		altFormat: "MM dd, yy",
+		changeMonth: true,
+		changeYear: true
+		});
+	});
+	
+</script>	
+
+</head>
+
+<body class="home blog home">
+	<div id="SwitchLanguage">
+	<a href="http://www.jewishcal.com/hebrew/" ><img src="../images/hebrew.png" title="לוח שנה בעברית"> Hebrew</a> / <a href="http://www.jewishcal.com/"><img src="../images/english.png" title="Jewish Calendar In English"> English</a>
+	</div>	  
+  <header id="header">   
+      <h1 id="logo">
+      <a href="http://www.jewishcal.com/hebrew/" rel="home" title="Jewish Cal Website">לוח שנה עברי</a>
+   <div id="FacebookiFrame">
+	<iframe src='http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FHebrew-Gregorian-Calendar%2F148828745164363&amp;layout=standard&amp;show_faces=false&amp;width=300&amp;action=like&amp;font=lucida+grande&amp;colorscheme=dark&amp;height=50' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:300px; height:50px;float:left;' allowTransparency='true'></iframe>	
+	</div>
+    </h1>
+	<style>
+	#logo a { background: url(../images/jewishcal.png) no-repeat !important;}
+	</style>
+    <nav id="site-nav">
+       <ul>
+         <li id="nav-contact" class="alpha"><a href="about us.html">אודותינו</a></li>
+		 <li id="nav-holidays"><a href="holidays.html">מועדים וחגים</a></li>
+		 <li id="nav-convert"><a href="convert dates.html">המרת תאריך</a></li>
+		 <li id="nav-convert"><a href="news.html">חדשות</a></li>
+		 <li id="nav-calendar" class="omega"><a href="calendar.html">לוח שנה</a></li>     
+       </ul>
+	</nav>
+ </header>
+
+   <section id="page" >
+	<article id="calendar-main" dir="rtl">
+	<h2>המרת תאריכים עברי לועזי ולועזי עברי</h2>
+	<div class="rightFloating" style="width:45%;  float:left; padding-left:20px height:500px">
+		<h3>המרת תאריך עברי ללועזי</h3>
+		<div id="HebDateForm">
+		</div>
+		<div id="ConversionForm">
+			<p class="seriously-cross-platform">
+			תאריך לועזי: <input type="text" id="GregorianDateFromHeb" size="30" readonly/>
+			</p>
+		</div>
+	</div>		
+	<script>
+	function updateHebDate(dateText, inst) { 
+				var gregDate = new Date(dateText);
+				var hebDate = GregToHeb(gregDate).split('/');
+			}
+	</script>
+	<div class="leftFloating" style="width: 50%;">
+		<h3>המרת תאריך לועזי לעברי</h3>
+		<p class="seriously-cross-platform">
+		תאריך לועזי: <input type="text" id="GregorianDate" onchange="updateHebDate()" size="30"/>
+		</p>
+		<br/>
+		<center>
+		<div id="datepicker"></div>
+		</center>
+		<p class="seriously-cross-platform">
+		<br/>
+		תאריך עברי : <input type="text" id="JewishDateHeb" size="30"/>
+		</p>
+
+	</div>
+<script type="text/javascript"><!--
+	google_ad_client = "ca-pub-0906149740519198";
+	/* TopADForWebsite */
+	google_ad_slot = "3165195422";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script> 	
+	
+	</article>
+
+    <footer id="footer">
+      <p id="copyrightHeb">כל הזכויות שמורות <a href="http://www.jewishcal.com/hebrew">לוח שנה עברי</a></p> 
+    </footer>
+  </section>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39529371-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>  
+</body>
+</html>
