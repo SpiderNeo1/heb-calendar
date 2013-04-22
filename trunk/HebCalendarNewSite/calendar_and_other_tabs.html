@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 <body>
 
 <div id="tabs">
@@ -17,10 +17,23 @@
 	<link rel="stylesheet" href="jquery-ui/css/redmond/jquery-ui-1.10.1.custom - calendar.css"> 
 	<!--<script src="http://code.jquery.com/jquery-1.9.1.js"></script>-->
 	<script src="jquery/jquery-ui.js"></script>
-
+	<div id="radio" style="float:right">
+		<input type="radio" id="radio1" name="radio" onclick="ReloadCalendarInNewLanguage('hebrew')"/><label for="radio1" id="hebrew">Hebrew</label>
+		<input type="radio" id="radio2" name="radio" onclick="ReloadCalendarInNewLanguage('english')" checked="checked" /><label id="english" for="radio2">English</label>
+	</div>
 	<script type="text/javascript">
+	if (parent.document.URL.indexOf("hebrew") >= 0)	{	
+		SwitchLanguage("hebrew");
+		document.getElementById("radio").dir="rtl";
+		document.getElementById("radio1").checked="checked";
+		document.getElementById("hebrew").innerHTML="עברית";
+		document.getElementById("radio2").checked="";
+		document.getElementById("english").innerHTML="אנגלית";
+	}
+	else	{
 	SwitchLanguage("english");
-	$(document).ready(function() {
+	}	
+	$(document).ready(function() {	
 		firstRun();
 		addEventForm("addevent");
 		listEvents("showevents");
@@ -28,6 +41,7 @@
 	$(function() {
 		$( "#radio" ).buttonset();
 		$('#tabs').tabs({
+			
 			beforeActivate: 
 			function( event, ui ) {
 				// Lost focus of edit event - restore add event text
@@ -44,9 +58,4 @@
 		});
 	});
 	</script>
-	<div id="radio">
-		<input type="radio" id="radio1" name="radio" onclick="ReloadCalendarInNewLanguage('hebrew')"/><label for="radio1">Hebrew</label>
-		<input type="radio" id="radio2" name="radio" onclick="ReloadCalendarInNewLanguage('english')" checked="checked" /><label for="radio2">English</label>
-	</div>
-
 	</html>

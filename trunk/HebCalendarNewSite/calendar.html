@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 <head>
 <meta charset="UTF-8" />
 	<Title>Jewish Calendar Online</title>
@@ -9,19 +9,24 @@
 	<meta property="og:description" content="The Jewish Calendar Online offers an interactive calendar with all Jewish dates and holidays in conjunction with the gregorian calendar."/>
 
 <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+<link rel="chrome-webstore-item"
+    href="https://chrome.google.com/webstore/detail/enehmdffibikehjcjamacjnaofdbgcfl">
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script type="text/javascript" src="fbcode.js"></script>
 
 </head>
 
 <body class="home blog home">
-  
+	<div id="SwitchLanguage">
+	<a href="http://www.jewishcal.com/hebrew/" ><img src="images/hebrew.png" title="לוח שנה בעברית">עברית</a> / <a href="http://www.jewishcal.com/"><img src="images/english.png" title="Jewish Calendar In English"> English</a>
+	</div>	  
   <header id="header">
-    
-        <h1 id="logo">
-      <a href="http://jewishcal.com/" rel="home" title="Jewish Cal Website">JewishCal</a>
+       <h1 id="logo">
+      <a href="http://www.jewishcal.com/" rel="home" title="Jewish Cal Website">JewishCal</a>
+  <div id="FacebookiFrame">
+	<iframe src='http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FHebrew-Gregorian-Calendar%2F148828745164363&amp;layout=standard&amp;show_faces=false&amp;width=300&amp;action=like&amp;font=lucida+grande&amp;colorscheme=dark&amp;height=50' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:300px; height:50px;float:left;' allowTransparency='true'></iframe>	
+	</div>  			
     </h1>
-    
 <style>
 #logo a { background: url(images/jewishcal.png) no-repeat !important;}
 </style>
@@ -41,6 +46,7 @@
   
 	<article id="calendar-main">
 		<h2>Calendar Latest Version</h2>			
+		<h4>Scroll Down For More Details About Jewish Cal - Jewish Calendar Online</h4>
 		<div class="rightFloating" style="width:45%;  float:right; padding-left:20px height:500px">
 			<p class="seriously-cross-platform">
 			<div id="fb-root"></div>
@@ -53,7 +59,6 @@
 			</p>
 		</div>		
 
-		
 		<div id="HolidaysEnglish" class="seriously-cross-platform" style="width: 50%;">	
 			<iframe id="calendar" src="" width="340" height="380" frameBorder="0" scrolling="no"></iframe>
 		</div>
@@ -72,13 +77,28 @@
 	</script> 
 
 	</article>
-
+	<article id="jewishcal-online-jewish-calendar-details">
+		
+		<h3>Online Jewish Calendar</h3>
+		<p class="seriously-cross-platform">
+		<br/>
+		The Online Jewish Calendar provides the ability to view holidays, events and jewish dates in general based on a gregorian calendar.
+		The <a href="https://chrome.google.com/webstore/detail/jewish-gregorian-calendar/enehmdffibikehjcjamacjnaofdbgcfl">Online Jewish Calendar</a> is also available as a google chrome app, which you can download 
+		here:<button onclick="chrome.webstore.install()" id="install-button">Add Jewish Calendar Online to Chrome</button>
+		<br/><br/>
+		The site also enables converting <a href="convert dates.html">Gregorian Dates to jewish dates</a> and <a href="convert dates.html">converting Jewish Dates to Gregorian Dates</a>. 
+		<br/><br/>
+		You can also find a list of <a href="holidays.html">Jewish Holidays</a> for the coming year or easily scroll using the above calendar to holidays in more than a year.
+		</p>
+	
+	</article>
 
     <footer id="footer">
-      <p id="jq-copyright">Copyright 2013 <a href="http://jewishcal.com/">Jewish Calendar</a>.</p> 
+      <p id="jq-copyright">Copyright 2013 <a href="http://jewishcal.com/">Online Jewish Calendar</a>.</p> 
     </footer>
   </section>
   <script>
+		var useCookies=false;
 		function LoadCalendar()
 		{
 			if (completedFacebookInitialization == false)
@@ -94,9 +114,7 @@
 			document.getElementById("calendar").src = "calendar_and_other_tabs.html";
 		}
 		setTimeout(LoadCalendar,500);
-		
-		
-		
+				
   </script>
   <script type="text/javascript">
 
