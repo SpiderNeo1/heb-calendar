@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>http://www.jewishcal.com/</loc>
+  <lastmod>2013-04-18T19:04:24+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>http://www.jewishcal.com/calendar.html</loc>
+  <lastmod>2013-04-18T19:03:01+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>http://www.jewishcal.com/news.html</loc>
+  <lastmod>2013-04-18T18:34:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://www.jewishcal.com/convert%20dates.html</loc>
+  <lastmod>2013-04-18T18:35:21+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.1</priority>
+</url>
+<url>
+  <loc>http://www.jewishcal.com/holidays.html</loc>
+  <lastmod>2013-04-18T18:35:41+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>http://www.jewishcal.com/about%20us.html</loc>
+  <lastmod>2013-04-18T18:32:54+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.1</priority>
+</url>
+<url>
+  <loc>http://www.jewishcal.com/calendar_and_other_tabs.html</loc>
+  <lastmod>2013-04-18T18:32:54+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>http://www.jewishcal.com/hebrew</loc>
+  <lastmod>2013-04-18T19:04:24+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>http://www.jewishcal.com/hebrew/calendar.html</loc>
+  <lastmod>2013-04-18T19:03:01+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>http://www.jewishcal.com/hebrew/news.html</loc>
+  <lastmod>2013-04-18T18:34:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://www.jewishcal.com/hebrew/convert%20dates.html</loc>
+  <lastmod>2013-04-18T18:35:21+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.1</priority>
+</url>
+<url>
+  <loc>http://www.jewishcal.com/hebrew/holidays.html</loc>
+  <lastmod>2013-04-18T18:35:41+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>http://www.jewishcal.com/hebrew/about%20us.html</loc>
+  <lastmod>2013-04-18T18:32:54+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.1</priority>
+</url>
+<url>
+  <loc>http://www.jewishcal.com/hebrew/calendar_and_other_tabs.html</loc>
+  <lastmod>2013-04-18T18:32:54+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1.0</priority>
+</url>
+
+</urlset>
